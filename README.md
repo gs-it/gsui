@@ -1,1 +1,1 @@
-# gsuicov
+# GS SHOP UI CONVENTION
