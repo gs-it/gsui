@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GS SHOP UI CONVENTION</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.snippet.min.css">
+</head>
+
+<body>
+	<header>
+		<div class="wrap"><h1>GS SHOP UI CONVENTION</h1></div>
+	</header>
+	<div class="container">
+		<div class="wrap">
+			<div class="nav">
+				<ul class="nav-menu">
+					<li class="on">
+						<a href="#">HTML Guide</a>
+						<ul class="sub">
+							<li><a href="#">HTML Principles</a></li>
+							<li><a href="#">이미지 명명규칙</a></li>
+						</ul>
+					</li>
+					<li><a href="#">CSS Guide</a></li>
+					<li><a href="#">JS Guide</a></li>
+				</ul>
+			</div>
+			<div class="contents">
+				<h1>이미지 명명규칙</h1>
+				<section>
+					<h2>1. 개요</h2>
+					<p>이미지 사용 시 지켜야 할 규칙과 비용 최소화를 위한 방안을 중심으로 설명합니다.</p>
+				</section>
+				<section>
+					<h2>2. 접두어</h2>
+					<table>
+						<caption>이미지 접두어 정의</caption>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>표기</th>
+								<th>예제</th>
+								<th>설명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>타이틀</td>
+								<td>t_</td>
+								<td>t_tvshopping.gif</td>
+								<td>타이틀 이미지</td>
+							</tr>
+							<tr>
+								<td>영역</td>
+								<td>w_</td>
+								<td>w_wrap.gif</td>
+								<td>레이아웃 혹은 영역 이미지</td>
+							</tr>
+							<tr>
+								<td>로고</td>
+								<td>g_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>탭</td>
+								<td>t_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>버튼</td>
+								<td>b_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>아이콘</td>
+								<td>i_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>배경</td>
+								<td>k_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>페이징</td>
+								<td>p_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>배너</td>
+								<td>r_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>텍스트</td>
+								<td>e_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>숫자</td>
+								<td>n_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>공통</td>
+								<td>c_</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>화살표/블릿</td>
+								<td>u_</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- <ul class="square-list">
+						<li>언더스코어(_) 사용</li>
+						<li>접두어 한 글자 사용</li>
+					</ul>
+					<pre>
+.img {background:url('//image.gsshop.com') no-repeat;}
+					</pre> -->
+				</section>
+				<section>
+					<h2>3. 접속어</h2>
+					<p>이미지의 상태나 위치 등을 추가로 표기할 때 언더스코어를 사용 상태나 위치를 나타내는 단어를 사용한다.</p>
+					<table>
+						<caption>접속어 사용</caption>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>표기</th>
+								<th>설명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>상태표현</td>
+								<td>_on, _off, _over, _focus</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>위치표현</td>
+								<td>_top, _bottom, _left, _right</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="wrap">Copyright(C) 1998-2015 GS HOMESHOPPING. All Rights Reserved.</div>
+	</footer>
+
+	<script type="text/javascript" src="http://image.gsshop.com/mi13/js/jquery.js"></script>
+	<script src="js/libs/jquery.snippet.min.js"></script>
+	<script type="text/javascript">
+		$("pre").snippet("html", {style:"ide-codewarrior"});
+	</script>
+</body>
+
+</html>

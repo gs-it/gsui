@@ -1,0 +1,54 @@
+* {margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:맑은 고딕,Malgun Gothic,Dotum,applegothic,sans-serif,arial;font-size:13px;line-height:1.5em;color:#555}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+h1,h2,h3,h4,h5,h6{font-size:1em}
+img{vertical-align:top;border:0 none}
+fieldset,iframe,frame{border:0 none}
+input,select,textarea{vertical-align:middle} 
+ul,ol{list-style:none}
+i,em,dfn,address{font-style:normal}
+a{text-decoration:none;cursor:pointer;color:#555}
+a:hover,a:focus{text-decoration:underline}
+a:link,a:visited,a:active{}
+input[type='text'],input[type='password'],input[type='image'],input[type='search']{-webkit-appearance:none;-webkit-border-radius:0}
+button{border:0;cursor:pointer}
+hr{display:none}
+legend {display:inline-block; overflow:hidden; position:absolute; left:-1000px; top:-1000px; visibility:hidden;width:0 !important; height:0 !important; padding:0 !important; font-size:0/0 m; color:rgba(255,255,255,0)}
+caption {overflow:hidden; visibility:hidden; width:0 !important; height:0 !important; line-height:0 !important; font-size:0 !important;}
+dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m} 
+
+pre {position:relative;margin:20px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, Helvetica,Verdana;
+	background:url('../img/k_pre.gif') repeat;border:1px solid #00aebd;
+}
+pre ol {border-left:40px solid #00aebd;}
+pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#fff;}
+
+header {background:#fff ;border-bottom:1px solid #CADB2A}
+footer {background:#f0f1f3;border-top:1px solid #CADB2A;}
+
+.container {background:#fff;}
+.wrap {overflow:auto;}
+section {margin-top:30px;}
+
+/* nav */
+.nav-menu {background:#fff;}
+.nav-menu li {position:relative;}
+.nav-menu a {display:block;padding:5px 10px;margin-top:-1px;}
+.nav-menu a:after {content:'';position:absolute;top:5px;right:0;width:10px;height:15px;background:url('http://image.gsshop.com/mi13/img/ico/tmp_small_black_icons.png') no-repeat -5px 0;}
+.nav-menu a:hover {position:relative;border-color:#91BB21;text-decoration:none;z-index:1;}
+.nav-menu .on a:after {background-position:-25px 0;}
+.nav-menu .sub {padding:0 0 10px 20px;}
+.nav-menu .sub a:after{background:none;}
+
+/* title */
+.contents h1 {font-weight:normal;font-size:23px;}
+section h2 {padding-bottom:10px;font-weight:normal;font-size:18px;}
+
+/* list */
+.square-list {padding-left:15px;list-style-type: square;}
+.square-list li {line-height:2em;}
+
+/* table */
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+table th {padding:0.5% 2%;background:#f5f7fa;border:1px solid #e1e3e6;border-top-color:#e1e3e6;}
+table td {padding:1% 2%;border:1px solid #e1e3e6;}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GS SHOP UI CONVENTION</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.snippet.min.css">
+</head>
+
+<body>
+	<header>
+		<div class="wrap"><h1>GS SHOP UI CONVENTION</h1></div>
+	</header>
+	<div class="container">
+		<div class="wrap">
+			<div class="nav">
+				<ul class="nav-menu">
+					<li class="on">
+						<a href="#">HTML Guide</a>
+						<ul class="sub">
+							<li><a href="#">HTML Principles</a></li>
+							<li><a href="#">이미지 명명규칙</a></li>
+						</ul>
+					</li>
+					<li><a href="#">CSS Guide</a></li>
+					<li><a href="#">JS Guide</a></li>
+				</ul>
+			</div>
+			<div class="contents">
+				<h1>HTML Principles</h1>
+				<section>
+					<h2>DOCTYPE</h2>
+					<p>문서타입에 (X)HTML의 버전과 문서형을 지정하는데, 다양한 플랫폼 지원을 위해 XHTML 1.0 , 하위 브라우져 호환성을 위해 Transitional 모드를 권장하고 있다. (Transition 모드를 사용하더라도, 웹표준 준수율의 향상을 위해 가급적 Strict 모드의 문법을 사용하는 것을 권장함) 시스템 식별자를 명시하여 Standards 모드 방식으로 지원해야 하나 예외적으로 메일, 개별카페, 개별블로그 등의 UCC영역에 해당하는 서비스는 과거 비표준 태그 허용을 위해 Quirks 모드로 지원할 수 있다.</p>
+					<pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+					</pre>
+				</section>
+				<section>
+					<h2>META</h2>
+					<ul class="square-list">
+						<li>검색 엔진 최적화를 위하여 meta 요소를 이용하여 문서 제목을 추가 명시한다.</li>
+						<li>컨텐츠 상세 페이지에서는 컨텐츠 제목 만을 표기한다.</li>
+						<li>서비스홈에서는 서비스명 만을 표기, 서브 섹션홈에서는 하위섹션명 | 서비스명 을 표기한다.</li>
+						<li>컨텐츠 제목이 HTML validation 을 깨지 않도록 반드시 HTML escape 되어야 한다. </li>
+					</ul>
+					<pre>
+&lt;meta http-equiv="Content-Type" content="text/html;charset=euc-kr" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"/&gt;
+					</pre>
+				</section>
+				<table>
+					<caption>이미지 접두어 정의</caption>
+					<thead>
+						<tr>
+							<th>구분</th>
+							<th>접두어</th>
+							<th>예제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>타이틀</td>
+							<td>t_</td>
+							<td>t_tvshopping.gif</td>
+						</tr>
+						<tr>
+							<td>영역</td>
+							<td>w_</td>
+							<td>w_leftside.gif</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="wrap">Copyright(C) 1998-2015 GS HOMESHOPPING. All Rights Reserved.</div>
+	</footer>
+
+	<script type="text/javascript" src="http://image.gsshop.com/mi13/js/jquery.js"></script>
+	<script src="js/libs/jquery.snippet.min.js"></script>
+	<script type="text/javascript">
+		$("pre").snippet("html", {style:"ide-codewarrior"});
+	</script>
+</body>
+
+</html>

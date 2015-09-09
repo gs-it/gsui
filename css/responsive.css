@@ -1,0 +1,16 @@
+
+@media (min-width: 0) {
+	.wrap {padding:5%;}
+}
+
+@media (min-width: 767px) {
+	.wrap {width:750px;padding:20px 10px;margin:0 auto;}
+	.nav {float:left;width:150px;}
+	.contents {float:left;width:570px;margin-left:30px;}
+}
+
+@media (min-width: 980px) {
+	.wrap {width:940px;padding:20px 10px;margin:0 auto;}
+	.nav {float:left;width:200px;}
+	.contents {float:left;width:710px;margin-left:30px;}
+}
