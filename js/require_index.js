@@ -7,34 +7,30 @@ requirejs.config({
         'base':'common/base',
         'plugin':'common/plugin',
         'common':'controller/controll_common',
-        'controll_main':'controller/controll_main'
+        'controller':'controller/controller'
     },
     shim:{
-        'controll_main':{
+        'controller':{
             deps:['plugin', 'highlighter'],
-            exports:'controll_main'
+            exports:'controller'
         }
     }
 });
 
 require(
-    [
-        'common',
-        'controll_main'
-    ],
-    function(Common, Templete){
+    ['controller'],
+    function(Templete){
         "use strict";
 
-        var common = new Common();
         var page = new Templete();
 
         //common Event
-        $(window).on({
+        /*$(window).on({
             resize:function(e){
                 page.resize();
             },
             scroll:function(){
-                common.scroll();
+                page.scroll();
             }
         });
 
@@ -43,6 +39,6 @@ require(
 
         $(document).on('touchend', function(e){
             common.touchend();
-        });
+        });*/
     }
 );
