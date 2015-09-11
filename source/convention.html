@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GS SHOP UI CONVENTION</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.snippet.min.css">
+</head>
+
+<body>
+	<header>
+		<div class="wrap"><h1>GS SHOP UI CONVENTION</h1></div>
+	</header>
+	<div class="container">
+		<div class="wrap">
+			<div class="nav">
+				<ul class="nav-menu">
+					<li class="on">
+						<a href="#">HTML Guide</a>
+						<ul class="sub">
+							<li><a href="#">HTML Principles</a></li>
+							<li><a href="#">이미지 명명규칙</a></li>
+							<li><a href="#">이벤트 템플릿</a></li>
+						</ul>
+					</li>
+					<li><a href="#">CSS Guide</a></li>
+					<li><a href="#">JS Guide</a></li>
+				</ul>
+			</div>
+			<div class="contents">
+				<h1>WHY? Coding Convention</h1>
+				<section>
+					<h2>1. 필요성</h2>
+					<ul class="square-list">
+						<li>마크업 개발은 프론트엔드 페이지의 기본을 형성한다.</li>
+						<li>마크업 개발을 잘해야 모든 브라우저에서 콘텐츠의 손실 없이, 빠르고 쉽게 이용자에게 전달할 수 있다.</li>
+						<li>위의 두가지를 만족시키기위해 마크업 개발자가 지켜야할 표준이 코딩켄벤션이다.</li>
+						<li>처음 코드를 작성자가 아니어도 이해할 수 있도록 작성하여 운영의 용이성을 제공한다. 이는 유지보수 비용을 절감하고 업무 효율을 높이는 역할을 한다.</li>
+						<li>다수의 프로젝트 진행시 통일된 기준으로 소스 코드를 작성 할 수 있는 기준이 된다.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>2. 용어</h2>
+					<ul class="square-list">
+						<li>엘리먼트(element) - HTML문서를 구성하는 모든 태그요소
+							<pre>
+								ex) head, body, div, p, span, table, img, form .... 
+							</pre>
+						</li>
+						<li>애트리뷰(attribute) - 엘리먼트의 특성(attribute 값은 큰따옴표("")로 묶는다)
+							<pre>
+								ex) &lt;img src="이미지경로" alt="이미지설명" width="100" height="100" /&gt;
+							</pre>
+						</li>
+						<li>선택자(selector) - 엘리먼트에 CSS 스타일적용할 수있는 객체
+							<pre>
+								ex) *, div, div p, div &gt; p, div#id, div.class, div:nth-child ...
+							</pre>
+						</li>
+						<li>속성(property) - 엘리먼트 CSS 특성
+							<pre>
+								ex) font-weight(property):bold(value)
+							</pre>
+						</li>
+						<li>예약어 - 객체, 이미지, 파일 및 폴더등 네이밍시 의미를 일관되게 표현하기 위해 미리 정해 놓은 언어 규칙
+							<pre>
+								ex) #wrap, #header, #content,...
+							</pre>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="wrap">Copyright(C) 1998-2015 GS HOMESHOPPING. All Rights Reserved.</div>
+	</footer>
+</body>
+<script type="text/javascript" src="http://image.gsshop.com/mi13/js/jquery.js"></script>
+<script src="js/libs/jquery.snippet.min.js"></script>
+<script type="text/javascript">
+	$("pre").snippet("html", {style:"ide-codewarrior"});
+</script>
+</html>
