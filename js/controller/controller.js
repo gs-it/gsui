@@ -2,9 +2,7 @@ define(['base'], function(Base){
         
 	"use strict";
 
-
     var contents = Base.loader('source/layout.html');
-    //var pattern = /(^\t+<pre>)|(^\t+<\/pre>$)/gim;
     var pattern = /(<pre>)|(<\/pre>)/gim;
     var arrCode = contents.split(pattern);
     var replaceIS = false;
@@ -21,14 +19,6 @@ define(['base'], function(Base){
 
     $('.contents').html(dataTxt);
     $('pre').snippet('html', {style:'ide-codewarrior'});
-
-    //PC & MOBILE
-    if(Base.agentChk.getDevice() == 'MOBILE'){
-        
-    }else if(Base.agentChk.getDevice() == 'PC'){
-        
-    }
-
 
     var Main = function(){}
     Main.prototype = {
