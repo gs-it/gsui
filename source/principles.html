@@ -11,7 +11,7 @@
 
 <body>
 	<header>
-		<div class="wrap"><h1>GS SHOP UI CONVENTION Layout</h1></div>
+		<div class="wrap"><h1>GS SHOP UI CONVENTION</h1></div>
 	</header>
 	<div class="container">
 		<div class="wrap">
@@ -30,23 +30,31 @@
 				</ul>
 			</div>
 			<div class="contents">
-				<h1>공통 HTML 가이드</h1>
+				<h1>HTML Principles</h1>
 				<section>
-					<h2>1. 기본 레이아웃</h2>
+					<h2>1. 개요</h2>
 					<ul class="square-list">
-						<li>가로폭 940px 공통 템플릿</li>
-						<li>#wrap 좌측 패딩 10px, 우측 스카이스크래퍼 패딩 66px</li>
+						<li>HTML 작성시 아래의 규칙을 준수하여 작성한다.</li>
 					</ul>
-					<pre>
-&lt;body&gt;
-	&lt;div id="header"&gt;&lt;/div&gt;
-	&lt;div id="gs-content"&gt;
-		&lt;div id="wrap"&gt;&lt;/div&gt;
-		&lt;div id="skyScraper"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div id="footer"&gt;&lt;/div&gt;
-&lt;/body&gt;
-					</pre>
+
+					<h2>2. 정의</h2>
+					<ul class="square-list">
+						<li>DOCTYPE 정의 - 문서타입을 선언, 표준 모드를 사용함으로써 모든 브라우저에서 일관된 렌더링을 구현할 수 있다.
+<pre>
+&lt;!DOCTYPE html&gt;
+</pre>
+						</li>
+						<li>문서제목의 표현 - 문서의 타이틀을 의미에 맞게 사용함으로써 웹표준,접근성에 기여한다.
+<pre>
+&lt;title&gt;문서제목 : 당신의 가장 좋은 선택을 만듭니다. GS SHOP&lt;/title&gt;
+</pre>
+						</li>
+						<li>문자열의 인코딩 선언
+<pre>
+&lt;meta charset="UTF-8" /&gt;
+</pre>
+						</li>
+					</ul>
 				</section>
 			</div>
 		</div>
