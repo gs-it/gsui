@@ -3,8 +3,7 @@ define(['base'], function(Base){
 	"use strict";
 
 
-    // html 로딩
-    var contents = Base.loader('templete/default.html');
+    var contents = Base.loader('source/layout.html');
     //var pattern = /(^\t+<pre>)|(^\t+<\/pre>$)/gim;
     var pattern = /(<pre>)|(<\/pre>)/gim;
     var arrCode = contents.split(pattern);
