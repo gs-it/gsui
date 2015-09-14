@@ -17,11 +17,10 @@ legend {display:inline-block; overflow:hidden; position:absolute; left:-1000px; 
 caption {overflow:hidden; visibility:hidden; width:0 !important; height:0 !important; line-height:0 !important; font-size:0 !important;}
 dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m} 
 
-pre {position:relative;margin:20px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, Helvetica,Verdana;
-	background:url('../img/k_pre.gif') repeat;border:1px solid #00aebd;
-}
+/* pre */
+pre {position:relative;margin:20px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, Helvetica,Verdana;background:url('../img/k_pre.gif') repeat;border:1px solid #00aebd;}
 pre ol {border-left:40px solid #00aebd;}
-pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#fff;}
+pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#000;}
 
 header {background:#fff ;border-bottom:1px solid #CADB2A}
 footer {background:#f0f1f3;border-top:1px solid #CADB2A;}
