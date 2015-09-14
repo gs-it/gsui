@@ -1,6 +1,7 @@
 define(function(){
 	"use strict";
-	 //userAgent Module
+
+	//userAgent Module
 	var UserAgentChk = (function(){
 		"use strict";
 
@@ -58,7 +59,7 @@ define(function(){
 		return new Agent();
 	})();
 
-
+	//static Base support
 	var Support = {
 		addEvent:function($target, evt, func){
 			if(window.addEventListener || document.addEventListener){
@@ -95,6 +96,19 @@ define(function(){
         })()
 	}
 
+	//hashlink return Array;
+	var GetUriSplit = function(uri){
+        var pattern = /[#/(?=)]/g;
+        var arrHashLink = uri.trim().split(pattern);
+        var splitHashLink = [];
+
+        for(var i=0; i<arrHashLink.length; i++){
+            if(arrHashLink[i] != '') splitHashLink.push(arrHashLink[i]);
+        }
+
+        return splitHashLink;
+	}
+
 	//String 가격(,) 추가 함수
 	String.prototype.price = function(){
 		var txt='';
@@ -113,9 +127,10 @@ define(function(){
 
 	//String 공백제거 함수
 	String.prototype.trim = function(){
-    	return this.replace(/(^\s*)|(\s*$)/gi, "");
+    	return this.replace(/[(^\s*)|(\s*$)]/gi, "");
 	}
 
+	//html 파일 로드
 	var HtmlLoader = function(url){
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", url, false);
@@ -126,6 +141,7 @@ define(function(){
 	return {
 		agentChk:UserAgentChk,
 		support:Support,
-		loader:HtmlLoader
+		loader:HtmlLoader,
+		getUriSplit:GetUriSplit
 	};
 });

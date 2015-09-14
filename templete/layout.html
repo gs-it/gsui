@@ -1,0 +1,95 @@
+				<h1>이벤트 HTML 템플릿</h1>
+				<section>
+					<h2>1. 가로 940 템플릿</h2>
+					<ul class="square-list">
+						<li>가로폭 940px 기본 템플릿</li>
+						<li>#wrap 아래 이벤트 div 생성</li>
+					</ul>
+					<pre>
+&lt;body&gt;
+	&lt;div id="header"&gt;&lt;/div&gt;
+	&lt;div id="gs-content"&gt;
+		&lt;div id="wrap"&gt;
+			&lt;div&gt;&lt;!-- 이벤트 div 생성 --&gt;
+				이벤트
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id="footer"&gt;&lt;/div&gt;
+&lt;/body&gt;
+					</pre>
+				</section>
+				<section>
+					<h2>2. 가로 와이드 템플릿</h2>
+					<ul class="square-list">
+						<li>가로 100% 이벤트 템플릿</li>
+						<li>#wrap 밖 #gs-content 아래 div 생성</li>
+						<li>.event-common-wrap을 사용 가운데 정렬(940px)</li>
+					</ul>
+					<pre>
+&lt;body&gt;
+	&lt;div id="header"&gt;&lt;/div&gt;
+	&lt;div id="gs-content"&gt;
+		&lt;div id="wrap"&gt;&lt;div&gt;
+		&lt;div&gt;<!-- 이벤트 div 생성 -->
+			&lt;div class="event-common-wrap"&gt;&lt;!-- 이벤트 컨텐츠 정렬 클래스 --&gt;
+				이벤트
+			&lt;/div&gt;
+		&lt;div&gt;
+	&lt;div&gt;
+	&lt;div id="footer"&gt;&lt;/div&gt;
+&lt;/body&gt;
+					</pre>
+				</section>
+				<section>
+					<h2>3. 이벤트 상단 탭</h2>
+					<ul class="square-list">
+						<li>#wrap 아래 .wide_tabpcEvent 추가</li>
+						<li>.wide_tabpcEvent 하단 마진 만큼 생성한 이벤트 영역에 음수 마진 적용</li>
+						<li>와이드 이벤트의 경우 생성한 이벤트 div는 #wrap 밖 #gs-content 아래 생성</li>
+					</ul>
+					<pre>
+&lt;body&gt;
+	&lt;div id="header"&gt;&lt;/div&gt;
+	&lt;div id="gs-content"&gt;
+		&lt;div id="wrap"&gt;
+			&lt;div class="wide_tabpcEvent"&gt;
+				&lt;ul&gt;
+					&lt;li class="first-child "&gt;&lt;a href="#"&gt;&lt;strong&gt;리얼멤버십&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li class="second-child "&gt;&lt;a href="#"&gt;&lt;strong&gt;할인쿠폰&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;strong&gt;적립금 GS&amp;POINT&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;strong&gt;연간할인권&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;strong&gt;제휴신용카드 혜택&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;div&gt;
+			&lt;div style="margin-top:-11px;"&gt;&lt;!-- 탭 하단 마진 만큼 음수 마진 적용 --&gt;
+				이벤트
+			&lt;/div&gt;
+		&lt;div&gt;
+	&lt;div&gt;
+	&lt;div id="footer"&gt;&lt;/div&gt;
+&lt;/body&gt;
+					</pre>	
+				</section>
+				<section>
+					<h2>4. 이벤트 하단 기획전 추가</h2>
+					<li>#wrap 바로 다음 #layBody를 개발에서 추가</li>
+					<li>#prdlist(기획전 상품 리스트) 위치지정</li>
+					<li>와이드 이벤트의 경우 생성한 이벤트 영역은 #wrap 밖 #gs-content 아래 생성</li>
+					<li>점차 사용하지 않는 추세</li>
+					<pre>
+&lt;body&gt;
+	&lt;div id="header"&gt;&lt;/div&gt;
+	&lt;div id="gs-content"&gt;
+		&lt;div id="wrap"&gt;
+			&lt;div id="layBody"&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;!-- 이벤트 div 생성 --&gt;
+				이벤트
+			&lt;/div&gt;
+			&lt;div id="prdlist"&gt;기획전 상품 리스트&lt;/div&gt;
+		&lt;div&gt;
+	&lt;div&gt;
+	&lt;div id="footer"&gt;&lt;/div&gt;
+&lt;/body&gt;
+					</pre>
+				</section>
