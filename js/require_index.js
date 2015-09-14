@@ -17,9 +17,7 @@ requirejs.config({
     }
 });
 
-require(
-    ['controller'],
-    function(Templete){
+require(['controller'],function(Templete){
         "use strict";
 
         var page = new Templete();

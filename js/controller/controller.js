@@ -2,23 +2,32 @@ define(['base'], function(Base){
         
 	"use strict";
 
-    var contents = Base.loader('source/layout.html');
-    var pattern = /(<pre>)|(<\/pre>)/gim;
-    var arrCode = contents.split(pattern);
-    var replaceIS = false;
-    var dataTxt = '';
+    window.addEventListener('hashchange', function(e){
+        templete();
+    });
 
-    for(var i=0; i<arrCode.length; i++){
-        if(arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
-        if(arrCode[i] == '<pre>') replaceIS = true;
-        if(arrCode[i] == '</pre>') replaceIS = false;
-        if(replaceIS && arrCode[i] != '<pre>') arrCode[i] = arrCode[i].replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    function templete(){
+        var arrHashLink = Base.getUriSplit(window.location.hash);
+        var contents = Base.loader('source/'+arrHashLink[0]+'/'+arrHashLink[1]+'.html');
+        var pattern = /(<pre>)|(<\/pre>)/gim;
+        var arrCode = contents.split(pattern);
+        var replaceIS = false;
+        var dataTxt = '';
 
-        dataTxt += arrCode[i];
+        for(var i=0; i<arrCode.length; i++){
+            if(arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
+            if(arrCode[i] == '<pre>') replaceIS = true;
+            if(arrCode[i] == '</pre>') replaceIS = false;
+            if(replaceIS && arrCode[i] != '<pre>') arrCode[i] = arrCode[i].replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            dataTxt += arrCode[i];
+        }
+
+        $('.contents').html(dataTxt);
+        $('pre').snippet('html', {style:'ide-codewarrior'});
     }
 
-    $('.contents').html(dataTxt);
-    $('pre').snippet('html', {style:'ide-codewarrior'});
+    templete();
 
     var Main = function(){}
     Main.prototype = {
