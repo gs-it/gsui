@@ -43,7 +43,7 @@
 pre ol li:last-child {display:none;}
 
 .sh_keyword {color:#9c318f;} /* 태그 */
-.sh_type {color:#b45a4f;} /* 속성 */
+.sh_type {color:#b93322;} /* 속성 */
 .sh_symbol {color:#9c318f;} /* 부등호 */
 .sh_string {color:#2644b2} /* 속성값 */
 .sh_comment {color:#4a784a;} /* 주석 */

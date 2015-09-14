@@ -24,7 +24,8 @@ define(['base'], function(Base){
         }
 
         $('.contents').html(dataTxt);
-        $('pre').snippet('html', {style:'ide-codewarrior'});
+        $('pre.html').snippet('html', {style:'ide-codewarrior'});
+        $('pre.style').snippet('css', {style:'ide-codewarrior'});
     }
 
     templete();
