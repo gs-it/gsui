@@ -2,19 +2,36 @@
 <section>
 	<h2>1. 개요</h2>
 	<ul class="square-list">
-		<li>HTML 작성시 아래의 규칙을 준수하여 작성한다.</li>
+		<li>모든 페이지에서 사용하는 Jquery 플러그인(global-1.0.js) 설명</li>
 	</ul>
 
-	<h2>2. 정의</h2>
+	<h2>2. Jquery plugIn 종류 및 사용법</h2>
 	<ul class="square-list">
-		<li>DOCTYPE 정의 - 문서타입을 선언, 표준 모드를 사용함으로써 모든 브라우저에서 일관된 렌더링을 구현할 수 있다.
-			<pre><!DOCTYPE html></pre>
-		</li>
-		<li>문서제목의 표현 - 문서의 타이틀을 의미에 맞게 사용함으로써 웹표준,접근성에 기여한다.
-			<pre><title>문서제목 : 당신의 가장 좋은 선택을 만듭니다. GS SHOP</title></pre>
-		</li>
-		<li>문자열의 인코딩 선언
-			<pre><meta charset="UTF-8" /></pre>
+		<li>$.fn.wooksAct
+			<ul>
+				<li>html
+					<pre class="html">
+<div class="ban-swipe">
+	<h3 class="hide">기획전</h3>
+	<div id="ban-swipe1" class="Viewer">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
+			<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
+			<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
+		</ul>
+		<a class="ctrl-st2 prev" href="javascript:;"><i class="pagination"><strong>1</strong>/4</i><span>이전</span></a>
+		<a class="ctrl-st2 next" href="javascript:;"><i class="pagination"><strong>1</strong>/4</i><span>다음</span></a>
+	</div>				
+</div>
+					</pre>
+				</li>
+				<li>script
+					<pre class="js">
+$('.ban-swipe').wooksAct({playTime:4000}); /* 롤링 배너 */
+$('.ban-swipe').wooksAct({effect:'fade',playTime:5000}); /* fadeIn type */
+					</pre>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </section>

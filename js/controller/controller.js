@@ -9,16 +9,20 @@ define(['base'], function(Base){
     function templete(){
         var arrHashLink = Base.getUriSplit(window.location.hash);
         var contents = Base.loader('source/'+arrHashLink[0]+'/'+arrHashLink[1]+'.html');
-        var pattern = /(<pre>)|(<\/pre>)/gim;
+        var pattern = /(<pre class="html">)|(<\/pre>)/gim;
         var arrCode = contents.split(pattern);
         var replaceIS = false;
         var dataTxt = '';
 
+        var ttt = contents.trim().split(/<pre?>/);
+        console.log(ttt);
+
+
         for(var i=0; i<arrCode.length; i++){
             if(arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
-            if(arrCode[i] == '<pre>') replaceIS = true;
-            if(arrCode[i] == '</pre>') replaceIS = false;
-            if(replaceIS && arrCode[i] != '<pre>') arrCode[i] = arrCode[i].replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            if(arrCode[i] == '<pre class="html">') replaceIS = true;
+            if(arrCode[i] == '<\/pre>') replaceIS = false;
+            if(replaceIS && arrCode[i] != '<pre class="html">') arrCode[i] = arrCode[i].replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
             dataTxt += arrCode[i];
         }
@@ -26,6 +30,7 @@ define(['base'], function(Base){
         $('.contents').html(dataTxt);
         $('pre.html').snippet('html', {style:'ide-codewarrior'});
         $('pre.style').snippet('css', {style:'ide-codewarrior'});
+        $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
     }
 
     templete();
