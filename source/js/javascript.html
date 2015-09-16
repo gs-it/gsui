@@ -30,27 +30,15 @@
 				</li>
 				<li>script
 					<pre class="js">
-						/* wooksAct Syntax */
+						/* Syntax */
 						$('selector').wooksAct({ custom option }); /* 롤링 배너 */
 
-						/* wooksAct option defaults*/
+						/* Options information */
 						$.fn.wooksAct.option = {
 							next			: 'next', 		/* next btn selector */
 							prev			: 'prev', 		/* prev btn selector */
 							current		: 0,		  		/* 첫번째 보여질 리스트 index값 */
 							effect			: 'tab', 		/* action type : tab, fade, rolling */
-							easing			: '',     		
-							viewClass		: 'Viewer',		
-							naviClass		: 'Navi',		
-							pageClass	: 'pagination',		
-							currentClass	: 'on', 		
-							playClass		: 'play',		
-							stopClass		: 'stop',		
-							happyPlayClass	: 'hplay',		
-							happyStopClass	: 'hstop',		
-							speed			: 400, 			
-							playTime		: 4000,			
-							intervalTime	: false,		
 							auto			: true,			/* 자동실행 사용여부 */
 							clicked		: false,			/* click event 사용여부 */
 							onInit			: function(){}, /* init callback function */
@@ -62,6 +50,135 @@
 					</pre>
 				</li>
 			</ul>
+		</li>
+		<li>$.fn.gsSwipe //idangerous swiper 확장형 jquery plugin (idangerous Swiper v2.5.5)
+			<ul>
+				<li>html
+					<pre class="html">
+						<div class="swiper-container">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#">
+										<div class="img">
+											<img src="#" title="#">
+										</div>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">
+										<div class="img">
+											<img src="#" title="#">
+										</div>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">
+										<div class="img">
+											<img src="#" title="#">
+										</div>
+									</a>
+								</li>
+							</ul>
+							<a href="javascript:;" class="ctrl-st2 prev"><i class="pagination"><strong>1</strong>/2</i><span>이전</span></a>
+							<a href="javascript:;" class="ctrl-st2 next"><i class="pagination"><strong>1</strong>/2</i><span>다음</span></a>
+						</div>
+					</pre>
+				</li>
+				<li>script
+					<pre class="js">
+						/* Syntax */
+						$(selector).gsSwipe({autoplay:5000, slidesPerView:3, slidesPerGroup:3});
+
+						/* Options information */
+						$.fn.gsSwipe.option = {
+							current			: 0,	// 초기화될 (slide.length/slidePerGroup) 값
+							speed				: 400,	// slide 속도
+							loop				: true,	// 롤링 여부
+							autoplay			: 0,	// 자동실행 (사용안함:false, 사용:1000)
+							simulateTouch	: false,	// PC 버젼 사용 여부
+							slidesPerView	: 1,	// 화면에 보여지는 slide 수
+							slidesPerGroup	: 1,	// 화면에 보여지는 slide 묶음
+							onInit				: function(){}, // swipe start callback
+							onChangeStart	: function(){} // slide animation complete callback
+						};
+					</pre>
+				</li>
+			</ul>
+		</li>
+		<li>$.fn.placeHolder //input placeholder
+			<pre class="js">
+				/* Syntax */
+				$(selector).placeHolder();
+			</pre>
+		</li>
+		<li>$.fn.locationcenter
+			<pre class="js">
+				/* Syntax */
+				$(selector).locationcenter(); // Dom object 가운데 띄우기
+			</pre>
+		</li>
+		<li>$.fn.PriceOnly
+			<pre class="js">
+				/* Syntax */
+				$(input).locationcenter(); // 가격 숫자 단위변환
+			</pre>
+		</li>
+		<li>modalBox Layer
+			<pre class="js">
+				/* Syntax */
+				modal.load(event, url, bg);	// Dom Object load
+				modal.open(event, fx, bg);	// layer open
+				modal.close(wrapClose);	// layer close
+				modal.esc(event);	// layer close (ESC keyEvent)
+			</pre>
+		</li>
+		<li>$.fn.gsSelect
+			<ul>
+				<li>html
+					<pre class="html">
+						<div id="pgtype" class="tmp-select h30">
+							<a class="current" role="button" href="#">
+								<span id="currentpg">다른 카테고리 가기</span>
+								<span class="btn-opt"><i>옵션열기</i></span>
+							</a>
+							<ul>
+								<li><a href="#"><span>백화점</span></a></li>
+								<li><a href="#"><span>레포츠</span></a></li>
+								<li><a href="#"><span>식품</span></a></li>
+							</ul>				
+						</div>
+					</pre>
+				</li>
+				<li>script
+					<pre class="js">
+						/* Syntax */
+						$('select Box').gsSelect({ custom option });
+
+						/* Options information */
+						$.fn.gsSelect.option = {
+							currentClass	: 'current',
+							openClass	: 'ico_btn, .ico-btn, .btn-opt',
+							onClass		: 'on',
+							overClass		: 'over',
+							focusClass	: 'focus',
+							disableClass	: 'disabled',
+							clicked		: false,
+							multiCheck	: false
+						};
+					</pre>
+				</li>
+			</ul>
+		</li>
+		<li>GsBase nameSpace
+			<pre class="js">
+				/* Syntax */
+				GsBase.agentChk.getBrowser(); // browser 종류 버전
+				GsBase.agentChk.getDevice(); // PC, agent
+
+				/* result */
+				{browser: "Chrome", version: "537.36"}
+				"PC" or "MOBILE"
+			</pre>
 		</li>
 	</ul>
 </section>
