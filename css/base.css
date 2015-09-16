@@ -14,11 +14,12 @@ input[type='text'],input[type='password'],input[type='image'],input[type='search
 button{border:0;cursor:pointer}
 hr{display:none}
 legend {display:inline-block; overflow:hidden; position:absolute; left:-1000px; top:-1000px; visibility:hidden;width:0 !important; height:0 !important; padding:0 !important; font-size:0/0 m; color:rgba(255,255,255,0)}
-caption {overflow:hidden; visibility:hidden; width:0 !important; height:0 !important; line-height:0 !important; font-size:0 !important;}
 dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m} 
 
+caption {margin:20px 0 5px;font-weight:bold;text-align:left;}
+
 /* pre */
-pre {position:relative;margin:20px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, Helvetica,Verdana;background:url('../img/k_pre.gif') repeat;border:1px solid #00aebd;}
+pre {position:relative;margin:10px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, 'Malgun Gothic', Helvetica,Verdana;background:url('../img/k_pre.gif') repeat;border:1px solid #00aebd;}
 pre ol {border-left:40px solid #00aebd;}
 pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#000;}
 
@@ -51,3 +52,6 @@ section h2 {padding-bottom:10px;font-weight:normal;font-size:18px;}
 table {width:100%;border-collapse:collapse;border-spacing:0;}
 table th {padding:0.5% 2%;background:#f5f7fa;border:1px solid #e1e3e6;border-top-color:#e1e3e6;}
 table td {padding:1% 2%;border:1px solid #e1e3e6;}
+
+.al {text-align:left;}
+.ac {text-align:center;}
