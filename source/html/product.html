@@ -1,0 +1,110 @@
+<h1>상품 모듈 템플릿</h1>
+
+<ul class="square-list mgt20">
+	<li>CSS는 '<a href="http://image.gsshop.com/mi13/css/goods.css"><strong>http://image.gsshop.com/mi13/css/goods.css</strong></a>'를 참조한다.</li>
+	<li>부모요소에 클래스 '<strong class="class">goods</strong>'를 적용해 모듈내 클래스를 상속해 사용한다.</li>
+</ul>
+
+<section>
+	<h2>1. 상품 기본 모듈</h2>
+	<pre class="html">
+<div class="goods"><!-- 부모 요소에 클래스 goods 적용 -->
+	<a href="#">
+		<div class="img">
+			<img src="http:/image.gsshop.com/mi13/img/etc/no_img_370.gif"  width="338" height="338" alt="">
+		</div>
+		<dl class="info">
+			<dd class="disc"><dfn>할인율 : </dfn><span>28</span>%</dd>
+			<dd class="price"><dfn>판매가 : </dfn><strong>39,500</strong>원</dd>
+			<dd class="cnt"><dfn>판매수량 : </dfn><strong>255</strong>개 구매중</dd>
+		</dl>
+		<div class="merit">
+			<span>적립금 2,000원</span>
+			<span>무료배송</span>
+			<span>해외배송</span>
+		</div>
+		<div class="side">
+			<span class="comment"><button onclick="return false;"><i>삼품평</i>23,514</button></span>
+			<span class="zzim"><button onclick="return false;"><i>상품 찜하기</i></button></span>
+			<span class="new-open"><button onclick="return false;"><i>새창으로 열기</i></button></span>
+		</div>
+	</a>
+</div>
+	</pre>
+</section>
+
+<section>
+	<h2>2. 상품 모듈 - 가로폭 조정(740px)</h2>
+	<ul class="square-list">
+		<li>상품 모듈의 부모 클래스('<strong class="class">goods</strong>')에 '<strong class="class">w940</strong>'클래스를 적용한다.</li>
+		<li>검색 결과등의 가로폭 740px의 경우 적용한다.</li>
+	</ul>
+	<pre class="html">
+<div class="goods w940"><!-- w940 클래스 적용 -->
+	<!-- 딜 상품 모듈 -->
+</div>
+	</pre>
+</section>
+
+<section>
+	<h2>3. 상품 모듈 -  상품 이미지 상단 배지 적용</h2>
+	<ul class="square-list">
+		<li>상품 모듈을 기반으로 상품 이미지 하단에 해당 배지를 적용한다.</li>
+		<li>상단 배지는 1개의 배지만 적용한다.</li>
+	</ul>
+	<pre class="html">
+<div class="img">
+	<img src="http:/image.gsshop.com/mi13/img/etc/no_img_370.gif"  width="338" height="338" alt="">
+	<span class="ico-best best1">Best1</span><!-- Best1 부터 Best12 까지 -->
+	<span class="badge ico-best-deal">Best Deal No.1</span><!-- 베스트딜 -->
+</div>
+	</pre>
+</section>
+
+<section>
+	<h2>4. 상품 모듈 -  상품 이미지 하단 배지 적용</h2>
+	<ul class="square-list">
+		<li>딜 상품 기본 모듈을 기반으로 상품 이미지 하단에 해당 배지를 적용한다.</li>
+		<li>2개 이상의 배지를 적용할 때 '<strong class="class">badge-pos</strong>'클래스로 태깅후 위치 지정 클래스를 조합해 적용한다.</li>
+		<li>위치 지정 클래스 '<strong class="class">bl</strong>'은 하단 좌측(bottom left) '<strong class="class">br</strong>'은 하단 우측('bottom right')를 의미한다.</li>
+	</ul>
+	<pre class="html">
+<div class="img">
+	<img src="http:/image.gsshop.com/mi13/img/etc/no_img_370.gif"  width="338" height="338" alt="">
+	<span class="badge ico-tv">TV쇼핑 상품</span><!-- TV쇼핑 상품 -->
+	<span class="badge ico-lotte">롯데백화점 상품</span><!-- 롯데백화점 상품 -->
+	<span class="badge ico-hyundai">현대백화점 상품</span><!-- 현대백화점 상품 -->
+	<span class="badge ico-ditto">Ditto 상품</span><!-- Ditto 상품 -->
+	<span class="badge ico-quick">총알배송</span><!-- 총알배송 -->
+	<span class="soldout">일시품절</span><!-- 일시품절 -->
+	<span class="soldout">SOLD OUT</span><!-- SOLD OUT -->
+</div>
+	</pre>
+	<pre class="html">
+<div class="img">
+	<img src="http:/image.gsshop.com/mi13/img/etc/no_img_370.gif"  width="338" height="338" alt="">
+	<span class="badge-pos bl"><!-- 배지 그룹 : 하단 좌측 -->
+		<span class="badge ico-quick">총알배송</span>
+	</span>
+	<span class="badge-pos br"><!-- 배지 그룹 : 하단 우측 -->
+		<span class="badge ico-hyundai">현대백화점 상품</span>
+		<span class="badge ico-ditto">Ditto 상품</span>
+	</span>
+</div>
+	</pre>
+</section>
+
+<section>
+	<h2>5. 상품 모듈 -  텍스트 옵션</h2>
+	<ul class="square-list">
+		<li>상품 가격 하단의 텍스트 기반 정보로 색상 클래스를 적용해 사용한다.</li>
+		<li>색상 정보는 'red'와 'green' 두 색상을 제공한다.</li>
+	</ul>
+	<pre class="html">
+<div class="merit">
+	<span class="red">오늘오픈</span><!-- red 텍스트 적용 -->
+	<span class="green">무료배송</span><!-- green 텍스트 적용 -->
+	<span>해외배송</span>
+</div>
+	</pre>
+</section>

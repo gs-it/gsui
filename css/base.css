@@ -55,3 +55,9 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;}
 
 .al {text-align:left;}
 .ac {text-align:center;}
+.mgt10 {margin-top:10px;}
+.mgt15 {margin-top:15px;}
+.mgt20 {margin-top:20px;}
+
+strong.class {color:#349234;}
+strong.tag {color:#9c318f;}
