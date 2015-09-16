@@ -17,12 +17,16 @@ requirejs.config({
     }
 });
 
-require(['controller'],function(Templete){
+require(['base', 'controller'],function(Base, Templete){
         "use strict";
 
         var page = new Templete();
+        page.init();
 
         //common Event
+        Base.support.addEvent(window, 'hashchange', function(e){
+            page.templete();
+        });
         /*$(window).on({
             resize:function(e){
                 page.resize();
