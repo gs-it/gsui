@@ -1017,3 +1017,5 @@ pre ol li:last-child {display:none;}
 * html .snippet-wrap .snippet-num li .box-sp {width:27px;}
 .snippet-wrap .snippet-no-num li.box {border:1px solid;}
 .snippet-wrap .snippet-no-num li .box-sp {display:none;}
+
+.sh_preproc, .sh_comment {color:#fff;}
