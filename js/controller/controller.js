@@ -7,7 +7,9 @@ define(['base'], function(Base){
         loadTemplete:function(hashLink){
             var objHashLink = Base.getUriSplit(hashLink);
             var params = objHashLink.params;
+
             console.log(objHashLink);
+
             var contents = Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html');
             var pattern = /(<pre class="(?:html|style|js)">)|(<\/pre>)/g;
             var prePattern = /<pre/;

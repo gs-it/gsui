@@ -121,7 +121,7 @@ define(function(){
 	//params Object 형태로 주소뒤에 ?{ ... } 추가
 	var GetUriSplit = function(uri){
         var pattern = /[#\/]/g;
-        var linkSplit = uri.trim().split('?');
+        var linkSplit = uri.split('?');
         var arrHashLink = linkSplit[0].split(pattern);
         var splitHashLink = [];
 

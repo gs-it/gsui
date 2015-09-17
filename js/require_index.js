@@ -22,8 +22,9 @@ require(['base', 'controller'],function(Base, Templete){
 
         var root = window.location.origin + '/convention/';
         var page = new Templete();
-        page.loadTemplete(window.location.href.split(root)[1]);
-
+        var initUrl = window.location.href.replace(root, '');
+        page.loadTemplete((initUrl=='')?'#html/convention':initUrl);
+        
         //common Event
         Base.support.addEvent(window, 'hashchange', function(e){
             page.loadTemplete(e.newURL.split(root)[1]);
