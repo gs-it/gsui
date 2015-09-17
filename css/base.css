@@ -23,21 +23,24 @@ pre {position:relative;margin:10px 0;padding:0;line-height:24px;white-space:pre-
 pre ol {border-left:40px solid #00aebd;}
 pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#000;}
 
-header {background:#fff ;border-bottom:1px solid #CADB2A}
-footer {background:#f0f1f3;border-top:1px solid #CADB2A;}
+header {background:#373737 ;border-bottom:1px solid #CADB2A;color:#fff;font-size:1.2em;padding:20px 0;}
+footer {background:#f7f7f7;border-top:1px solid #CADB2A;padding:20px 0;}
 
 .container {background:#fff;}
 .wrap {overflow:auto;}
+.nav {padding-top:20px;}
 section {margin-top:30px;}
+.contents {background-color:#fff;}
 
 /* nav */
-.nav-menu {background:#fff;}
-.nav-menu li {position:relative;li}
+.nav-menu {background:#fff;margin-bottom:20px;}
+.nav-menu li {position:relative;border-bottom:1px solid #fefefe;}
 .nav-menu a {display:block;padding:5px 10px;margin-top:-1px;}
 .nav-menu a:after {content:'';position:absolute;top:5px;right:0;width:10px;height:15px;background:url('http://image.gsshop.com/mi13/img/ico/tmp_small_black_icons.png') no-repeat -5px 0;}
 .nav-menu a:hover {position:relative;border-color:#91BB21;text-decoration:none;z-index:1;}
 .nav-menu .on a:after {background-position:-25px 0;}
 .nav-menu .sub {padding:0 0 10px 20px;}
+.nav-menu .sub li {border-bottom-width:0}
 .nav-menu .sub a:after{background:none;}
 
 /* title */
