@@ -20,7 +20,7 @@ requirejs.config({
 require(['base', 'controller'],function(Base, Templete){
         "use strict";
 
-        var root = window.location.origin + '/convention/'
+        var root = window.location.origin + '/convention/';
         var page = new Templete();
         page.loadTemplete(window.location.href.split(root)[1]);
 

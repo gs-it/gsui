@@ -1,6 +1,27 @@
 define(function(){
 	"use strict";
 
+	//String 가격(,) 추가 함수
+	String.prototype.price = function(){
+		var txt='';
+		var str = this;
+		var totalNum = str.length;
+
+		for(var i=totalNum; i>0; i--){
+			if(i % 3 == 0 && totalNum-i > 0){
+				txt += ",";
+			}
+			txt += str.charAt(totalNum-i);
+		}
+		return txt;
+	}
+
+
+	//String 공백제거 함수
+	String.prototype.trim = function(){
+    	return this.replace(/[(^\s*)|(\s*$)]/gi, "");
+	}
+
 	//userAgent Module
 	var UserAgentChk = (function(){
 		"use strict";
@@ -112,27 +133,6 @@ define(function(){
         	hashLink : splitHashLink,
         	params : linkSplit[1]
         };
-	}
-
-	//String 가격(,) 추가 함수
-	String.prototype.price = function(){
-		var txt='';
-		var str = this;
-		var totalNum = str.length;
-
-		for(var i=totalNum; i>0; i--){
-			if(i % 3 == 0 && totalNum-i > 0){
-				txt += ",";
-			}
-			txt += str.charAt(totalNum-i);
-		}
-		return txt;
-	}
-
-
-	//String 공백제거 함수
-	String.prototype.trim = function(){
-    	return this.replace(/[(^\s*)|(\s*$)]/gi, "");
 	}
 
 	//html 파일 로드
