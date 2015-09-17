@@ -32,7 +32,7 @@ section {margin-top:30px;}
 
 /* nav */
 .nav-menu {background:#fff;}
-.nav-menu li {position:relative;}
+.nav-menu li {position:relative;li}
 .nav-menu a {display:block;padding:5px 10px;margin-top:-1px;}
 .nav-menu a:after {content:'';position:absolute;top:5px;right:0;width:10px;height:15px;background:url('http://image.gsshop.com/mi13/img/ico/tmp_small_black_icons.png') no-repeat -5px 0;}
 .nav-menu a:hover {position:relative;border-color:#91BB21;text-decoration:none;z-index:1;}
@@ -43,15 +43,18 @@ section {margin-top:30px;}
 /* title */
 .contents h1 {font-weight:normal;font-size:23px;}
 section h2 {padding-bottom:10px;font-weight:normal;font-size:18px;}
+h3 {padding:20px 0 10px;}
 
 /* list */
 .square-list {padding-left:15px;list-style-type: square;}
-.square-list li {line-height:2em;}
+.square-list li {padding-bottom:5px;}
 
 /* table */
 table {width:100%;border-collapse:collapse;border-spacing:0;}
 table th {padding:0.5% 2%;background:#f5f7fa;border:1px solid #e1e3e6;border-top-color:#e1e3e6;}
 table td {padding:1% 2%;border:1px solid #e1e3e6;}
+
+.exbox {padding:5px 10px;background:#f6f9fb;border:1px solid #ccc;}
 
 .al {text-align:left;}
 .ac {text-align:center;}
