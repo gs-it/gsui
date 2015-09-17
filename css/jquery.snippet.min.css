@@ -1018,4 +1018,7 @@ pre ol li:last-child {display:none;}
 .snippet-wrap .snippet-no-num li.box {border:1px solid;}
 .snippet-wrap .snippet-no-num li .box-sp {display:none;}
 
-.sh_preproc, .sh_comment {color:#fff;}
+.sh_preproc, .sh_comment {color:#bcbcbc;}
+.sh_type {color:#477488;}
+.sh_keyword {color:#79abff;}
+.sh_string {color:#cc9e00;}
