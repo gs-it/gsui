@@ -1,4 +1,5 @@
 <h1>WHY? Coding Convention</h1>
+
 <section>
 	<h2>1. 필요성</h2>
 	<ul class="square-list">
@@ -9,23 +10,44 @@
 		<li>다수의 프로젝트 진행시 통일된 기준으로 소스 코드를 작성 할 수 있는 기준이 된다.</li>
 	</ul>
 </section>
+
 <section>
 	<h2>2. 용어</h2>
-	<ul class="square-list">
-		<li>엘리먼트(element) - HTML문서를 구성하는 모든 태그요소
-			<pre class="html">ex) head, body, div, p, span, table, img, form .... </pre>
-		</li>
-		<li>애트리뷰(attribute) - 엘리먼트의 특성(attribute 값은 큰따옴표("")로 묶는다)
-			<pre class="html">ex) <img src="이미지경로" alt="이미지설명" width="100" height="100" /></pre>
-		</li>
-		<li>선택자(selector) - 엘리먼트에 CSS 스타일적용할 수있는 객체
-			<pre class="html">ex) *, div, div p, div > p, div#id, div.class, div:nth-child ...</pre>
-		</li>
-		<li>속성(property) - 엘리먼트 CSS 특성
-			<pre class="html">ex) font-weight(property):bold(value)</pre>
-		</li>
-		<li>예약어 - 객체, 이미지, 파일 및 폴더등 네이밍시 의미를 일관되게 표현하기 위해 미리 정해 놓은 언어 규칙
-			<pre class="html">ex) #wrap, #header, #content,...</pre>
-		</li>
-	</ul>
+	<dl>
+		<dt>엘리먼트(element)</dt>
+		<dd>HTML문서를 구성하는 모든 태그요소</dd>
+		<dd>
+			<div class="exbox">head, body, div, p, span, table, img, form .... </div>
+		</dd>
+	</dl>
+	<dl>
+		<dt>애트리뷰(attribute)</dt>
+		<dd>엘리먼트의 특성(애트리뷰 값은 큰따옴표("")로 묶는다)</dd>
+		<dd>
+			<pre class="html">
+<img src="sample.jpg" alt="샘플 이미지" width="100" height="100" />
+			</pre>
+		</dd>
+	</dl>
+	<dl>
+		<dt>선택자(selector)</dt>
+		<dd>엘리먼트에 CSS 스타일적용할 수있는 객체</dd>
+		<dd>
+			<div class="exbox">*, div, div p, div > p, div#id, div.class, div:nth-child ...</div>
+		</dd>
+	</dl>
+	<dl>
+		<dt>속성(property)</dt>
+		<dd>엘리먼트 CSS 특성</dd>
+		<dd>
+			<div class="exbox">font-weight(property):bold(value)</div>
+		</dd>
+	</dl>
+	<dl>
+		<dt>예약어</dt>
+		<dd객체, 이미지, 파일 및 폴더등 네이밍시 의미를 일관되게 표현하기 위해 미리 정해 놓은 언어 규칙></dd>
+		<dd>
+			<div class="exbox">#wrap, #header, #content,...</div>
+		</dd>
+	</dl>
 </section>
