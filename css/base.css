@@ -35,13 +35,14 @@ section {margin-top:30px;}
 
 /* nav */
 .nav-menu {background:#fff;margin-bottom:20px;}
-.nav-menu li {position:relative;border-bottom:1px solid #ced1d6;}
+.nav-menu li {position:relative;}
 .nav-menu a {display:block;padding:5px 10px;margin-top:-1px;}
 .nav-menu a:after {content:'';position:absolute;top:5px;right:0;width:10px;height:15px;background:url('http://image.gsshop.com/mi13/img/ico/tmp_small_black_icons.png') no-repeat -5px 0;}
 .nav-menu a:hover {position:relative;border-color:#91BB21;text-decoration:none;z-index:1;}
+.nav-menu .on {background-color:#ced1d6;}
+.nav-menu .on a {color:#212121;}
 .nav-menu .on a:after {background-position:-25px 0;}
 .nav-menu .sub {padding:0 0 10px 20px;}
-.nav-menu .sub li {border-bottom-width:0}
 .nav-menu .sub a:after{background:none;}
 
 /* title */
