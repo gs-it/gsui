@@ -20,13 +20,15 @@ requirejs.config({
 require(['base', 'controller'],function(Base, Templete){
         "use strict";
 
+        var root = window.location.origin + '/convention/'
         var page = new Templete();
-        page.init();
+        page.loadTemplete(window.location.href.split(root)[1]);
 
         //common Event
         Base.support.addEvent(window, 'hashchange', function(e){
-            page.templete();
+            page.loadTemplete(e.newURL.split(root)[1]);
         });
+
         /*$(window).on({
             resize:function(e){
                 page.resize();

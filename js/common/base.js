@@ -97,16 +97,21 @@ define(function(){
 	}
 
 	//hashlink return Array;
+	//params Object 형태로 주소뒤에 ?{ ... } 추가
 	var GetUriSplit = function(uri){
-        var pattern = /[#/(?=)]/g;
-        var arrHashLink = uri.trim().split(pattern);
+        var pattern = /[#\/]/g;
+        var linkSplit = uri.trim().split('?');
+        var arrHashLink = linkSplit[0].split(pattern);
         var splitHashLink = [];
 
         for(var i=0; i<arrHashLink.length; i++){
             if(arrHashLink[i] != '') splitHashLink.push(arrHashLink[i]);
         }
 
-        return splitHashLink;
+        return {
+        	hashLink : splitHashLink,
+        	params : linkSplit[1]
+        };
 	}
 
 	//String 가격(,) 추가 함수

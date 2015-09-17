@@ -4,13 +4,11 @@ define(['base'], function(Base){
 
     var Main = function(){}
     Main.prototype = {
-        init:function(){
-            var _that = this;
-            _that.templete();
-        },
-        templete:function(){
-            var arrHashLink = Base.getUriSplit(window.location.hash);
-            var contents = Base.loader('source/'+arrHashLink[0]+'/'+arrHashLink[1]+'.html');
+        loadTemplete:function(hashLink){
+            var objHashLink = Base.getUriSplit(hashLink);
+            var params = objHashLink.params;
+            console.log(objHashLink);
+            var contents = Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html');
             var pattern = /(<pre class="(?:html|style|js)">)|(<\/pre>)/g;
             var prePattern = /<pre/;
             var arrCode = contents.split(pattern);
