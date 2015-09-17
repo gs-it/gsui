@@ -1,0 +1,84 @@
+<h1>CSS 가이드</h1>
+
+<section>
+	<h2>1. 기본 정책</h2>
+	<ul class="square-list">
+		<li>HTML 문서와 동일한 인코딩을 CSS문서 첫줄에 선언해 준다.
+			<div class="exbox">@charset "utf-8"</div>
+			CSS문서 저장시 반드시 선언한 인코딩과 같은 인코딩으로 저장한다.
+		</li>
+		<li>모든 속성(property)는 소문자로 작성한다</li>
+		<li>속성에 사용하는 따옴표는 쌍따옴표를 사용한다 (")</li>
+		<li>초기화 선언 style 은 문서의 최상단에 위치한다.</li>
+		<li>마지막 세미콜론(;)은 꼭 넣는다.
+			<pre class="css">
+... :property;}
+			</pre>
+		</li>
+		<li>css코드 작성시 개행하지 않는다.</li>
+		<li>선택자간 공백은 제거한다.</li>
+		<li>빈줄은 1줄이상 사용하지않는다. 빈 줄 사용은 강제 요구사항이 아니다.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>2. CSS문서 선언</h2>
+	<ul class="square-list">
+		<li>External 방식 - style 내용을 CSS 파일로 따로 저장하여 페이지에 링크시키는 방법. 이 방법을 권장 사용한다.
+			<pre class="html">
+<link rel="stylesheet" href="common.css" type="text/css" />
+			</pre>
+		</li>
+		<li>Internal 방식 - head 또는 body 안에 style 태그로 선언 하는 방법. 이벤트페이지 작업시 사용가능.
+			<pre class="html">
+<style type="text/css">
+	.tit {font-family:'Malgun gothic',dotum;}
+	.desc {font-size:16px;}
+</style>
+
+			</pre>
+		</li>
+		<li>inline 방식 - HTML 태그에 직접 style 값을 지정하는 방법.
+			<pre class="html">
+<strong style="font-size:10px;">안녕하세요. </strong>
+			</pre>
+		</li>
+		<li>import  방식은 사용하지 않는다.
+			<pre class="css">
+@import url("layout.css");
+			</pre>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h2>2. 선택자(SELECTOR)</h2>
+	<ul class="square-list">
+		<li>공통 선택자 '*' 는 웹페이지 성능을 저하시키고, 주석에 영향을 미칠수 있으므로 사용하지 않는다.</li>
+		<li>ID 선택자의 사용은 미리 정의한 레이아웃등에서만 사용하고, 빈번한 사용을 지향한다.</li>
+		<li>중복 속성 클래스의 생성빈도를 낮추기위해 OOCSS(Object-Oriented Cascading Style Sheets), 객체지향 스타일시트의 사용 및 작성을 권장한다.</li>
+		<li>클래스 조합시 중복속성의 사용을 지양한다.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>3. 속성</h2>
+	<ul class="square-list">
+		<li>속성의 선언은 레이아웃관련 스타일을 우선 선언하여 선언한다.</li>
+		<li>속성중 축약이 가능한 속성은 축약하여 작성한다.
+			<pre class="css">
+color:#fff;padding:0 20px;
+			</pre>
+		</li>
+		<li>속성값이 0인 경우 단위는 쓰지 않는다.</li>
+		<li>z-index 속성값은 최대 10000 이며, 기준값을 넘지 않는다.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>3. 주석</h2>
+	<ul class="square-list">
+		<li>공동작업 및 유지보수의 용이함을 위해 주석(/*  */)을 권장한다.</li>
+		<li>특별한 경우를 제외하고, /* 주석내용 */ 의 포맷을 유지한다.</li>
+	</ul>
+</section>
