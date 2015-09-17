@@ -20,11 +20,12 @@ requirejs.config({
 require(['base', 'controller'],function(Base, Templete){
         "use strict";
 
-        var root = window.location.origin + '/convention/';
+        var root = window.location.origin + window.location.pathname;
         var page = new Templete();
         var initUrl = window.location.href.replace(root, '');
         page.loadTemplete((initUrl=='')?'#html/convention':initUrl);
-        
+
+
         //common Event
         Base.support.addEvent(window, 'hashchange', function(e){
             page.loadTemplete(e.newURL.split(root)[1]);
