@@ -1,6 +1,6 @@
 
 @media (min-width: 0) {
-	.wrap {padding:5%;}
+	header .wrap, footer .wrap, .wrap {padding:5%;}
 }
 
 @media (min-width: 767px) {
