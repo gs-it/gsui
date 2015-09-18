@@ -19,7 +19,7 @@ define(function(){
 
 	//String 공백제거 함수
 	String.prototype.trim = function(){
-    	return this.replace(/[(^\s*)|(\s*$)]/gi, "");
+    	return this.replace(/(^\s+)|(\s+$)/g, "");
 	}
 
 	//userAgent Module

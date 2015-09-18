@@ -11,7 +11,7 @@ define(['base'], function(Base){
             console.log(objHashLink);
 
             var contents = Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html');
-            var pattern = /(<pre class="(?:html|style|js)">)|(<\/pre>)/g;
+            var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
             var prePattern = /<pre/;
             var arrCode = contents.split(pattern);
             var replaceIS = false;
