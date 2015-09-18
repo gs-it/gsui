@@ -3,82 +3,224 @@
 <section>
 	<h2>1. 기본 정책</h2>
 	<ul class="square-list">
-		<li>HTML 문서와 동일한 인코딩을 CSS문서 첫줄에 선언해 준다.
-			<div class="exbox">@charset "utf-8"</div>
-			CSS문서 저장시 반드시 선언한 인코딩과 같은 인코딩으로 저장한다.
-		</li>
-		<li>모든 속성(property)는 소문자로 작성한다</li>
-		<li>속성에 사용하는 따옴표는 쌍따옴표를 사용한다 (")</li>
-		<li>초기화 선언 style 은 문서의 최상단에 위치한다.</li>
-		<li>마지막 세미콜론(;)은 꼭 넣는다.
-			<pre class="css">
-... :property;}
-			</pre>
-		</li>
-		<li>css코드 작성시 개행하지 않는다.</li>
-		<li>선택자간 공백은 제거한다.</li>
-		<li>빈줄은 1줄이상 사용하지않는다. 빈 줄 사용은 강제 요구사항이 아니다.</li>
+		<li>CSS문서 인코딩과 문자 인코딩은 UTF-8을 원칙으로 한다.</li>
+		<li>모든 속성(property)은 소문자로 작성한다.</li>
+		<li>따옴표는 생략 가능하나 사용시 반드시 홀따옴표만 사용한다.</li>
+		<li>초기화 선언(CSS Reset) 스타일은 문서의 최상단에 위치한다.</li>
+		<li>!important 필터는 사용하지 않는다.</li>
+		<li>CSS코드 작성시 개행하지 않는다.</li>
+		<li>빈 줄은 1줄 이상 사용하지 않는다. 빈 줄 사용은 강제 요구사항이 아니다.</li>
 	</ul>
+	<pre class="style">
+/* 인코딩 선언 */
+@charset "utf-8"
+/* 소문자, 홀따옴표 사용 */
+.tit {overflow:hidden;width:940px;font-family:'Malgun gothic',dotum;}
+/* 개행 불가 */
+.list {
+	float:left;
+	margin-left:10px;} (X)
+/* !important 사용 불가 */
+.al {text-align:center !important;}(X)
+	</pre>
 </section>
 
 <section>
 	<h2>2. CSS문서 선언</h2>
 	<ul class="square-list">
-		<li>External 방식 - style 내용을 CSS 파일로 따로 저장하여 페이지에 링크시키는 방법. 이 방법을 권장 사용한다.
-			<pre class="html">
-<link rel="stylesheet" href="common.css" type="text/css" />
-			</pre>
-		</li>
-		<li>Internal 방식 - head 또는 body 안에 style 태그로 선언 하는 방법. 이벤트페이지 작업시 사용가능.
-			<pre class="html">
-<style type="text/css">
-	.tit {font-family:'Malgun gothic',dotum;}
-	.desc {font-size:16px;}
-</style>
-
-			</pre>
-		</li>
-		<li>inline 방식 - HTML 태그에 직접 style 값을 지정하는 방법.
-			<pre class="html">
-<strong style="font-size:10px;">안녕하세요. </strong>
-			</pre>
-		</li>
-		<li>import  방식은 사용하지 않는다.
-			<pre class="css">
-@import url("layout.css");
-			</pre>
-		</li>
+		<li>External 방식 - 스타일 내용을 CSS 파일로 따로 저장하여 페이지에 링크시키는 방법. 이 방법을 권장 사용한다.</li>
+		<li>Internal 방식 - head 태그 또는 body 태그 안에 style 태그로 선언 하는 방법. 이벤트등 일시적 페이지에서 사용 가능.</li>
+		<li>Inline 방식 - HTML 태그에 직접 스타일 값을 지정하는 방법.</li>
+		<li>Import 방식은 사용을 지양한다.</li>
 	</ul>
+	<pre class="html">
+<!-- External 방식 - 권장 -->
+<link rel="stylesheet" href="common.css" type="text/css" />
+<!-- Internal 방식 -->
+<style type="text/css"></style>
+<!-- inline 방식 - 사용 지양 -->
+<strong style="font-size:10px;">안녕하세요. </strong>
+	</pre>
 </section>
 
 <section>
-	<h2>2. 선택자(SELECTOR)</h2>
+	<h2>2. 선택자(Selector)</h2>
 	<ul class="square-list">
 		<li>공통 선택자 '*' 는 웹페이지 성능을 저하시키고, 주석에 영향을 미칠수 있으므로 사용하지 않는다.</li>
-		<li>ID 선택자의 사용은 미리 정의한 레이아웃등에서만 사용하고, 빈번한 사용을 지향한다.</li>
-		<li>중복 속성 클래스의 생성빈도를 낮추기위해 OOCSS(Object-Oriented Cascading Style Sheets), 객체지향 스타일시트의 사용 및 작성을 권장한다.</li>
-		<li>클래스 조합시 중복속성의 사용을 지양한다.</li>
+		<li>id 선택자의 사용은 미리 예약한 레이아웃 등에서만 사용하고 되도록 사용을 지양한다.</li>
+		<li>예약된 선택자는 'gs-'의 접두어를 갖는다.</li>
+		<li>중복 속성 클래스의 생성빈도를 낮추기위해 OOCSS(Object-Oriented Cascading Style Sheets), 객체지향 스타일시트의 작성을 권장한다.</li>
+		<li>선택자 상속을 최소화 한다. 3단 이하의 선택자 상속 사용을 권장한다.</li>
 	</ul>
+	<pre class="style">
+/* 공통 선택자 사용 불가 */
+.body * {font-size:12px;} (X)
+/* 3단 이상의 선택자 상속 지양 */
+.left .menulist .menu .first {float:left;background:none;} (X)
+	</pre>
+	<table>
+		<caption>CSS 예약 선택자 표</caption>
+		<thead>
+			<tr>
+				<th>선택자(아이디/클래스)</th>
+				<th>내용</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>gs-skip</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>gs-container</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>gs-content</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>gs-footer</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>footer-push</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>skyScraper</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 </section>
 
 <section>
-	<h2>3. 속성</h2>
+	<h2>3. 속성(Property)</h2>
 	<ul class="square-list">
-		<li>속성의 선언은 레이아웃관련 스타일을 우선 선언하여 선언한다.</li>
-		<li>속성중 축약이 가능한 속성은 축약하여 작성한다.
-			<pre class="css">
-color:#fff;padding:0 20px;
-			</pre>
-		</li>
+		<li>속성의 선언은 레이아웃 관련 속성을 우선 선언한다.</li>
+		<li>속성중 축약이 가능한 속성은 축약하여 작성한다.</li>
 		<li>속성값이 0인 경우 단위는 쓰지 않는다.</li>
-		<li>z-index 속성값은 최대 10000 이며, 기준값을 넘지 않는다.</li>
+		<li>z-index 속성값은 최대 5000이며, 하단의 z-index 수치표를 기반으로 작성한다.</li>
 	</ul>
+	<pre class="style">
+/* 레이아웃 관련 속성을 우선 선언 */
+.ex1 {display:block;font-size:12px;}
+/* 축약 가능한 속성값은 축약을 권장 */
+.ex2 {padding:0 10px;font:12px/1.4em 'Malgun Gothic';}
+	</pre>
+	<table>
+		<caption>z-index 수치표</caption>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th class="ac">z-index 값</th>
+				<th>내용</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>레이어 팝업</td>
+				<td class="ac">5000</td>
+				<td>최상위 레이어. Dim 레이어 상위 팝업 컨텐츠</td>
+			</tr>
+			<tr>
+				<td>레이어 Dim</td>
+				<td class="ac">2000</td>
+				<td>화면 전체를 사용하는 Dim(오버레이) 배경</td>
+			</tr>
+			<tr>
+				<td>헤더, 스카이스크래퍼(날개)</td>
+				<td class="ac">1000</td>
+				<td>레이아웃 컨텐츠 헤더(#header), 스카이스크래퍼(#skyscraper)</td>
+			</tr>
+			<tr>
+				<td>일반 레이어</td>
+				<td class="ac">999</td>
+				<td>셀렉트박스, 툴팁 등 GUI 요소</td>
+			</tr>
+			<tr>
+				<td>컨텐츠</td>
+				<td class="ac">500 이하</td>
+				<td>컨텐츠내 z-index가 필요할때 500이하에서 자유롭게 지정</td>
+			</tr>
+		</tbody>
+	</table>
 </section>
 
 <section>
 	<h2>3. 주석</h2>
 	<ul class="square-list">
 		<li>공동작업 및 유지보수의 용이함을 위해 주석(/*  */)을 권장한다.</li>
-		<li>특별한 경우를 제외하고, /* 주석내용 */ 의 포맷을 유지한다.</li>
+		<li>특별한 경우를 제외하고, /*+공백+주석내용+공백+*/ 의 형식을 유지한다.</li>
 	</ul>
+</section>
+
+<section>
+	<h2>4. 핵(CSS Hack)</h2>
+	<ul class="square-list">
+		<li>크로스 브라우징을 위한 CSS 핵을 허용한다.</li>
+		<li>GS Shop의 배포도구는 스타핵(*) 하나만 허용한다. 그 외의 핵은 전용 CSS 파일로 관리 한다.</li>
+		<li>CSS 핵은 개행을 허용한다.</li>
+	</ul>
+	<table>
+		<caption>CSS 핵 표</caption>
+		<thead>
+			<tr>
+				<th>표현식</th>
+				<th>적용범위</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>*(스타핵)</td>
+				<td>IE7</td>
+			</tr>
+			<tr>
+				<td>@-moz-document url-prefix()</td>
+				<td>Firefox</td>
+			</tr>
+			<tr>
+				<td>@media \0screen</td>
+				<td>IE8 </td>
+			</tr>
+			<tr>
+				<td>:root</td>
+				<td>IE9</td>
+			</tr>
+			<tr>
+				<td>@media screen and (min-width:0\0)</td>
+				<td>IE9 ~ 10 </td>
+			</tr>
+			<tr>
+				<td>@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none)</td>
+				<td>IE10 ~ 11</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<section>
+	<h2>5. Reset CSS</h2>
+	<pre class="style">
+/* Reset */
+* {margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:맑은 고딕,Malgun Gothic,Dotum,applegothic,sans-serif,arial;font-size:12px;color:#555}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+h1,h2,h3,h4,h5,h6{font-size:1em}
+img{vertical-align:top;border:0 none}
+fieldset,iframe,frame{border:0 none}
+input,select,textarea{vertical-align:middle} 
+ul,ol{list-style:none}
+i,em,dfn,address{font-style:normal}
+a{text-decoration:none;cursor:pointer;color:#555}
+a:hover,a:focus{text-decoration:underline}
+a:link,a:visited,a:active{}
+input[type='text'],input[type='password'],input[type='image'],input[type='search']{-webkit-appearance:none;-webkit-border-radius:0}
+button{border:0;cursor:pointer}
+hr{display:none}
+legend {display:inline-block; overflow:hidden; position:absolute; left:-1000px; top:-1000px; visibility:hidden;width:0 !important; height:0 !important; padding:0 !important; font-size:0/0 m; color:rgba(255,255,255,0)}
+caption {overflow:hidden; visibility:hidden; width:0 !important; height:0 !important; line-height:0 !important; font-size:0 !important;}
+dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m} 	
+	</pre>
 </section>

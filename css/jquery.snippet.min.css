@@ -984,12 +984,6 @@
 
 pre ol li:last-child {display:none;}
 
-.sh_keyword {color:#9c318f;} /* 태그 */
-.sh_type {color:#b93322;} /* 속성 */
-.sh_symbol {color:#9c318f;} /* 부등호 */
-.sh_string {color:#2644b2} /* 속성값 */
-.sh_comment {color:#4a784a;} /* 주석 */
-
 .snippet-wrap {position:relative;}
 *:first-child+html .snippet-wrap {display:inline-block;}
 * html .snippet-wrap {display:inline-block;}
@@ -1018,7 +1012,30 @@ pre ol li:last-child {display:none;}
 .snippet-wrap .snippet-no-num li.box {border:1px solid;}
 .snippet-wrap .snippet-no-num li .box-sp {display:none;}
 
+/* CSS */
+.sh_selector {color:#a6e22e;}
+.sh_cbracket {color:#f8f8f2;}
+.sh_property {color:#66d9ef;}
+.sh_value {color:#e6db74;}
+
+/* HTML */
+/* white */
+.sh_keyword {color:#9c318f;} /* 태그 */
+.sh_type {color:#b93322;} /* 속성 */
+.sh_symbol {color:#9c318f;} /* 부등호 */
+.sh_string {color:#2644b2} /* 속성값 */
+.sh_comment {color:#4a784a;} /* 주석 */
+
+/* black1 */
 .sh_preproc, .sh_comment {color:#bcbcbc;}
 .sh_type {color:#477488;}
 .sh_keyword {color:#79abff;}
 .sh_string {color:#cc9e00;}
+
+/* black2 */
+/*.sh_preproc {color:}*/
+.sh_comment {color:#ababab;}
+.sh_type {color:#a6e22e;}
+.sh_keyword {color:#f92672;}
+.sh_symbol {color:#f8f8f2;} /* 부등호 */
+.sh_string {color:#e6db74;}

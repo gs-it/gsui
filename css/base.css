@@ -19,14 +19,17 @@ dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m}
 caption {margin:20px 0 5px;font-weight:bold;text-align:left;}
 
 /* pre */
-pre {position:relative;margin:10px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, 'Malgun Gothic', Helvetica,Verdana;background:url('../img/k_pre.gif') repeat;border-left:1px solid #000}
-pre ol {border-left:40px solid #fff;}
-pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#575757;background-color:#000;}
+pre {
+	position:relative;margin:10px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, 'Malgun Gothic', Helvetica,Verdana;
+	/*background:url('../img/k_pre.gif') repeat*/
+}
+pre ol {border-left:40px solid #606060;}
+pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#f8f8f2;background-color:#272822;}
 
 header {background:#373737 ;border-bottom:1px solid #CADB2A;color:#fff;font-size:1.2em;}
 header a {color:#fff;}
 footer {background:#f7f7f7;border-top:1px solid #CADB2A;}
-header .wrap, footer .wrap {padding:15px 0;line-height:1.5;}
+header .wrap, footer .wrap {padding:25px 0;line-height:1.5;}
 
 .container {background:#fff;}
 .wrap {overflow:auto;}
