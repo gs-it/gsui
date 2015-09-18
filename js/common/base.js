@@ -136,17 +136,30 @@ define(function(){
 	}
 
 	//html 파일 로드
-	var HtmlLoader = function(url){
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", url, false);
+	var XhrLoader = function(url, callback){
+		var xmlhttp = null;
+		if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		}else{// code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		xmlhttp.onreadystatechange=function(){
+			if(this.readyState==4 && this.status == 200){
+				callback(this.responseText);
+			}else if(this.readyState==4 && this.status == 404){
+				callback('page not found');
+			}
+		}
+
+		xmlhttp.open("GET", url, true);
 		xmlhttp.send();
-		return xmlhttp.responseText;
 	}
 
 	return {
 		agentChk:UserAgentChk,
 		support:Support,
-		loader:HtmlLoader,
+		loader:XhrLoader,
 		getUriSplit:GetUriSplit
 	};
 });
