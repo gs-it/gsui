@@ -26,30 +26,44 @@ pre {
 pre ol {border-left:40px solid #606060;}
 pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#f8f8f2;background-color:#272822;}
 
-header {background:#373737 ;border-bottom:1px solid #CADB2A;color:#fff;font-size:1.2em;}
-header a {color:#fff;}
-footer {background:#f7f7f7;border-top:1px solid #CADB2A;}
+header {background:#bed730 ;border-bottom:1px solid #CADB2A;color:#fff;font-size:1.2em;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);position:fixed;z-index:500;width:100%;left:0;right:0;top:0;}
+header a {color:#fff;font:400 34px/56px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.04em;transition:opacity .2s;}
+header a:hover {text-decoration:none;}
+header small {color:#424242;letter-spacing:-0.05em;opacity:0.9;}
+header .for {font-style:italic;font-size:60%;font-weight:100;letter-spacing:0}
+footer {background:#424242;border-top:1px solid #616161;color:#f7f7f7;}
 header .wrap, footer .wrap {padding:25px 0;line-height:1.5;}
 
-.container {background:#fff;}
+.container {background:#fff;padding-top:120px;}
 .wrap {overflow:auto;}
-.nav {padding-top:20px;}
+.nav {margin-top:40px;background-color:#f7f7f7;}
 section {margin-top:30px;}
 .contents {background-color:#fff;}
 
 /* nav */
-.nav-menu {background:#fff;margin-bottom:20px;}
+.nav-menu {padding:20px 10px 20px 20px;}
 .nav-menu li {position:relative;}
-.nav-menu a {display:block;padding:5px 10px;margin-top:-1px;}
-.nav-menu a:after {content:'';position:absolute;top:5px;right:0;width:10px;height:15px;background:url('http://image.gsshop.com/mi13/img/ico/tmp_small_black_icons.png') no-repeat -5px 0;}
-.nav-menu a:hover {position:relative;border-color:#91BB21;text-decoration:none;z-index:1;}
-.nav-menu .on a:after {background-position:-25px 0;}
-.nav-menu .sub {padding:0 0 10px 20px;}
+.nav-menu {counter-reset: li;list-style: none;}
+.nav-menu a {display:block;padding:3px 0;margin-top:-1px;font-weight:bold;color:#212121;}
+/*.nav-menu a:after {content:'';position:absolute;top:5px;right:0;width:10px;height:15px;background:url('http://image.gsshop.com/mi13/img/ico/tmp_small_black_icons.png') no-repeat -5px 0;}*/
+.nav-menu a:hover {position:relative;text-decoration:none;z-index:1;color:#03b3f7;}
+/*.nav-menu .on a:after {background-position:-25px 0;}*/
+
+.nav-menu .sub {padding:0 0 10px 10px;}
+.nav-menu .sub a {font-weight:normal;}
 .nav-menu .sub a:after{background:none;}
+/*
+.nav-menu a{position: relative;display: block;padding: .1em .1em .1em .1em;*padding: .1em;margin: .5em 0 .5em 0;color: #606060;text-decoration: none;transition: all .3s ease-out;}
+.nav-menu a:after{position: absolute; content: '';border: .4em solid transparent;left: -1.45em;top: 50%;margin-top: -.36em;transition: all .3s ease-out; }
+.nav-menu a:hover:after{left: -.75em;border-left-color: #606060;}
+*/
+
+.ico-cate {display:none; position:relative;width:30px; height:30px; border:4px solid #fff; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
+.ico-cate:before{content:''; height:5px; width:20px; background:#fff; display:block; position:absolute; top:5px; left:5px; box-shadow:0 8px 0 #fff, 0 16px 0 #fff;-webkit-box-shadow:0 8px 0 #fff, 0 16px 0 #fff;-moz-box-shadow:0 8px 0 #fff, 0 16px 0 #fff;}
 
 /* title */
-.contents h1 {font-weight:normal;font-size:23px;}
-section h2 {padding-bottom:10px;font-weight:normal;font-size:18px;}
+.contents h1 {color:#757575;font:400 34px/40px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.01em;}
+section h2 {margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #ebebeb;font:400 24px/32px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.01em;color:#212121;}
 h3 {padding:20px 0 10px;}
 
 /* list */
