@@ -6,12 +6,13 @@ define(['base'], function(Base){
         var contents = data;
         var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
         var prePattern = /<pre/;
+        var removePattern = /^(html|js|style)$/;
         var arrCode = contents.split(pattern);
         var replaceIS = false;
         var dataTxt = '';
 
-        for(var i=0; i<arrCode.length; i++){         
-            if(arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
+        for(var i=0; i<arrCode.length; i++){
+            if(removePattern.test(arrCode[i]) || arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
             if(arrCode[i] == '<pre class="html">'|| arrCode[i] == '<pre class="js">' || arrCode[i] == '<pre class="style">') replaceIS = true;
             if(arrCode[i] == '</pre>') replaceIS = false;
 

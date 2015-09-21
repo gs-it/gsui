@@ -1,0 +1,98 @@
+<h1>code convention for Javascript</h1>
+<section>
+	<h2>1. 코딩 표준화</h2>
+	<ul class="square-list">
+		<li>
+			<h3>코딩 표준화의 필요성</h3>
+			<ul>
+				<li>- 소프트웨어에 대한 비용의 80% 정도가 유지 보수에 지출된다.</li>
+				<li>- 어떤 소프트웨어도 원 저작자가 끝까지 관리하지는 않는다.</li>
+				<li>- 코딩 규칙은 소프트웨어의 가독성을 증대시키고 엔지니어들이 새로운 코드를 보다 빠르고 완전하게 이해하도록 한다.</li>
+				<li>- 소스 코드를 제품으로 배포하려는 경우에는, 그 소스 코드가 잘 묶어야 할 뿐만 아니라 깨끗해야 한다.</li>
+			</ul>
+		</li>
+		<li>
+			<h3>코딩 표준화의 방향</h3>
+			<ul>
+				<li>- 코딩 표준화는 기본적으로 이해하기 쉬운 코드와 개발과 관리가 용이한 코드의 생산을 통해 전체적 개발 기간과 비용의 절감을 목표로 한다.</li>
+			</ul>
+		</li>
+	</ul>
+</section>
+<section>
+	<h2>2. 자바스크립트 코딩 규칙</h2>
+	<ul class="square-list">
+		<li>
+			<h3>file</h3>
+			<ul>
+				<li>- Javascript 프로그램은 파일은 .js 작성한다. (ex: xxx.js)</li>
+				<li>- Html 과 분리시켜 관리 한다.</li>
+				<li>- 스크립트 태그틑 가능하면 body 태그 맨 아래쪽에 위치 시킨다</li>
+			</ul>
+		</li>
+		<li>
+			<h3>들여쓰기</h3>
+			<ul>
+				<li>- 기본 4개의 스페이스 이다.</li>
+				<li>- 파일 배포시에는 앞축하여 스페이스를 제거한후 배포한다.</li>
+			</ul>
+		</li>
+		<li>
+			<h3>줄 길이</h3>
+			<ul>
+				<li>- 기본적으로 줄 길이가 길어지면 가독성이 떨어지기 때문에 80자 이내를 준수 한다.</li>
+				<li>- 콤마 이후에 줄 바꾸기를 한다.</li>
+			</ul>
+		</li>
+		<li>
+			<h3>변수선언</h3>
+			<ul>
+				<li>
+					- 변수의 이름은 camelCase를 적용하고 상수로 써야될 변수의 이름은 대문자로 하되 단어와 단어 사이에 언더스코어를 사용한다.
+					<pre class="js">
+var mainBanner = ''; //camelCase
+var MAX_HEIGHT = '1000'; //상수
+					</pre>
+				</li>
+				<li>
+					- 변수 선언 후 주석으로 이 변수의 쓰임을 알려준다.
+					<pre class="js">
+var mainBanner = new MainBanner('#banner'); //메인 에서 사용하는 배너
+					</pre>
+				</li>
+				<li>
+					- 데이터 형태에 따라 변수 앞에 의미에 맞는 이름을 넣어주는 것도 변수의 형태를 알려주는 방법이기도 하다.
+					<pre class="js">
+var arrPosX = []; //position X 의 배열
+var objPageInfo = {}; //페이지 정보 오브젝트
+					</pre>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<h3>함수선언</h3>
+			<ul>
+				<li>- 함수의 이름은 camelCase를 적용한다.</li>
+				<li>
+					- 선언적 함수
+					<pre class="js">
+function myFunc() {
+	var output = prompt('숫자 입력', '숫자');
+	alert(output);
+}
+myFunc();
+					</pre>
+				</li>
+				<li>
+					- 익명 함수
+					<pre class="js">
+(function(){
+	var output = prompt('숫자 입력', '숫자');
+	alert(output);
+})();
+					</pre>
+				</li>
+			</ul>
+		</li>		
+	</ul>
+</section>

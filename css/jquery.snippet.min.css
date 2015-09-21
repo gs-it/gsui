@@ -982,7 +982,7 @@
 .sh_zellner .sh_sourceCode .sh_value{color:#f0f;font-weight:normal;font-style:normal;}
 */
 
-pre ol li:first-child, pre ol li:last-child {display:none;}
+pre ol li:last-child {display:none;}
 
 .snippet-wrap {position:relative;}
 *:first-child+html .snippet-wrap {display:inline-block;}
