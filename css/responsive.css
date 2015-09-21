@@ -5,6 +5,7 @@
 	header a {font-size:24px;line-height:30px;}
 	.container {padding-top:70px;}
 	.contents {padding:0 10px;}
+	#disqus_thread {margin:0 10px;}
 	.nav {background-color:transparent;}
 	.nav-menu {display:none;}
 	.ico-cate {display:block;position:fixed;z-index:501;top:25px;right:15px;}
@@ -28,4 +29,5 @@
 	.wrap {width:980px;margin:0 auto;}
 	.nav {float:left;width:240px;}
 	.contents {float:left;width:710px;margin-left:30px;padding:40px 0}
+	#disqus_thread {width:710px;margin:0 auto;padding-left:270px;}
 }
