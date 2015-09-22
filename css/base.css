@@ -26,7 +26,7 @@ pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#f8
 header {background:#373737 ;border-bottom:1px solid #CADB2A;color:#fff;font-size:1.2em;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);position:fixed;z-index:500;width:100%;left:0;right:0;top:0;}
 header a {color:#fff;font:400 34px/56px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.04em;transition:opacity .2s;}
 header a:hover {text-decoration:none;}
-header small {color:#fff;letter-spacing:-0.05em;opacity:1;}
+header small {color:#fff;letter-spacing:-0.05em;opacity:1;font-family:Malgun Gothic;}
 header .for {font-style:italic;font-size:60%;font-weight:100;letter-spacing:0}
 header em {color:#bed730;}
 footer {background:#f7f7f7;border-top:1px solid #CADB2A;}
@@ -80,3 +80,5 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;}
 
 strong.class {color:#349234;}
 strong.tag {color:#9c318f;}
+
+
