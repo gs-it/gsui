@@ -31,6 +31,8 @@ define(['base'], function(Base){
         $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
     }
 
+
+    //header
     var headerH = $('header').height();
     var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
 
@@ -50,10 +52,10 @@ define(['base'], function(Base){
         scroll:function(scrollTop){
             if(scrollTop > 0){
                 $('header').stop().animate({height:rtnGap(headerH, 60)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300, 'linear');
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300);
             }else{
                 $('header').stop().animate({height:rtnGap(headerH, 100)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300, 'linear');
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300);
             }
         }
     }
