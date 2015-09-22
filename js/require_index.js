@@ -31,20 +31,12 @@ require(['base', 'controller'],function(Base, Templete){
             page.loadTemplete(e.newURL.split(root)[1]);
         });
 
-        /*$(window).on({
-            resize:function(e){
-                page.resize();
-            },
+        $(window).on({
             scroll:function(){
-                page.scroll();
+                page.scroll($(document).scrollTop());
             }
         });
 
         $(window).trigger('scroll');
-
-
-        $(document).on('touchend', function(e){
-            common.touchend();
-        });*/
     }
 );

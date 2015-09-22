@@ -31,6 +31,13 @@ define(['base'], function(Base){
         $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
     }
 
+    var headerH = $('header').height();
+    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
+
+    function rtnGap(maxHeight, percent){
+        return Math.ceil(percent * maxHeight * 0.01);
+    }
+
     var Main = function(){}
     Main.prototype = {
         loadTemplete:function(hashLink){
@@ -40,7 +47,15 @@ define(['base'], function(Base){
             console.log(objHashLink);
             var contents = Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', xhrCallBack);
         },
-        resize:function(e){}
+        scroll:function(scrollTop){
+            if(scrollTop > 0){
+                $('header').stop().animate({height:rtnGap(headerH, 60)}, 300);
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300, 'linear');
+            }else{
+                $('header').stop().animate({height:rtnGap(headerH, 100)}, 300);
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300, 'linear');
+            }
+        }
     }
 
     Main.prototype.constructor = Main;
