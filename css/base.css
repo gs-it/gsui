@@ -24,9 +24,9 @@ pre ol {border-left:40px solid #606060;}
 pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#f8f8f2;background-color:#272822;}
 
 header {background:#373737 ;border-bottom:1px solid #CADB2A;color:#fff;font-size:1.2em;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);position:fixed;z-index:500;width:100%;left:0;right:0;top:0;}
-header a {color:#fff;font:400 34px/56px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.04em;transition:opacity .2s;}
+header a {color:#fff;font: 34px/56px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.04em;transition:opacity .2s;}
 header a:hover {text-decoration:none;}
-header small {color:#fff;letter-spacing:-0.05em;opacity:1;font-family:Malgun Gothic;}
+header small {color:#fff;letter-spacing:-0.05em;opacity:1;font-family:Malgun Gothic;font-size:70%;}
 header .for {font-style:italic;font-size:60%;font-weight:100;letter-spacing:0}
 header em {color:#bed730;}
 footer {background:#f7f7f7;border-top:1px solid #CADB2A;}
@@ -54,7 +54,7 @@ section {margin-top:30px;}
 .ico-cate:before{content:''; height:5px; width:20px; background:#fff; display:block; position:absolute; top:5px; left:5px; box-shadow:0 8px 0 #fff, 0 16px 0 #fff;-webkit-box-shadow:0 8px 0 #fff, 0 16px 0 #fff;-moz-box-shadow:0 8px 0 #fff, 0 16px 0 #fff;}
 
 /* title */
-.contents h1 {color:#757575;font:400 34px/40px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.01em;}
+.contents h1 {color:#757575;font:400 34px/40px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.01em;text-shadow:2px 2px 5px rgba(0,0,0,0.2)}
 section h2 {margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #ebebeb;font:400 24px/32px Roboto, sans-serif, Malgun Gothic;letter-spacing:-0.01em;color:#212121;}
 h3 {padding:20px 0 10px;}
 
