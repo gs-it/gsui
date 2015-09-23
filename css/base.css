@@ -30,7 +30,10 @@ header small {color:#fff;letter-spacing:-0.05em;opacity:1;font-family:Malgun Got
 header .for {font-style:italic;font-size:60%;font-weight:100;letter-spacing:0}
 header em {color:#bed730;}
 footer {background:#f7f7f7;border-top:1px solid #CADB2A;}
-header .wrap, footer .wrap {padding:25px 0;line-height:1.5;}
+header .wrap, footer .wrap {padding:15px 0;line-height:1.2;}
+header .wrap {margin-top:-6px;padding-left:5px;}
+header .wrap.mini {margin-top:-12px;padding-left:10px;}
+header .wrap.mini h1 a {font-size:25px;}
 
 .container {background:#fff;padding-top:120px;}
 .wrap {overflow:auto;}
@@ -42,15 +45,15 @@ section {margin-top:30px;}
 .nav-menu {padding:20px 10px 20px 20px;}
 .nav-menu li {position:relative;}
 .nav-menu {counter-reset: li;list-style: none;}
-.nav-menu a {display:block;padding:3px 0;margin-top:-1px;font-weight:bold;color:#212121;}
+.nav-menu a {display:block;padding:3px 0;margin-top:-1px;font-weight:bold;color:#212121;z-index:14px;}
 .nav-menu a:hover {position:relative;text-decoration:none;z-index:1;color:#03b3f7;}
 .nav-menu .on {color:#03b3f7;}
 
-.nav-menu .sub {padding:0 0 10px 10px;}
+.nav-menu .sub {padding:0 0 5px 10px;}
 .nav-menu .sub a {font-weight:normal;}
 .nav-menu .sub a:after{background:none;}
 
-.ico-cate {display:none; position:relative;width:30px; height:30px; border:4px solid #fff; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
+.ico-cate {display:none; position:fixed;width:30px; height:30px; border:4px solid #fff; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
 .ico-cate:before{content:''; height:5px; width:20px; background:#fff; display:block; position:absolute; top:5px; left:5px; box-shadow:0 8px 0 #fff, 0 16px 0 #fff;-webkit-box-shadow:0 8px 0 #fff, 0 16px 0 #fff;-moz-box-shadow:0 8px 0 #fff, 0 16px 0 #fff;}
 
 /* title */
@@ -68,8 +71,8 @@ table th {padding:0.5% 2%;background:#f5f7fa;border:1px solid #e1e3e6;border-top
 table td {padding:1% 2%;border:1px solid #e1e3e6;}
 
 .exbox {padding:5px 10px;background:#f6f9fb;border:1px solid #ccc;}
-.desc-list dt {font-weight:bold;border-bottom:1px solid #e1e3e6;padding:5px;}
-.desc-list dd {padding:0 5px 10px 5px;}
+.desc-list dt {font-weight:bold;padding:5px 0 5px 5px;font-size:14px;}
+.desc-list dd {padding:10px 5px 10px 5px;}
 .desc-list dd pre, .desc-list dd div {margin:5px 0;}
 
 .al {text-align:left;}
@@ -80,5 +83,13 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;}
 
 strong.class {color:#349234;}
 strong.tag {color:#9c318f;}
+
+header nav {width:100%;position:absolute;bottom:0;left:0;padding:0;background-color:#555;}
+.head-nav a {font-size:18px;display:inline-block;padding:5px 10px;line-height:25px;}
+header .wrap.mini .head-nav a  {font-size:14px;line-height:20px;}
+header menu {width:980px;margin:0 auto;}
+header menu li {list-style-type:none;display:inline-block;padding:0 0 0 0;border-right:1px solid #373737;margin-left:0;}
+header menu li:last-child {border-width:0}
+
 
 

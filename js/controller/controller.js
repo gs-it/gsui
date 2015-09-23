@@ -55,11 +55,11 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
         },
         scroll:function(scrollTop){
             if(scrollTop > 0){
-                $('header').stop().animate({height:rtnGap(headerH, 60)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300);
+                $('header').stop().animate({height:rtnGap(headerH, 80)}, 300);
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300).addClass('mini');
             }else{
-                $('header').stop().animate({height:rtnGap(headerH, 100)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300);
+                $('header').stop().animate({height:rtnGap(headerH, 130)}, 300);
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300).removeClass('mini');
             }
         }
     }
