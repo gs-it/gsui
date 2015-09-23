@@ -11,8 +11,7 @@ requirejs.config({
         'controller':{
             deps:['plugin', 'highlighter'],
             exports:'controller'
-        }
-        /*,
+        }/*,
         'disqus':{
             deps:['//gsuicov.disqus.com/embed.js', '//gsuicov.disqus.com/count.js'],
             exports:'disqus'
