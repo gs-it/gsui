@@ -1,7 +1,15 @@
-define(['base'], function(Base){
+define(['base', 'modules/module_gnb'], function(Base, Gnb){
         
 	"use strict";
 
+    //header
+    var headerH = $('header').height();
+    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
+
+    //GNB
+    var gnb = new Gnb();
+
+    //xhrCallBack function
     function xhrCallBack(data){
         var contents = data;
         var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
@@ -31,10 +39,6 @@ define(['base'], function(Base){
         $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
     }
 
-
-    //header
-    var headerH = $('header').height();
-    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
 
     function rtnGap(maxHeight, percent){
         return Math.ceil(percent * maxHeight * 0.01);

@@ -11,11 +11,12 @@ requirejs.config({
         'controller':{
             deps:['plugin', 'highlighter'],
             exports:'controller'
-        },
+        }
+        /*,
         'disqus':{
             deps:['//gsuicov.disqus.com/embed.js', '//gsuicov.disqus.com/count.js'],
             exports:'disqus'
-        }
+        }*/
     }
 });
 
@@ -28,7 +29,7 @@ require(['base', 'controller', 'disqus'],function(Base, Templete, Sns){
         var initUrl = window.location.href.replace(root, '');
 
         page.loadTemplete((initUrl=='')?'#html/convention':initUrl);
-        sns.reset(initUrl, (root+initUrl));
+        //sns.reset(initUrl, (root+initUrl));
 
         //common Event
         Base.support.addEvent(window, 'hashchange', function(e){
