@@ -1,7 +1,15 @@
-define(['base'], function(Base){
+define(['base', 'modules/module_gnb'], function(Base, Gnb){
         
 	"use strict";
 
+    //header
+    var headerH = $('header').height();
+    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
+
+    //GNB
+    var gnb = new Gnb();
+
+    //xhrCallBack function
     function xhrCallBack(data){
         var contents = data;
         var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
@@ -31,8 +39,6 @@ define(['base'], function(Base){
         $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
     }
 
-    var headerH = $('header').height();
-    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
 
     function rtnGap(maxHeight, percent){
         return Math.ceil(percent * maxHeight * 0.01);
@@ -50,10 +56,10 @@ define(['base'], function(Base){
         scroll:function(scrollTop){
             if(scrollTop > 0){
                 $('header').stop().animate({height:rtnGap(headerH, 60)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300, 'linear');
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300);
             }else{
                 $('header').stop().animate({height:rtnGap(headerH, 100)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300, 'linear');
+                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300);
             }
         }
     }
