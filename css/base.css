@@ -94,8 +94,17 @@ header .menu li {list-style-type:none;display:inline-block;padding:0 0 0 0;borde
 header .menu li:last-child {border-width:0}
 header .menu li:first-child {display:none;}
 header .wrap.mini .head-nav a {font-size:14px;}
-header .menu-sub {position:absolute;top:35px;background-color:#555;padding:5px 15px 5px 5px;margin-left:-5px;border:1px solid #cadb2a;border-width:0 1px 1px 1px}
-header .menu-sub a {display:block;font-size:13px;line-height:20px;}
+header .menu-sub {position:absolute;top:35px;background-color:#555;padding:0 0 5px;margin-left:-5px;border:1px solid #cadb2a;border-width:0 1px 1px 1px;min-width:88px;}
+header .menu-sub a {display:block;font-size:13px;line-height:20px;padding:5px 15px 0 10px;}
+header .menu-sub a:hover {opacity:0.8;color:#666;} 
 
 /* reply form */
-#disqus_thread {margin:0 10px;}
+#disqus_thread {margin:20px 10px;}
+
+/* footer link */
+.foot-link {padding:0 0 15px;}
+.foot-link a {margin:0 10px;position:relative;}
+.foot-link img {height:25px;vertical-align:middle;}
+.foot-link a:first-child{margin-left:0;}
+.foot-link a:first-child img {height:18px;}
+.foot-link img[alt="GitHub"] {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
