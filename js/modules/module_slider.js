@@ -1,4 +1,4 @@
-define(['Base'], function(Base){
+define(['base'], function(Base){
 	var Slider = function(selector, callback){
 		if(!selector) throw new Error("잘못된 selector 입니다.");
 

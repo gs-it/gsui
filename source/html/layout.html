@@ -21,20 +21,19 @@
 <script type="text/javascript" src="http://image.gsshop.com/mi13/js/global-1.0.js"></script>
 </head>
 <body>
-	<div id="header"></div>
+	<div id="header">헤더 컨텐츠</div>
 	<div id="gs-content">
-		<div id="wrap"></div>
+		<div id="wrap">본문 컨텐츠</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer">푸터 컨텐츠</div>
 </body>
 </html>
 	</pre>
 
-	<h2>기본 레이아웃 - HTML5 + Requre JS</h2>
+	<h2>기본 레이아웃 - HTML5</h2>
 	<ul class="square-list">
-		<li>HTML5 기반으로 PC와 MC 같은 마크업 코드 사용을 지향한다.</li>
-		<li>CSS '<strong class="class">gs-</strong>' 접두어는 레이아웃 전용으로 예약한다.</li>
-		<li>향후 Requre JS 등 기술 도입 </li>
+		<li>HTML5 기반으로 PC와 MC 같은 마크업 코드 사용을 우선으로 한다.</li>
+		<li>향후 기술 도입 혹은 변화에 유연하게 대처하기 위한 구조적 설계를 지향한다.</li>
 	</ul>
 	<pre class="html">
 <!DOCTYPE html>
@@ -42,7 +41,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Layout</title>
+<title>GS SHOP - 당신의 가장 좋은 선택을 만듭니다.</title>
 <link rel="stylesheet" type="text/css" href="../css/default.css" />
 <link rel="stylesheet" type="text/css" href="../css/tmp.css" />
 <link rel="stylesheet" type="text/css" href="페이지별 css" />
@@ -56,18 +55,18 @@
 </div>
 <div id="gs-container">
 	<header id="gs-header">
-		<div class="gs-wrap"></div><!-- max-width size 지정 영역 -->
+		<div class="gs-wrap">헤더 컨텐츠</div><!-- max-width size 지정 영역 -->
 	</header><!--// gs-header -->
 	<div id="gs-content">
 		<div class="gs-wrap">
-			<section></section>
+			<section>본문 컨텐츠</section>
 		</div>
 	</div><!--// gs-content -->
-	<div id="skyScraper"></div>
+	<div id="skyScraper">스카이스크래퍼</div>
 	<div id="footer-push"></div>
 </div><!--// gs-container -->
 <footer id="gs-footer">
-	<div class="gs-wrap"></div>
+	<div class="gs-wrap">푸터 컨텐츠</div>
 </footer>
 </body>
 </html>
