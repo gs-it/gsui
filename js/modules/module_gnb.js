@@ -2,6 +2,10 @@ define(['base'], function(Base){
 
 	"use strict";
 
+	function touchCallback(per){
+		console.log(per);
+	}
+
 	var Gnb = function(){
 		var _that = this;
 		_that.target = $('[data-type=btn]');
