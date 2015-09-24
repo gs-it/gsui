@@ -7,7 +7,7 @@ fieldset,iframe,frame{border:0 none}
 input,select,textarea{vertical-align:middle} 
 ul,ol{list-style:none}
 i,em,dfn,address{font-style:normal}
-a{text-decoration:none;cursor:pointer;color:#555}
+a{text-decoration:underline;cursor:pointer;color:#555}
 a:hover,a:focus{text-decoration:underline}
 a:link,a:visited,a:active{}
 input[type='text'],input[type='password'],input[type='image'],input[type='search']{-webkit-appearance:none;-webkit-border-radius:0}
@@ -75,6 +75,7 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;}
 .desc-list dd {padding:10px 5px 10px 5px;}
 .desc-list dd pre, .desc-list dd div {margin:5px 0;}
 
+/* contents */
 .al {text-align:left;}
 .ac {text-align:center;}
 .mgt10 {margin-top:10px;}
@@ -83,6 +84,8 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;}
 
 strong.class {color:#349234;}
 strong.tag {color:#9c318f;}
+
+.desc {padding-top:5px;}
 
 header nav {width:100%;position:absolute;bottom:0;left:0;padding:0;background-color:#555;}
 .head-nav a {font-size:18px;display:inline-block;padding:5px 10px;line-height:25px;}
