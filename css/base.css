@@ -9,7 +9,7 @@ fieldset,iframe,frame{border:0 none}
 input,select,textarea{vertical-align:middle} 
 ul,ol{list-style:none}
 i,em,dfn,address{font-style:normal}
-a{text-decoration:none;cursor:pointer;color:#555}
+a{text-decoration:underline;cursor:pointer;color:#555}
 a:hover,a:focus{text-decoration:underline}
 a:link,a:visited,a:active{}
 input[type='text'],input[type='password'],input[type='image'],input[type='search']{-webkit-appearance:none;-webkit-border-radius:0}
@@ -80,6 +80,7 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;}
 .mgt10 {margin-top:10px;}
 .mgt15 {margin-top:15px;}
 .mgt20 {margin-top:20px;}
+.desc {padding-top:5px;}
 
 /* tag color */
 strong.class {color:#349234;}
