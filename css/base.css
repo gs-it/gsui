@@ -1,7 +1,7 @@
 /* default setting */
 /* author : GSSHOP UI GROUP 2015 */
 * {margin:0;padding:0}
-body,input,textarea,select,button,table{font-family:"Open Sans", "Myriad Pro","Helvetica Neue","Helvetica","Arial","Malgun Gothic",sans-serif;font-size:13px;line-height:1.5em;color:#555;text-rendering:optimizelegibility;}
+body,input,textarea,select,button,table{font-family:Helvetica,Myriad Pro,맑은 고딕,Malgun Gothic,Dotum,applegothic,sans-serif,arial;font-size:13px;line-height:1.5em;color:#555}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
 h1,h2,h3,h4,h5,h6{font-size:1em}
 img{vertical-align:top;border:0 none}
@@ -21,22 +21,22 @@ dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m}
 caption {margin:20px 0 5px;font-weight:bold;text-align:left;}
 
 /* header */
-header {background:#373737 ;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);position:fixed;z-index:500;width:100%;left:0;right:0;top:0;}
-header a {color:#fff;line-height:56px;transition:opacity .2s;text-decoration:none;}
+header {background:#373737 ;border-bottom:1px solid #cadb2a;color:#fff;font-size:1.2em;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);position:fixed;z-index:500;width:100%;left:0;right:0;top:0;}
+header a {color:#fff;font-size:34px;font-family:Helvetica,Myriad Pro, Malgun Gothic;line-height:56px;letter-spacing:-0.04em;transition:opacity .2s;text-decoration:none;}
 header a:hover {text-decoration:none;}
+header small {color:#fff;letter-spacing:-0.05em;opacity:1;font-size:70%;} /* for gsshop it group */
+header .for {font-style:italic;font-size:60%;font-weight:100;letter-spacing:0}
+header em {color:#bed730;}
 
 /* logo */
-header .wrap h1 {font-weight:400;font-size:24px;letter-spacing:0.1em;}
+header .wrap h1 {font-weight:normal;}
 header .wrap, footer .wrap {padding:15px 0;line-height:1.2;}
 header .wrap {margin-top:-6px;padding-left:5px;}
 header .wrap.mini {margin-top:-12px;padding-left:10px;}
-header .wrap.mini h1 a {font-size:20px;line-height:48px;}
-header small {color:#fff;opacity:0.3;font-weight:400;} /* for gsshop it group */
-header .for {}
-header em {/*color:#bed730;*/}
+header .wrap.mini h1 a {font-size:25px;}
 
 /* footer */
-footer {background:#f7f7f7;}
+footer {background:#f7f7f7;border-top:1px solid #cadb2a;}
 
 /* layout setting */
 .container {background:#fff;padding-top:150px;}
@@ -49,13 +49,13 @@ section {margin-top:30px;}
 .ico-cate:before{content:''; height:3px; width:20px; background:#fff; display:block; position:absolute; top:5px; left:3px; box-shadow:0 6px 0 #fff, 0 12px 0 #fff;-webkit-box-shadow:0 6px 0 #fff, 0 12px 0 #fff;-moz-box-shadow:0 6px 0 #fff, 0 12px 0 #fff;}
 
 /* title */
-.contents h1 {color:#333;font-size:34px;font-weight:400;line-height:50px;}
+.contents h1 {color:#757575;font-size:34px;letter-spacing:-0.01em;text-shadow:2px 2px 5px rgba(0,0,0,0.2);font-weight:normal;line-height:50px;}
 section h2 {margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #ebebeb;font-size:24px;letter-spacing:-0.01em;color:#212121;font-weight:normal;}
 h3 {padding:20px 0 10px;}
 
 /* code setting */
 /* pre */
-pre {position:relative;margin:10px 0;padding:0;line-height:24px;white-space:pre-line;}
+pre {position:relative;margin:10px 0;padding:0;line-height:24px;white-space:pre-line;font-family:Tahoma, 'Malgun Gothic', Helvetica,Verdana;}
 pre ol {border-left:40px solid #606060;}
 pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#f8f8f2;background-color:#272822;}
 
@@ -88,17 +88,14 @@ strong.tag {color:#9c318f;}
 
 /* horizontal nav menu */
 header .head-nav {width:100%;position:absolute;bottom:0;left:0;padding:0;background-color:#555;}
-header .head-nav a {font-weight:400;font-size:13px;display:block;padding:5px 20px;line-height:25px;}
-header .menu {width:980px;margin:0 auto;}
-header .menu li {float:left;list-style-type:none;padding:0;border-right:1px solid #373737;margin-left:0;text-align:center;}
+header .head-nav a {font-size:15px;display:inline-block;padding:5px 10px;line-height:25px;}
+
+header .menu li {list-style-type:none;display:inline-block;padding:0 0 0 0;border-right:1px solid #373737;margin-left:0;}
 header .menu li:last-child {border-width:0}
 header .menu li:first-child {display:none;}
-header .menu li.on {background:#bed730;}
-header .menu li.on a {color:#333;}
-header .wrap.mini .head-nav a {font-size:13px;}
-header .menu-sub {position:absolute;left:0;top:35px;width:100%;background:#bed730;box-shadow:0 2px 4px #ddd;}
-header .menu-sub .wrap {padding:0;margin:0 auto;}
-header .menu-sub a {float:left;display:block;font-size:13px;line-height:25px;padding:5px 20px;text-align:left;color:#333;}
+header .wrap.mini .head-nav a {font-size:14px;}
+header .menu-sub {display:none; position:absolute;top:35px;background-color:#555;padding:0 0 5px;margin-left:-5px;border:1px solid #cadb2a;border-width:0 1px 1px 1px;min-width:88px;}
+header .menu-sub a {display:block;font-size:13px;line-height:20px;padding:5px 15px 0 10px;}
 header .menu-sub a:hover {opacity:0.8;color:#666;} 
 
 /* reply form */
@@ -111,3 +108,7 @@ header .menu-sub a:hover {opacity:0.8;color:#666;}
 .foot-link a:first-child{margin-left:0;}
 .foot-link a:first-child img {height:18px;}
 .foot-link img[alt="GitHub"] {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
+
+
+/*dim*/
+.dim {position:fixed;width:100%;height:100%;bottom:0;opacity:0;background:#000;z-index:1;}

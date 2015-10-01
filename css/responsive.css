@@ -4,21 +4,22 @@
 	.container {padding-top:70px;}
 	.nav {background-color:transparent;}
 	.head-nav .ico-cate {display:block;position:fixed;z-index:501;top:15px;left:10px;cursor:pointer;}
-	header nav .menu {display:none;}
 	header .wrap {padding-left:55px;margin-top:-12px;font-weight:normal;}
 	header .wrap h1 a {font-size:18px;}
-	.menu.active {display:block;position:fixed;z-index:502;background-color:#fff;left:0;top:0;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);}
-	.menu.active {width:50%;height:100%;overflow-y:auto;overflow-x:hidden;}
-	.menu.active li:first-child {padding:10px 0 10px 24px;font-size:14px;display:block;}
-	.menu.active li .menu-title {}
+	header .menu-sub {display:block; display:block; position:static; top:0; background-color:#fff; padding-left:20px; margin:0; border:0;}
+	.menu {display:block;position:fixed;z-index:502;background-color:#fff;left:0;top:0;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);}
+	.menu {width:50%;height:100%;overflow-y:auto;overflow-x:hidden;}
+	.menu {-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%);}
+	.menu li:first-child {padding:10px 0 10px 24px;font-size:14px;display:block;}
+	.menu li .menu-title {}
 	.menu-title{color:#212121;display:inline-block;}
 	.menu-title:before{content:''; height:3px; width:16px; background:#333; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px; display:block; position:absolute; top:10px; left:3px; box-shadow:0 16px #333, 0 12px #333;-webkit-box-shadow:0 6px #333, 0 12px #333;-moz-box-shadow:0 6px #333, 0 12px #333;}
-	.menu.active li {width:100%;display:block;float:none;border-right-width:0}
-	.menu.active li a {color:#373737;font-size:13px;padding:3px 0 3px 10px;}
-
+	.menu li {width:100%;display:block;float:none;border-right-width:0}
+	.menu li a {color:#373737;font-size:13px;padding:3px 0 3px 10px;}
 }
 @media (min-width: 980px) {
 	.wrap {width:980px;margin:0 auto;}
+	header .menu {width:980px;margin:0 auto;}
 }
 @media (max-width: 374px) {
 	header .wrap {margin-top:-3px;}
