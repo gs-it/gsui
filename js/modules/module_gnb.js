@@ -2,9 +2,8 @@ define(['base'], function(Base){
 
 	"use strict";
 
-	function touchCallback(per){
-		console.log(per);
-	}
+	var startX = 0;
+	var posX = 0;
 
 	var Gnb = function(){
 		var _that = this;
@@ -25,6 +24,64 @@ define(['base'], function(Base){
 		        if(_that.evtTarget.hasClass(_that.actClass)) _that.evtTarget.removeClass(_that.actClass);
 				else _that.evtTarget.addClass(_that.actClass);
 		    });
+
+		    _that.evtTarget.children().each(function(i){
+		    	var $that = $(this);
+		    	$that.on({
+		    		'mouseenter':function(e){
+		    			$that.find('.menu-sub').css({'display':'block'});
+		    		},
+		    		'mouseleave':function(e){
+		    			$that.find('.menu-sub').removeAttr('style');
+		    		}
+		    	});
+		    });
+
+		    if(Base.support.touch){
+		        Base.support.addEvent(window, 'touchstart', touchStart);
+		        Base.support.addEvent(window, 'touchmove', touchMove);
+		        Base.support.addEvent(window, 'touchend', touchEnd);
+		    }
+
+		    function touchStart(e){
+				var touchobj = (Base.support.touch) ? e.touches[0] : e;
+				if(touchobj.clientX <= 10){
+					startX = touchobj.clientX;
+					//posX = Math.round((Base.agentChk.getDeviceWidth() + _that.evtTarget[0].offsetLeft) / Base.agentChk.getDeviceWidth() * 100);
+				}
+			}
+			function touchMove(e){
+				var touchobj = (Base.support.touch) ? e.touches[0] : e;
+				var percent = Math.round((touchobj.clientX - startX) / Base.agentChk.getDeviceWidth() * 100);
+				var translate = 0;
+
+				if(startX > 0){
+					if(Base.support.transforms){
+						var translate = 'translateX(' + (percent - 100) + '%)';
+						_that.evtTarget.css({
+							"-moz-transform": translate, 
+							"-ms-transform": translate, 
+							"-webkit-transform": translate, 
+							"transform": translate
+						});
+					}
+				}
+			}
+			function touchEnd(e){
+				startX = 0;
+				if(Base.support.transforms){
+					_that.evtTarget.css({
+						"-moz-transition-duration": '0.5s', 
+						"-moz-transform": 'translateX(0)', 
+						"-ms-transition-duration": '0.5s', 
+						"-ms-transform": 'translateX(0)', 
+						"-webkit-transition-duration": '0.5s', 
+						"-webkit-transform": 'translateX(0)', 
+						"transition-duration": '0.5s', 
+						"transform": 'translateX(0)'
+					});
+				}
+			}
 		}
 	}
 

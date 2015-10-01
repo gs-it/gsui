@@ -74,6 +74,9 @@ define(function(){
 			},
 			getDevice:function(){
 				return device;
+			},
+			getDeviceWidth:function(){
+				return $(document).width();
 			}
 		}
 
