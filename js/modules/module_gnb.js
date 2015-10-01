@@ -23,29 +23,9 @@ define(['base'], function(Base){
 
 			Base.support.addEvent(_that.target[0], _that.setup.evtType, function(e){
 		        if(_that.evtTarget.hasClass(_that.actClass)){
-		        	if(Base.support.transforms){
-						_that.evtTarget.css({
-							"-moz-transition-duration": '0.5s', 
-							"-moz-transform": 'translateX(0)', 
-							"-ms-transition-duration": '0.5s', 
-							"-ms-transform": 'translateX(0)', 
-							"-webkit-transition-duration": '0.5s', 
-							"-webkit-transform": 'translateX(0)', 
-							"transition-duration": '0.5s', 
-							"transform": 'translateX(0)'
-						});
-					}
+		        	_that.setTransition(-100, 0.5);
 		        }else{
-		        	_that.evtTarget.css({
-							"-moz-transition-duration": '0.5s', 
-							"-moz-transform": 'translateX(0)', 
-							"-ms-transition-duration": '0.5s', 
-							"-ms-transform": 'translateX(0)', 
-							"-webkit-transition-duration": '0.5s', 
-							"-webkit-transform": 'translateX(0)', 
-							"transition-duration": '0.5s', 
-							"transform": 'translateX(0)'
-						});
+		        	_that.setTransition(0, 0.5);
 				}
 		    });
 
@@ -71,7 +51,6 @@ define(['base'], function(Base){
 				var touchobj = (Base.support.touch) ? e.touches[0] : e;
 				if(touchobj.clientX <= 10){
 					e.preventDefault();
-					activeIS = true;
 					startX = touchobj.clientX;
 				}
 			}
@@ -79,36 +58,37 @@ define(['base'], function(Base){
 				var touchobj = (Base.support.touch) ? e.touches[0] : e;
 				var percent = Math.round((touchobj.clientX - startX) / Base.agentChk.getDeviceWidth() * 100);
 				var translate = 0;
-
 				if(startX > 0){
-					if(Base.support.transforms){
-						var translate = 'translateX(' + (percent - 100) + '%)';
-						_that.evtTarget.css({
-							"-moz-transform": translate, 
-							"-ms-transform": translate, 
-							"-webkit-transform": translate, 
-							"transform": translate
-						});
-					}
+					if(percent < 10) activeIS = false;
+					else activeIS = true;
+					var translate = 'translateX(' + (percent - 100) + '%)';
+					_that.setTransition(percent - 100, 0);
 					$('.dim').css({opacity:(percent*0.01)/2});
 				}
 			}
 			function touchEnd(e){
 				startX = 0;
-				if(Base.support.transforms && activeIS){
+				if(activeIS){
 					activeIS = false;
-					_that.evtTarget.css({
-						"-moz-transition-duration": '0.5s', 
-						"-moz-transform": 'translateX(0)', 
-						"-ms-transition-duration": '0.5s', 
-						"-ms-transform": 'translateX(0)', 
-						"-webkit-transition-duration": '0.5s', 
-						"-webkit-transform": 'translateX(0)', 
-						"transition-duration": '0.5s', 
-						"transform": 'translateX(0)'
-					});
+					_that.setTransition(0, 0.5);
+				}else{
+					_that.setTransition(-100, 0.5);
+					$('.dim').css({opacity:0});
 				}
 			}
+		},
+		setTransition:function(posX, fps){
+			var _that = this;
+			_that.evtTarget.css({
+				'-moz-transition-duration': fps + 's', 
+				'-moz-transform': 'translateX(' + posX + '%)', 
+				'-ms-transition-duration': fps + 's', 
+				'-ms-transform': 'translateX(' + posX + '%)', 
+				'-webkit-transition-duration': fps + 's', 
+				'-webkit-transform': 'translateX(' + posX + '%)', 
+				'transition-duration': fps + 's', 
+				'transform': 'translateX(' + posX + '%)'
+			});
 		}
 	}
 
