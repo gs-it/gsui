@@ -4,9 +4,14 @@
 	.container {padding-top:70px;}
 	.nav {background-color:transparent;}
 	.head-nav .ico-cate {display:block;position:fixed;z-index:501;top:15px;left:10px;cursor:pointer;}
+	header .menu li:first-child {display:block;}
 	header .wrap {padding-left:55px;margin-top:-12px;font-weight:normal;}
 	header .wrap h1 a {font-size:18px;}
-	header .menu-sub {display:block; display:block; position:static; top:0; background-color:#fff; padding-left:20px; margin:0; border:0;}
+	header .menu {width:50%;}
+	header .menu li, header .menu li a {float:none;text-align:left;}
+	header .menu-sub {display:block;position:static;top:auto;left:auto;padding-left:20px;background-color:#fff;box-shadow:none;}
+	header .menu-sub a {display:block;float:none;font-size:13px;line-height:25px;padding:5px 20px;text-align:left;color:#333;}
+
 	.menu {display:block;position:fixed;z-index:502;background-color:#fff;left:0;top:0;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);}
 	.menu {width:50%;height:100%;overflow-y:auto;overflow-x:hidden;}
 	.menu {-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%);}
