@@ -91,7 +91,6 @@ header .head-nav {width:100%;position:absolute;bottom:0;left:0;padding:0;backgro
 header .head-nav a {font-size:15px;display:inline-block;padding:5px 10px;line-height:25px;}
 header .menu li {list-style-type:none;display:inline-block;padding:0 0 0 0;border-right:1px solid #373737;margin-left:0;}
 header .menu li:last-child {border-width:0}
-header .menu li:first-child {display:none;}
 header .wrap.mini .head-nav a {font-size:14px;}
 header .menu-sub {display:none; position:absolute;top:35px;background-color:#555;padding:0 0 5px;margin-left:-5px;border:1px solid #cadb2a;border-width:0 1px 1px 1px;min-width:88px;}
 header .menu-sub a {display:block;font-size:13px;line-height:20px;padding:5px 15px 0 10px;}
