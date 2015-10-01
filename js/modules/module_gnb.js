@@ -4,6 +4,7 @@ define(['base'], function(Base){
 
 	var startX = 0;
 	var posX = 0;
+	var activeIS = false;
 
 	var Gnb = function(){
 		var _that = this;
@@ -21,8 +22,31 @@ define(['base'], function(Base){
 			var _that = this;
 
 			Base.support.addEvent(_that.target[0], _that.setup.evtType, function(e){
-		        if(_that.evtTarget.hasClass(_that.actClass)) _that.evtTarget.removeClass(_that.actClass);
-				else _that.evtTarget.addClass(_that.actClass);
+		        if(_that.evtTarget.hasClass(_that.actClass)){
+		        	if(Base.support.transforms){
+						_that.evtTarget.css({
+							"-moz-transition-duration": '0.5s', 
+							"-moz-transform": 'translateX(0)', 
+							"-ms-transition-duration": '0.5s', 
+							"-ms-transform": 'translateX(0)', 
+							"-webkit-transition-duration": '0.5s', 
+							"-webkit-transform": 'translateX(0)', 
+							"transition-duration": '0.5s', 
+							"transform": 'translateX(0)'
+						});
+					}
+		        }else{
+		        	_that.evtTarget.css({
+							"-moz-transition-duration": '0.5s', 
+							"-moz-transform": 'translateX(0)', 
+							"-ms-transition-duration": '0.5s', 
+							"-ms-transform": 'translateX(0)', 
+							"-webkit-transition-duration": '0.5s', 
+							"-webkit-transform": 'translateX(0)', 
+							"transition-duration": '0.5s', 
+							"transform": 'translateX(0)'
+						});
+				}
 		    });
 
 		    _that.evtTarget.children().each(function(i){
@@ -46,8 +70,9 @@ define(['base'], function(Base){
 		    function touchStart(e){
 				var touchobj = (Base.support.touch) ? e.touches[0] : e;
 				if(touchobj.clientX <= 10){
+					e.preventDefault();
+					activeIS = true;
 					startX = touchobj.clientX;
-					//posX = Math.round((Base.agentChk.getDeviceWidth() + _that.evtTarget[0].offsetLeft) / Base.agentChk.getDeviceWidth() * 100);
 				}
 			}
 			function touchMove(e){
@@ -65,11 +90,13 @@ define(['base'], function(Base){
 							"transform": translate
 						});
 					}
+					$('.dim').css({opacity:(percent*0.01)/2});
 				}
 			}
 			function touchEnd(e){
 				startX = 0;
-				if(Base.support.transforms){
+				if(Base.support.transforms && activeIS){
+					activeIS = false;
 					_that.evtTarget.css({
 						"-moz-transition-duration": '0.5s', 
 						"-moz-transform": 'translateX(0)', 

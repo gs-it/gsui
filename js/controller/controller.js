@@ -54,13 +54,13 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
             var contents = Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', xhrCallBack);
         },
         scroll:function(scrollTop){
-            if(scrollTop > 0){
+            /*if(scrollTop > 0){
                 $('header').stop().animate({height:rtnGap(headerH, 80)}, 300);
                 $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300).addClass('mini');
             }else{
                 $('header').stop().animate({height:rtnGap(headerH, 130)}, 300);
                 $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300).removeClass('mini');
-            }
+            }*/
         }
     }
 
