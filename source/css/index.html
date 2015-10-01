@@ -7,7 +7,7 @@
 		<li>모든 속성(property)은 소문자로 작성한다.</li>
 		<li>따옴표는 생략 가능하나 사용시 반드시 홀따옴표만 사용한다.</li>
 		<li>초기화 선언(Reset CSS) 스타일은 문서의 최상단에 위치한다.</li>
-		<li>!important 필터는 사용하지 않는다.</li>
+		<li>!important 필터는 사용을 지양한다.</li>
 		<li>CSS 코드 작성시 개행하지 않는다.</li>
 		<li>빈 줄은 1줄 이상 사용하지 않는다.</li>
 	</ul>
@@ -69,27 +69,27 @@
 		<tbody>
 			<tr>
 				<td>gs-skip</td>
-				<td></td>
+				<td>접근성 향상을 위해 탭(tab)키를 이용한 바로가기 메뉴를 제공</td>
 			</tr>
 			<tr>
 				<td>gs-container</td>
-				<td></td>
+				<td>푸터를 제외한 문서 전체 영역(실제 컨텐츠를 포함한 일종의 wrap 역활)</td>
 			</tr>
 			<tr>
 				<td>gs-content</td>
-				<td></td>
+				<td>문서의 실제 컨텐츠(본문) 영역</td>
 			</tr>
 			<tr>
 				<td>gs-footer</td>
-				<td></td>
+				<td>문서의 푸터 영역</td>
 			</tr>
 			<tr>
 				<td>footer-push</td>
-				<td></td>
+				<td>푸터를 문서의 최하단에 고정하기 위한 가상의 영역</td>
 			</tr>
 			<tr>
 				<td>skyScraper</td>
-				<td></td>
+				<td>문서의 '날개' 영역</td>
 			</tr>
 		</tbody>
 	</table>
@@ -236,11 +236,24 @@ dfn {position:absolute;overflow:hidden;visibility:hidden;height:0;font:0/0 m}
 	<ul class="square-list">
 		<li>2015년 9월 초기화 선언과 전역 공통 클래스를 묶어 단독 파일로 생성/관리 한다.</li>
 		<li>공식 배포후(배포일 미정) 기존 CSS의 영향을 받지 않는 신규 서비스의 구축은 아래의 통합 초기화 CSS를 활용한다. (자세한 내용은 파일내 주석 참조)</li>
+		<li>CSS 상단에 해당 문서의 간략한 목차(인덱스) 작성을 권장한다.</li>
 	</ul>
 	<p class="desc">
 		<strong>통합 초기화 CSS(내부 URL) - <a href="http://devimage.gsshop.com/mi13/css2/default.css">http://devimage.gsshop.com/mi13/css2/default.css</a></strong>
 	</p>
 	<pre class="style">
+/*
+------------------------------------------------------------
+1. Default Reset
+2. Global Class
+	└ Align
+	└ Float & Clear
+	└ display
+	└ Position
+	└ Font set - [컬러값] 기본: 555, 강조: 333, 흐림: 999  
+	└ Blank - Margin, Padding : 1~100까지, 20이상 5단위, 60이상 10단위
+*/
+
 * 1. Default Reset *****************************/
 * {margin:0;padding:0}
 body,input,textarea,select,button,table{font-family:malgun gothic,'맑은 고딕',applegothic,sans-serif;font-size:13px;color:#555}
