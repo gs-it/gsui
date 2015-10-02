@@ -13,6 +13,7 @@ define(['base'], function(Base){
 		_that.setup = eval('(' + _that.attrSetup + ')');
 
 		_that.evtTarget = $('[data-type='+ _that.setup.evtTarget +']');
+		_that.closeTarget = $('[data-type='+ _that.setup.closeTarget +']');
 		_that.actClass = _that.setup.actClass;
 		_that.init();
 	}
@@ -24,8 +25,11 @@ define(['base'], function(Base){
 			Base.support.addEvent(_that.target[0], _that.setup.evtType, function(e){
 		        if(_that.evtTarget.hasClass(_that.actClass)){
 		        	_that.setTransition(-100, 0.5);
+		        	_that.setDimTransition(false);
+		        	
 		        }else{
 		        	_that.setTransition(0, 0.5);
+		        	_that.setDimTransition(true);
 				}
 		    });
 
@@ -41,10 +45,16 @@ define(['base'], function(Base){
 		    	});
 		    });
 
+		    _that.closeTarget.on({
+		    	click:function(e){
+		    		e.preventDefault();
+		    		_that.setTransition(-100, 0.5);
+					_that.setDimTransition(false);
+		    	}
+		    });
+
 		    if(Base.support.touch){
 		        Base.support.addEvent(window, 'touchstart', touchStart);
-		        Base.support.addEvent(window, 'touchmove', touchMove);
-		        Base.support.addEvent(window, 'touchend', touchEnd);
 		    }
 
 		    function touchStart(e){
@@ -52,18 +62,23 @@ define(['base'], function(Base){
 				if(touchobj.clientX <= 10){
 					e.preventDefault();
 					startX = touchobj.clientX;
+
+					if(Base.support.touch){
+				        Base.support.addEvent(window, 'touchmove', touchMove);
+				        Base.support.addEvent(window, 'touchend', touchEnd);
+				    }
 				}
 			}
 			function touchMove(e){
 				var touchobj = (Base.support.touch) ? e.touches[0] : e;
 				var percent = Math.round((touchobj.clientX - startX) / Base.agentChk.getDeviceWidth() * 100);
-				var translate = 0;
+
 				if(startX > 0){
 					if(percent < 10) activeIS = false;
 					else activeIS = true;
-					var translate = 'translateX(' + (percent - 100) + '%)';
+
 					_that.setTransition(percent - 100, 0);
-					$('.dim').css({opacity:(percent*0.01)/2});
+					_that.closeTarget.css({display:'block', opacity:(percent*0.01)/2});
 				}
 			}
 			function touchEnd(e){
@@ -71,10 +86,16 @@ define(['base'], function(Base){
 				if(activeIS){
 					activeIS = false;
 					_that.setTransition(0, 0.5);
+					_that.setDimTransition(true);
 				}else{
 					_that.setTransition(-100, 0.5);
-					$('.dim').css({opacity:0});
+					_that.setDimTransition(false);
 				}
+
+				if(Base.support.touch){
+			        Base.support.removeEvent(window, 'touchmove', touchMove);
+			        Base.support.removeEvent(window, 'touchend', touchEnd);
+			    }
 			}
 		},
 		setTransition:function(posX, fps){
@@ -89,9 +110,19 @@ define(['base'], function(Base){
 				'transition-duration': fps + 's', 
 				'transform': 'translateX(' + posX + '%)'
 			});
+		},
+		setDimTransition:function(IS){
+			var _that = this;
+
+			if(IS){
+				_that.closeTarget.css({display:'block'}).stop().animate({opacity:0.5}, 500);
+			}else{
+				_that.closeTarget.stop().animate({opacity:0}, 500, function(){
+					$(this).removeAttr('style');
+				});
+			}
 		}
 	}
-
 	Gnb.prototype.constructor = Gnb;
 	return Gnb;
 });
