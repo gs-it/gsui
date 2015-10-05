@@ -116,9 +116,11 @@ define(['base'], function(Base){
 
 			if(IS){
 				_that.closeTarget.css({display:'block'}).stop().animate({opacity:0.5}, 500);
+				$('body').css('overflow', 'hidden');
 			}else{
 				_that.closeTarget.stop().animate({opacity:0}, 500, function(){
 					$(this).removeAttr('style');
+					$('body').removeAttr('style');
 				});
 			}
 		}
