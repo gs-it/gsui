@@ -35,7 +35,7 @@ require(['base', 'controller', 'disqus'],function(Base, Templete, Sns){
     Base.support.addEvent(window, 'hashchange', function(e){
         var hash = e.newURL.split(root)[1];
         page.loadTemplete(hash);
-        //sns.reset(hash, e.newURL);
+        sns.reset(hash, e.newURL);
     });
 
     $(window).on({
