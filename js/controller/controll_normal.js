@@ -1,13 +1,6 @@
-define(['base', 'modules/module_gnb'], function(Base, Gnb){
+define(['base'], function(Base){
         
 	"use strict";
-
-    //header
-    var headerH = $('header').height();
-    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
-
-    //GNB
-    var gnb = new Gnb();
 
     //xhrCallBack function
     function xhrCallBack(data){
@@ -39,34 +32,23 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
         $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
     }
 
-
-    function rtnGap(maxHeight, percent){
-        return Math.ceil(percent * maxHeight * 0.01);
-    }
-
-    var Main = function(){}
-    Main.prototype = {
+    var Controller = function(){}
+    Controller.prototype = {
+        init:function(){
+            console.log('controll_narmal');
+        },
         loadTemplete:function(hashLink){
             var objHashLink = Base.getUriSplit(hashLink);
             var params = objHashLink.params;
-
-            console.log(objHashLink);
-            var contents = Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', xhrCallBack);
+            Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', xhrCallBack);
         },
-        scroll:function(scrollTop){
-            /*if(scrollTop > 0){
-                $('header').stop().animate({height:rtnGap(headerH, 80)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300).addClass('mini');
-            }else{
-                $('header').stop().animate({height:rtnGap(headerH, 130)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300).removeClass('mini');
-            }*/
+        destroy:function(){
+            console.log('normal destroy');
         }
     }
+    Controller.prototype.constructor = Controller;
 
-    Main.prototype.constructor = Main;
-
-    return Main;
+    return Controller;
 });
 
 

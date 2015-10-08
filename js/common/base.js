@@ -83,6 +83,9 @@ define(function(){
 		return new Agent();
 	})();
 
+
+
+
 	//static Base support
 	var Support = {
 		addEvent:function($target, evt, func){
@@ -137,6 +140,7 @@ define(function(){
         	params : linkSplit[1]
         };
 	}
+
 
 	//html 파일 로드
 	var XhrLoader = function(url, callback){
