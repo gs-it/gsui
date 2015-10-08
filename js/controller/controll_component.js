@@ -5,7 +5,7 @@ define(['base'], function(Base){
     var Controller = function(){}
 
     function xhrCallBack(data){
-
+        $('.contents').html(data);
     }
 
     Controller.prototype = {
