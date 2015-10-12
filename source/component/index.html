@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="http://devimage.gsshop.com/mi13/css2/default.css" />
 <link rel="stylesheet" type="text/css" href="http://devimage.gsshop.com/mi13/css2/tmp.css" />
 
-<script type="text/javascript" src="http://devimage.gsshop.com/mi13/js/jquery.js"></script>
 <style type="text/css">
 .cpn-contorl {border:1px solid #d6d6d6;border-radius:5px;margin:15px 0 0 0;}
 .cpn-contorl dt {font-weight:bold;padding:15px;margin:-25px 0 0 0;}
@@ -890,73 +889,3 @@
 
 
 </section>
-
-
-		
-<script type="text/javascript" src="http://devimage.gsshop.com/mi13/js/global-2.0.js"></script>
-
-<script type="text/javascript">
-jQuery(function($){
-	var ele = $('section .tmp-input, section .tmp-check, section .tmp-radio, section .tmp-select, section .tmp-btn, section .tmp-tab');
-	function ele_reset(){ele.removeClass('red green lime khaki gray light-gray');}
-	$('#change-reset').on('click', ele_reset);
-	$('#change-red').on('click', function(){ele_reset();ele.addClass('red');});
-	$('#change-green').on('click', function(){ele_reset();ele.addClass('green');});
-	$('#change-lime').on('click', function(){ele_reset();ele.addClass('lime');});
-	$('#change-khaki').on('click', function(){ele_reset();ele.addClass('khaki');});
-	$('#change-gray').on('click', function(){ele_reset();ele.addClass('gray');});
-	$('#change-lightgary').on('click', function(){ele_reset();ele.addClass('light-gray');});
-	
-	var btn = $('#ico-box .tmp-btn'), b=0, c=0;
-
-	$('#icons').click(function(){
-		var ico = $('#ico-box').find('.tmp-ico');
-		ico.each(function(){
-			var classN = $(this).attr('class');
-			var aa = classN.split(' ')[1];
-			var bb = aa.split('v')[1]>50 ? 0 : aa.split('v')[1];
-			var cc = parseInt(bb)+1;
-			var dd = classN.split(' ')[2] != null? classN.split(' ')[2] :"";
-			
-			chageClass = classN.split(' ')[0] +' v'+cc+' '+dd;
-			$(this).attr('class', chageClass);
-		});
-	});
-		
-	$('#round').click(function(){
-		var roundClass = ['round', 'round2', 'round3', 'round4', 'round5'];
-		var deleteClass = 'round round2 round3 round4 round5';
-		var cnt = b >= roundClass.length ? b=0 : b++;
-		btn.removeClass(deleteClass);
-		if(b !=0) btn.addClass(roundClass[cnt]);
-	});
-	$('#color').click(function(){
-		var colorClass = ['red', 'green', 'lime', 'khaki', 'gray', 'light-gray'];
-		var deleteClass = 'red green lime khaki gray light-gray';
-		var cnt = c >= colorClass.length ? c=0 : c++;
-
-		//console.log(c+" : "+colorClass.length+" = "+cnt);
-		
-		btn.removeClass(deleteClass);
-		if(c !=0) btn.addClass(colorClass[cnt]);
-	});
-	$('#txt-bold').click(function(){
-		btn.find('a, input, button').toggleClass('bold');
-	});
-
-	$('#gradient').click(function(){
-		btn.toggleClass('gradient');
-	});
-
-	var btnClassNew = $('.tmp-btn *');
-
-	btnClassNew.on({
-		mousedown : function(){$(this).parent().addClass('active')},
-		mouseup : function(){$(this).parent().removeClass('active')},
-		focusin : function(){$(this).parent().addClass('over')},
-		focusout : function(){$(this).parent().removeClass('over')},
-		mouseleave : function(){$(this).parent().removeClass('over')}
-	});
-});	
-</script>
-

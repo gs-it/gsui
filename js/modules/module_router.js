@@ -32,11 +32,21 @@ define(['base'], function(Base){
         },
         loadController:function(){
             var _that = this;
-            var hash = window.location.hash;
+            var hash = (window.location.hash == '') ? '#/html/convention' : window.location.hash;
             var path = window.location.hash.split('/')[1];
             _that.controllerID = (_that.routes[path]) ? _that.routes[path].controller : _that.routes['normal'].controller;
 
             require([_that.controllerID], function(Module){
+
+                //templete load 확장
+                Module.prototype.loadTemplete = function(hashLink){
+                    var _that = this;
+                    var objHashLink = Base.getUriSplit(hashLink);
+                    var params = objHashLink.params;
+                    Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', _that.xhrCallBack);
+                    return _that;
+                }
+
                 _that.currentController = new Module();
                 _that.currentController.loadTemplete(hash);
             });
