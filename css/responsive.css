@@ -23,8 +23,7 @@
 	.menu li a {color:#373737;font-size:13px;padding:3px 0 3px 10px;}
 }
 @media (min-width: 980px) {
-	.wrap {width:980px;margin:0 auto;}
-	header .menu {width:980px;margin:0 auto;}
+	header .menu {width:auto;margin:0 auto;}
 }
 @media (max-width: 374px) {
 	header .wrap {margin-top:-3px;}
