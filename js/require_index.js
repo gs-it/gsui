@@ -12,11 +12,11 @@ requirejs.config({
         'controll_common':{
             deps:['plugin', 'highlighter'],
             exports:'controll_common'
-        },
+        }/*,
         'disqus':{
             deps:['//gsuicov.disqus.com/embed.js', '//gsuicov.disqus.com/count.js'],
             exports:'disqus'
-        }
+        }*/
     }
 });
 
@@ -29,6 +29,7 @@ require(['router', 'controll_common', 'disqus'], function(Route, Common, Sns){
 
     Route.registerRoutes({
         normal:{path:'/', controller:'controller/controll_normal'},
-        component:{path:'/component', controller:'controller/controll_component'}
+        component:{path:'/component', controller:'controller/controll_component'},
+        markdown:{path:'/markdown', controller:'controller/controll_markdown'}
     }).init().loadController();
 });

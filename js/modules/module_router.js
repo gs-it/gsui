@@ -16,6 +16,7 @@ define(['base'], function(Base){
                 //var hash = e.newURL.split(root)[1];
                 _that.destroy();
                 _that.loadController();
+                $(document).scrollTop(0);
             });
 
             return _that;
@@ -38,7 +39,7 @@ define(['base'], function(Base){
 
             require([_that.controllerID], function(Module){
 
-                //templete load 확장
+                //templete loadTemplete 함수 확장
                 Module.prototype.loadTemplete = function(hashLink){
                     var _that = this;
                     var objHashLink = Base.getUriSplit(hashLink);
@@ -50,6 +51,7 @@ define(['base'], function(Base){
                 _that.currentController = new Module();
                 _that.currentController.loadTemplete(hash);
             });
+
             return _that;
         },
         destroy:function(){
