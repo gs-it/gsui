@@ -38,5 +38,8 @@ require(['router', 'controll_common', 'disqus'], function(Route, Common, Sns){
     $(window).scroll(function(e){
         common.scroll($(window).scrollTop());
     });
+    $(window).resize(function(e){
+        common.resize();
+    });
     $(window).trigger('scroll');
 });

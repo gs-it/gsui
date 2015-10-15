@@ -6,8 +6,6 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
     var $title = $('.container .contents');
     var headerH = $('header').height();
 
-    console.log($title);
-
     //GNB
     var gnb = new Gnb();
 
@@ -20,6 +18,9 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
         scroll:function(scrollTop){
             if(scrollTop > 10) $title.find('h1').addClass('small');
             else $title.find('h1').removeClass('small');
+        },
+        resize:function(){
+            if(Base.agentChk.getDeviceWidth() < 767) gnb.destroy();
         }
     }
 
