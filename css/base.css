@@ -49,8 +49,13 @@ section {margin-top:30px;}
 .ico-cate:before{content:''; height:3px; width:20px; background:#cbd92a; display:block; position:absolute; top:5px; left:3px; box-shadow:0 6px 0 #cbd92a, 0 12px 0 #cbd92a;-webkit-box-shadow:0 6px 0 #cbd92a, 0 12px 0 #cbd92a;-moz-box-shadow:0 6px 0 #cbd92a, 0 12px 0 #cbd92a;}
 
 /* title */
+/* title */
 .contents h1 {overflow:hidden;position:fixed;left:230px;top:0;width:100%;height:102px;padding-left:20px;background:#00aebd;color:#fff;font-size:34px;font-weight:400;line-height:102px;z-index:10;}
-.contents h1 strong {font-weight:600;}
+.contents h1.small {height:60px;font-size:20px;line-height:60px;}
+.contents h1 strong {font-weight:normal;}
+.contents h1.small strong {display:inline;}
+
+
 section h2 {margin-bottom:10px;padding-bottom:10px;font-size:20px;letter-spacing:-0.01em;color:#000;font-weight:normal;}
 h3 {padding:20px 0 10px;}
 h2+h3 {padding-top:0;}
