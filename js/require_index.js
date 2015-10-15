@@ -32,4 +32,11 @@ require(['router', 'controll_common', 'disqus'], function(Route, Common, Sns){
         component:{path:'/component', controller:'controller/controll_component'},
         markdown:{path:'/markdown', controller:'controller/controll_markdown'}
     }).init().loadController();
+
+
+    //addCommonEvent
+    $(window).scroll(function(e){
+        common.scroll($(window).scrollTop());
+    });
+    $(window).trigger('scroll');
 });
