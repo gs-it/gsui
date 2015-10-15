@@ -3,8 +3,8 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
 	"use strict";
     
     //header
+    var $title = $('.container .contents');
     var headerH = $('header').height();
-    var titleH = $('header > .wrap').css('paddingTop').replace('px', '');
 
     //GNB
     var gnb = new Gnb();
@@ -16,13 +16,11 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
     var Common = function(){}
     Common.prototype = {
         scroll:function(scrollTop){
-            /*if(scrollTop > 0){
-                $('header').stop().animate({height:rtnGap(headerH, 80)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 20)}, 300).addClass('mini');
-            }else{
-                $('header').stop().animate({height:rtnGap(headerH, 130)}, 300);
-                $('header > .wrap').stop().animate({paddingTop:rtnGap(titleH, 100)}, 300).removeClass('mini');
-            }*/
+            if(scrollTop > 10) $title.find('h1').addClass('small');
+            else $title.find('h1').removeClass('small');
+        },
+        resize:function(){
+            if(Base.agentChk.getDeviceWidth() < 767) gnb.destroy();
         }
     }
 
@@ -30,8 +28,3 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
 
     return Common;
 });
-
-
-
-
-
