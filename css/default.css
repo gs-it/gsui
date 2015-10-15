@@ -15,7 +15,7 @@
 
 * 1. Default Reset *****************************/
 * {margin:0;padding:0}
-body,input,textarea,select,button,table{font-family:malgun gothic,'맑은 고딕',applegothic,sans-serif;font-size:13px;color:#555}
+body,input,textarea,select,button,table{color:#555}
 html,body{/*height:100%;*/background:#fff}
 header,footer,hgroup,nav,section,article,aside,details,figcaption,figure{display:block}
 h1,h2,h3,h4,h5,h6{font-size:1em}
