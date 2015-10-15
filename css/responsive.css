@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 414px) {
-	body, header {min-width:320px;overflow-x:hidden;}
+	body, header {min-width:320px;overflow-hidden:x;}
 	header .wrap h1 {padding:10px 10px 10px 50px;}
 	header small {display:block;}
 	header .head-nav .ico-cate {top:12px;}
