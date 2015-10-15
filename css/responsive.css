@@ -55,4 +55,44 @@
 	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
 	pre ol li {list-style:none;font-size:0.9em;line-height:1.1em;}
 	.snippet-menu {display:none !important;}
+
+	.flex-tbl .tbl-cell {display:block;width:auto;text-align:left;background-color:#fff;border-width:0 1px 1px 1px}
+	.flex-tbl .tbl-cell:first-child {width:auto;background-color:#f5f7fa;border-right-width:1px;}
+	.flex-table.col-group2 .tbl-cell:first-child {font-weight:bold;}
+	.flex-table.col-group2 .tbl-cell:first-child,	.flex-table.col-group2 .tbl-cell+.tbl-cell,
+	.flex-table.col-group3 .tbl-cell:first-child,	.flex-table.col-group3 .tbl-cell+.tbl-cell, .flex-table.col-group3 .tbl-cell+.tbl-cell+.tbl-cell {width:auto;border-left-width:1px}
+	.flex-table .flex-tbl.tbl-header .tbl-cell:first-child,
+	.flex-table.col-group2 .flex-tbl.tbl-header .tbl-cell:first-child,
+	.flex-table.col-group3 .flex-tbl.tbl-header .tbl-cell:first-child,
+	.flex-table.col-group2 .flex-tbl.tbl-header .tbl-cell+.tbl-cell,
+	.flex-table .flex-tbl.tbl-header .tbl-cell+.tbl-cell, .flex-table.col-group3 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell {text-align:left;padding-left:2%;}
+
+	.flex-table.col-group2 .flex-tbl.tbl-header .tbl-cell:first-child,
+	.flex-table.col-group2 .flex-tbl.tbl-header .tbl-cell+.tbl-cell {display:none;}
+
+	.flex-table.col-group3.img .tbl-cell:first-child,
+	.flex-table.col-group3 .tbl-cell:first-child {width:auto;font-weight:bold;}
+	.flex-table.col-group3 .flex-tbl.tbl-header .tbl-cell:first-child,
+	.flex-table.col-group3 .flex-tbl.tbl-header .tbl-cell+.tbl-cell,
+	.flex-table.col-group3 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell,
+	.flex-table.col-group3.img .flex-tbl.tbl-header .tbl-cell:first-child,
+	.flex-table.col-group3.img .flex-tbl.tbl-header .tbl-cell+.tbl-cell,
+	.flex-table.col-group3.img .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell {display:none;}
+
+	.flex-table.col-group3.z-index .tbl-cell:nth-child(2):before {content:"z-index : ";font-weight:bold;font-size:13px;}
+	.flex-table.css-hack .flex-tbl.tbl-header .tbl-cell:first-child, .flex-table.css-hack .flex-tbl.tbl-header .tbl-cell+.tbl-cell {display:none;}
+	.flex-table.css-hack .tbl-cell:nth-child(2):before {content:"적용범위 : ";font-weight:bold;font-size:12px;}
+
+	.flex-table.col-group5 .tbl-cell:first-child,
+	.flex-table.col-group5 .tbl-cell+.tbl-cell,
+	.flex-table.col-group5 .tbl-cell+.tbl-cell+.tbl-cell,
+	.flex-table.col-group5 .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell,
+	.flex-table.col-group5 .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell {width:auto;text-align:left;border-right-width:1px;text-align:left;background-color:#fff;font-weight:normal;}
+	.flex-table.col-group5 .tbl-cell:first-child {display:none;}
+	.flex-table.col-group5 .tbl-cell+.tbl-cell {background-color:#f5f7fa;font-weight:bold;}
+
+	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell,
+	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell,
+	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell,
+	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell{text-align:left;background-color:#f5f7fa;display:none;}
 }

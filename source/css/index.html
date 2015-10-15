@@ -1,7 +1,7 @@
 <h1>CSS Guide</h1>
 
 <section>
-	<h2>1. 기본 정책</h2>
+	<h2>기본 정책</h2>
 	<ul class="square-list">
 		<li>CSS 문서 인코딩과 문자 인코딩은 UTF-8을 원칙으로 한다.</li>
 		<li>모든 속성(property)은 소문자로 작성한다.</li>
@@ -26,7 +26,7 @@
 </section>
 
 <section>
-	<h2>2. CSS문서 선언</h2>
+	<h2>CSS문서 선언</h2>
 	<ul class="square-list">
 		<li>External 방식 - 스타일 내용을 CSS 파일로 따로 저장하여 페이지에 링크시키는 방법. 이 방법을 권장 사용한다.</li>
 		<li>Internal 방식 - head 태그 또는 body 태그 안에 style 태그로 선언 하는 방법. 이벤트등 일시적 페이지에서 사용 가능.</li>
@@ -44,7 +44,7 @@
 </section>
 
 <section>
-	<h2>2. 선택자(Selector)</h2>
+	<h2>선택자(Selector)</h2>
 	<ul class="square-list">
 		<li>공통 선택자 '*' 는 웹페이지 성능을 저하시키고, 주석에 영향을 미칠수 있으므로 사용하지 않는다.</li>
 		<li>id 선택자의 사용은 미리 예약한 레이아웃 요소 등에서만 사용하고 되도록 사용을 지양한다.</li>
@@ -58,45 +58,42 @@
 /* 3단 이상의 선택자 상속 지양 */
 .left .menulist .menu .first {float:left;background:none;} (X)
 	</pre>
-	<table>
-		<caption>CSS 예약 선택자 표</caption>
-		<thead>
-			<tr>
-				<th>선택자(아이디/클래스)</th>
-				<th>내용</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>gs-skip</td>
-				<td>접근성 향상을 위해 탭(tab)키를 이용한 바로가기 메뉴를 제공</td>
-			</tr>
-			<tr>
-				<td>gs-container</td>
-				<td>푸터를 제외한 문서 전체 영역(실제 컨텐츠를 포함한 일종의 wrap 역활)</td>
-			</tr>
-			<tr>
-				<td>gs-content</td>
-				<td>문서의 실제 컨텐츠(본문) 영역</td>
-			</tr>
-			<tr>
-				<td>gs-footer</td>
-				<td>문서의 푸터 영역</td>
-			</tr>
-			<tr>
-				<td>footer-push</td>
-				<td>푸터를 문서의 최하단에 고정하기 위한 가상의 영역</td>
-			</tr>
-			<tr>
-				<td>skyScraper</td>
-				<td>문서의 '날개' 영역</td>
-			</tr>
-		</tbody>
-	</table>
+
+	<div class="flex-table col-group2">
+		<div class="tbl-caption">CSS 예약 선택자 표</div>
+		<div class="flex-tbl tbl-header">
+			<div class="tbl-cell">선택자(아이디/클래스)</div>
+			<div class="tbl-cell">내용</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">gs-skip</div>
+			<div class="tbl-cell">접근성 향상을 위해 탭(tab)키를 이용한 바로가기 메뉴를 제공</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">gs-container</div>
+			<div class="tbl-cell">푸터를 제외한 문서 전체 영역(실제 컨텐츠를 포함한 일종의 wrap 역활)</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">gs-content</div>
+			<div class="tbl-cell">문서의 실제 컨텐츠(본문) 영역</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">gs-footer</div>
+			<div class="tbl-cell">문서의 푸터 영역</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">footer-push</div>
+			<div class="tbl-cell">푸터를 문서의 최하단에 고정하기 위한 가상의 영역</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">skyScraper</div>
+			<div class="tbl-cell">문서의 '날개' 영역</div>
+		</div>
+	</div>
 </section>
 
 <section>
-	<h2>3. 속성(Property)</h2>
+	<h2>속성(Property)</h2>
 	<ul class="square-list">
 		<li>속성의 선언은 레이아웃 관련 속성을 우선 선언한다.</li>
 		<li>속성 중 축약이 가능한 속성은 축약하여 작성한다.</li>
@@ -109,47 +106,44 @@
 /* 축약 가능한 속성값은 축약을 권장 */
 .ex2 {padding:0 10px;font:12px/1.4em 'Malgun Gothic';}
 	</pre>
-	<table>
-		<caption>z-index 수치표</caption>
-		<thead>
-			<tr>
-				<th>구분</th>
-				<th class="ac">z-index 값</th>
-				<th>내용</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>레이어 팝업</td>
-				<td class="ac">5000</td>
-				<td>최상위 레이어. Dim 레이어 상위 팝업 컨텐츠</td>
-			</tr>
-			<tr>
-				<td>레이어 Dim</td>
-				<td class="ac">2000</td>
-				<td>화면 전체를 사용하는 Dim(오버레이) 배경</td>
-			</tr>
-			<tr>
-				<td>헤더, 스카이스크래퍼(날개)</td>
-				<td class="ac">1000</td>
-				<td>레이아웃 컨텐츠 헤더(#header), 스카이스크래퍼(#skyscraper)</td>
-			</tr>
-			<tr>
-				<td>일반 레이어</td>
-				<td class="ac">999</td>
-				<td>셀렉트박스, 툴팁 등 GUI 요소</td>
-			</tr>
-			<tr>
-				<td>컨텐츠</td>
-				<td class="ac">500 이하</td>
-				<td>컨텐츠내 z-index가 필요할때 500이하에서 자유롭게 지정</td>
-			</tr>
-		</tbody>
-	</table>
+
+	<div class="flex-table col-group3 z-index">
+		<div class="tbl-caption">z-index 수치표</div>
+		<div class="flex-tbl tbl-header">
+			<div class="tbl-cell">구분</div>
+			<div class="tbl-cell">z-index 값</div>
+			<div class="tbl-cell">내용</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">레이어 팝업</div>
+			<div class="tbl-cell">5000</div>
+			<div class="tbl-cell">최상위 레이어. Dim 레이어 상위 팝업 컨텐츠</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">레이어 Dim</div>
+			<div class="tbl-cell">2000</div>
+			<div class="tbl-cell">화면 전체를 사용하는 Dim(오버레이) 배경</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">헤더, 스카이스크래퍼(날개)</div>
+			<div class="tbl-cell">1000</div>
+			<div class="tbl-cell">레이아웃 컨텐츠 헤더(#header), 스카이스크래퍼(#skyscraper)</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">일반 레이어</div>
+			<div class="tbl-cell">999</div>
+			<div class="tbl-cell">셀렉트박스, 툴팁 등 GUI 요소</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">컨텐츠</div>
+			<div class="tbl-cell">500 이하</div>
+			<div class="tbl-cell">컨텐츠내 z-index가 필요할때 500이하에서 자유롭게 지정</div>
+		</div>
+	</div>
 </section>
 
 <section>
-	<h2>3. 주석</h2>
+	<h2>주석</h2>
 	<ul class="square-list">
 		<li>공동작업 및 유지보수의 용이함을 위해 주석(/*  */)을 적극 권장한다.</li>
 		<li>특별한 경우를 제외하고 /*+공백+주석내용+공백+*/ 의 형식을 유지한다.</li>
@@ -157,56 +151,49 @@
 </section>
 
 <section>
-	<h2>4. 핵(CSS Hack)</h2>
+	<h2>핵(CSS Hack)</h2>
 	<ul class="square-list">
 		<li>크로스 브라우징을 위한 CSS 핵을 허용한다.</li>
 		<li>GS Shop의 배포도구는 스타핵(*) 하나만 허용한다. 그 외의 핵은 전용 CSS 파일로 관리 한다.</li>
 		<li>CSS 핵은 개행을 허용한다.</li>
 	</ul>
 	<p class="desc">* GS Shop 배포도구(<a href="http://ims.gsenext.com" target="_blank">http://ims.gsenext.com</a>)는 CSS Lint(<a href="http://csslint.net/" target="_blank">http://csslint.net/</a>)를 기반으로 한다.</p>
-	<table>
-		<colgroup>
-			<col width="70%">
-			<col width="30%">
-		</colgroup>
-		<caption>CSS 핵 표</caption>
-		<thead>
-			<tr>
-				<th>표현식</th>
-				<th>적용범위</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>*(스타핵)</td>
-				<td class="ac">IE7</td>
-			</tr>
-			<tr>
-				<td>@-moz-document url-prefix()</td>
-				<td class="ac">Firefox</td>
-			</tr>
-			<tr>
-				<td>@media \0screen</td>
-				<td class="ac">IE8 </td>
-			</tr>
-			<tr>
-				<td>:root</td>
-				<td class="ac">IE9</td>
-			</tr>
-			<tr>
-				<td>@media screen and (min-width:0\0)</td>
-				<td class="ac">IE9 ~ 10 </td>
-			</tr>
-			<tr>
-				<td>@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none)</td>
-				<td class="ac">IE10 ~ 11</td>
-			</tr>
-		</tbody>
-	</table>
+
+	<div class="flex-table css-hack">
+		<div class="tbl-caption">CSS 핵 표</div>
+		<div class="flex-tbl tbl-header">
+			<div class="tbl-cell">표현식</div>
+			<div class="tbl-cell">적용범위</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">*(스타핵)</div>
+			<div class="tbl-cell">IE7</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">@-moz-document url-prefix()</div>
+			<div class="tbl-cell">Firefox</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">@media \0screen</div>
+			<div class="tbl-cell">IE8</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">:root</div>
+			<div class="tbl-cell">IE9</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">@media screen and (min-width:0\0)</div>
+			<div class="tbl-cell">IE9 ~ 10 </div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none)</div>
+			<div class="tbl-cell">IE10 ~ 11</div>
+		</div>
+	</div>
 </section>
 
 <section>
-	<h2>5. 초기화 선언(Reset CSS) </h2>
+	<h2>초기화 선언(Reset CSS) </h2>
 	<ul class="square-list">
 		<li>CSS 초기화는 전역 공통 CSS 파일 최상단에 한번만 정의한다.</li>
 		<li>초기화 선언 CSS의 수정은 반드시 UI파트와의 협의를 통한다.</li>

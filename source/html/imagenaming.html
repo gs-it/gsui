@@ -1,7 +1,7 @@
 <h1>Images Guide</h1>
 
 <section>
-	<h2>1. 이미지 기본 정책</h2>
+	<h2>이미지 기본 정책</h2>
 	<ul class="square-list">
 		<li>기본 포맷은  GIF, JPG 로 한다.</li>
 		<li>투명 이미지일 경우에만 PNG를 사용하고 가급적 사용을 지양한다.</li>
@@ -12,7 +12,7 @@
 </section>
 
 <section>
-	<h2>2. 이미지 명명규칙</h2>
+	<h2>이미지 명명규칙</h2>
 	<ul class="square-list">
 		<li>이미지명은 '접두어_접속어_접속어_..'를 사용하여 이미지명으로 이미지를 유추 가능 하도록 작성한다.</li>
 		<li>접두어는 이미지 접두어표의 적용순위를 기반으로 작성한다.</li>
@@ -21,156 +21,145 @@
 		<li>임시 이미지는 접두어 'tmp_'를 사용한다. 예) tmp_</li>
 		<li>CSS내 이미지 경로는 상대 경로를 기본으로 한다.</li>
 	</ul>
-	<table>
-		<colgroup>
-			<col width="8%">
-			<col width="18%">
-			<col width="10%">
-			<col width="">
-			<col width="45%">
-		</colgroup>
-		<caption>이미지 접두어 표</caption>
-		<thead>
-			<tr>
-				<th>적용<br>순위</th>
-				<th>구분</th>
-				<th>표기</th>
-				<th>예제</th>
-				<th>설명</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="ac">1</td>
-				<td>타이틀</td>
-				<td class="ac">t_</td>
-				<td>t_h1.gif</td>
-				<td>컨텐츠 제목 이미지에 사용</td>
-			</tr>
-			<tr>
-				<td class="ac">2</td>
-				<td>로고</td>
-				<td class="ac">g_</td>
-				<td>g_gsshop.gif</td>
-				<td>로고 이미지</td>
-			</tr>
-			<tr>
-				<td class="ac">3</td>
-				<td>탭</td>
-				<td class="ac">a_</td>
-				<td>a_gnb_tv.gif</td>
-				<td>이미지 탭 메뉴</td>
-			</tr>
-			<tr>
-				<td class="ac">4</td>
-				<td>버튼</td>
-				<td class="ac">b_</td>
-				<td>b_deal.gif</td>
-				<td>이미지 버튼</td>
-			</tr>
-			<tr>
-				<td class="ac">5</td>
-				<td>아이콘</td>
-				<td class="ac">i_</td>
-				<td>i_home.gif</td>
-				<td>이미지 아이콘</td>
-			</tr>
-			<tr>
-				<td class="ac">6</td>
-				<td>페이징</td>
-				<td class="ac">p_</td>
-				<td>p_type1.gif</td>
-				<td>컨텐츠 페이징 요소</td>
-			</tr>
-			<tr>
-				<td class="ac">7</td>
-				<td>배너</td>
-				<td class="ac">r_</td>
-				<td>r_wide_main.gif</td>
-				<td>이미지 배너</td>
-			</tr>
-			<tr>
-				<td class="ac">8</td>
-				<td>배경</td>
-				<td class="ac">k_</td>
-				<td>k_footer.gif</td>
-				<td>컨텐츠와 무관한 장식적 이미지는 배경으로 처리</td>
-			</tr>
-			<tr>
-				<td class="ac">9</td>
-				<td>텍스트</td>
-				<td class="ac">e_</td>
-				<td>e_member_info1.gif</td>
-				<td>이미지화된 텍스트 컨텐츠</td>
-			</tr>
-			<tr>
-				<td class="ac">10</td>
-				<td>숫자</td>
-				<td class="ac">n_</td>
-				<td>n_notice1.gif</td>
-				<td>이미지화된 숫자 컨텐츠</td>
-			</tr>
-			<tr>
-				<td class="ac">11</td>
-				<td>화살표/블릿</td>
-				<td class="ac">u_</td>
-				<td>u_arrow.gif</td>
-				<td>컨텐츠내 화살표, 리스트의 블릿 이미지</td>
-			</tr>
-			<tr>
-				<td class="ac">12</td>
-				<td>공통</td>
-				<td class="ac">c_</td>
-				<td>c_sprite.gif</td>
-				<td>재사용이 가능한 공통 이미지</td>
-			</tr>
-			<tr>
-				<td class="ac">13</td>
-				<td>영역</td>
-				<td class="ac">w_</td>
-				<td>w_leftmenu.gif</td>
-				<td>레이아웃, 컨텐츠 영역지정</td>
-			</tr>
-			<tr>
-				<td class="ac">14</td>
-				<td>임시파일, 기타</td>
-				<td class="ac">tmp_</td>
-				<td>tmp_prd.gif</td>
-				<td>임시 이미지 또는 접두어표외의 이미지</td>
-			</tr>
-		</tbody>
-	</table>
-	<table>
-		<caption>이미지 접속어 예시 표</caption>
-		<thead>
-			<tr>
-				<th>구분</th>
-				<th>표기</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>상태표현</td>
-				<td>_on, _off, _over, _focus</td>
-			</tr>
-			<tr>
-				<td>위치표현</td>
-				<td>_top, _bottom, _left, _right</td>
-			</tr>
-			<tr>
-				<td>순서</td>
-				<td>_first, _end, _last</td>
-			</tr>
-			<tr>
-				<td>이전/다음</td>
-				<td>_prev, _next</td>
-			</tr>
-		</tbody>
-	</table>
+
+	<div class="flex-table col-group5">
+		<div class="tbl-caption">이미지 접두어 표</div>
+		<div class="flex-tbl tbl-header">
+			<div class="tbl-cell">적용<br />순위</div>
+			<div class="tbl-cell">구분</div>
+			<div class="tbl-cell">표기</div>
+			<div class="tbl-cell">예제</div>
+			<div class="tbl-cell">설명</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">1</div>
+			<div class="tbl-cell">타이틀</div>
+			<div class="tbl-cell">t_</div>
+			<div class="tbl-cell">t_h1.gif</div>
+			<div class="tbl-cell">컨텐츠 제목 이미지에 사용</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">2</div>
+			<div class="tbl-cell">로고</div>
+			<div class="tbl-cell">g_</div>
+			<div class="tbl-cell">g_gsshop.gif</div>
+			<div class="tbl-cell">로고 이미지</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">3</div>
+			<div class="tbl-cell">탭</div>
+			<div class="tbl-cell">a_</div>
+			<div class="tbl-cell">a_gnb_tv.gif</div>
+			<div class="tbl-cell">이미지 탭 메뉴</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">4</div>
+			<div class="tbl-cell">버튼</div>
+			<div class="tbl-cell">b_</div>
+			<div class="tbl-cell">b_deal.gif</div>
+			<div class="tbl-cell">이미지 버튼</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">5</div>
+			<div class="tbl-cell">아이콘</div>
+			<div class="tbl-cell">i_</div>
+			<div class="tbl-cell">i_home.gif</div>
+			<div class="tbl-cell">이미지 아이콘</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">6</div>
+			<div class="tbl-cell">페이징</div>
+			<div class="tbl-cell">p_</div>
+			<div class="tbl-cell">p_type1.gif</div>
+			<div class="tbl-cell">컨텐츠 페이징 요소</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">7</div>
+			<div class="tbl-cell">배너</div>
+			<div class="tbl-cell">r_</div>
+			<div class="tbl-cell">r_wide_main.gif</div>
+			<div class="tbl-cell">이미지 배너</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">8</div>
+			<div class="tbl-cell">배경</div>
+			<div class="tbl-cell">k_</div>
+			<div class="tbl-cell">k_footer.gif</div>
+			<div class="tbl-cell">컨텐츠와 무관한 장식적 이미지는 배경으로 처리</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">9</div>
+			<div class="tbl-cell">텍스트</div>
+			<div class="tbl-cell">e_</div>
+			<div class="tbl-cell">e_member_info1.gif</div>
+			<div class="tbl-cell">이미지화된 텍스트 컨텐츠</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">10</div>
+			<div class="tbl-cell">숫자</div>
+			<div class="tbl-cell">n_</div>
+			<div class="tbl-cell">n_notice1.gif</div>
+			<div class="tbl-cell">이미지화된 숫자 컨텐츠</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">11</div>
+			<div class="tbl-cell">화살표/블릿</div>
+			<div class="tbl-cell">u_</div>
+			<div class="tbl-cell">u_arrow.gif</div>
+			<div class="tbl-cell">컨텐츠내 화살표, 리스트의 블릿 이미지</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">12</div>
+			<div class="tbl-cell">공통</div>
+			<div class="tbl-cell">c_</div>
+			<div class="tbl-cell">c_sprite.gif</div>
+			<div class="tbl-cell">재사용이 가능한 공통 이미지</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">13</div>
+			<div class="tbl-cell">영역</div>
+			<div class="tbl-cell">w_</div>
+			<div class="tbl-cell">w_leftmenu.gif</div>
+			<div class="tbl-cell">레이아웃, 컨텐츠 영역지정</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">14</div>
+			<div class="tbl-cell">임시파일, 기타</div>
+			<div class="tbl-cell">tmp_</div>
+			<div class="tbl-cell">tmp_prd.gif</div>
+			<div class="tbl-cell">임시 이미지 또는 접두어표외의 이미지</div>
+		</div>
+	</div>
+
+
+	<div class="flex-table col-group2">
+		<div class="tbl-caption">이미지 접속어 예시 표</div>
+		<div class="flex-tbl tbl-header">
+			<div class="tbl-cell">구분</div>
+			<div class="tbl-cell">표기</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">상태표현</div>
+			<div class="tbl-cell">_on, _off, _over, _focus</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">위치표현</div>
+			<div class="tbl-cell">_top, _bottom, _left, _right</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">순서</div>
+			<div class="tbl-cell">_first, _end, _last</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">이전/다음</div>
+			<div class="tbl-cell">_prev, _next</div>
+		</div>
+	</div>
+
 </section>
 
 <section>
-	<h2>3. 더미 이미지(상품 임시 이미지)</h2>
+	<h2>더미 이미지(상품 임시 이미지)</h2>
 	<ul class="square-list">
 		<li>더미 이미지의 'alt' 속성 값은 공백으로 한다.</li>
 		<li>더미 이미지의 'width'와 'height'속성은 사용하지 않는다.</li>
@@ -182,91 +171,93 @@
 <!-- 사이즈 변경 활용 -->
 <img src="http:/image.gsshop.com/mi13/img/etc/no_img_200.gif" width="190" height="190" alt="">
 	</pre>
-	<table>
-		<caption>더미 이미지 표</caption>
-		<thead>
-			<tr>
-				<th>이미지 사이즈</th>
-				<th>이미지명</th>
-				<th>이미지 주소</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td class="ac">50 X 50</td>
-				<td class="ac">no_img_50.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_50.gif">http:/image.gsshop.com/mi13/img/etc/no_img_50.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">60 X 60</td>
-				<td class="ac">no_img_60.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_60.gif">http:/image.gsshop.com/mi13/img/etc/no_img_60.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">70 X 70</td>
-				<td class="ac">no_img_70.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_70.gif">http:/image.gsshop.com/mi13/img/etc/no_img_70.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">90 X 90</td>
-				<td class="ac">no_img_90.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_90.gif">http:/image.gsshop.com/mi13/img/etc/no_img_90.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">100 X 100</td>
-				<td class="ac">no_img_100.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_100.gif">http:/image.gsshop.com/mi13/img/etc/no_img_100.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">130 X 130</td>
-				<td class="ac">no_img_130.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_130.gif">http:/image.gsshop.com/mi13/img/etc/no_img_130.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">160 X 160</td>
-				<td class="ac">no_img_160.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_160.gif">http:/image.gsshop.com/mi13/img/etc/no_img_160.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">200 X 200</td>
-				<td class="ac">no_img_200.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_200.gif">http:/image.gsshop.com/mi13/img/etc/no_img_200.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">214 X 214</td>
-				<td class="ac">no_img_214.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_50.gif">http:/image.gsshop.com/mi13/img/etc/no_img_214.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">250 X 250</td>
-				<td class="ac">no_img_250.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_250.gif">http:/image.gsshop.com/mi13/img/etc/no_img_250.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">270 X 270</td>
-				<td class="ac">no_img_2700.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_270.gif">http:/image.gsshop.com/mi13/img/etc/no_img_270.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">280 X 280</td>
-				<td class="ac">no_img_280.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_280.gif">http:/image.gsshop.com/mi13/img/etc/no_img_280.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">370 X 370</td>
-				<td class="ac">no_img_370.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_370.gif">http:/image.gsshop.com/mi13/img/etc/no_img_370.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">500 X 500</td>
-				<td class="ac">no_img_500.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_500.gif">http:/image.gsshop.com/mi13/img/etc/no_img_500.gif</a></td>
-			</tr>
-			<tr>
-				<td class="ac">550 X 550</td>
-				<td class="ac">no_img_550.gif</td>
-				<td><a href="http:/image.gsshop.com/mi13/img/etc/no_img_550.gif">http:/image.gsshop.com/mi13/img/etc/no_img_550.gif</a></td>
-			</tr>
-		</tbody>
-	</table>
+
+	<div class="flex-table col-group3 img">
+		<div class="tbl-caption">더미 이미지 표</div>
+		<div class="flex-tbl tbl-header">
+			<div class="tbl-cell">이미지<br />사이즈</div>
+			<div class="tbl-cell">이미지명</div>
+			<div class="tbl-cell">이미지 주소</div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">50 X 50</div>
+			<div class="tbl-cell">no_img_50.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_50.gif">http:/image.gsshop.com/mi13/img/etc/no_img_50.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">60 X 60</div>
+			<div class="tbl-cell">no_img_60.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_60.gif">http:/image.gsshop.com/mi13/img/etc/no_img_60.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">70 X 70</div>
+			<div class="tbl-cell">no_img_70.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_70.gif">http:/image.gsshop.com/mi13/img/etc/no_img_70.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">90 X 90</div>
+			<div class="tbl-cell">no_img_90.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_90.gif">http:/image.gsshop.com/mi13/img/etc/no_img_90.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">100 X 100</div>
+			<div class="tbl-cell">no_img_100.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_100.gif">http:/image.gsshop.com/mi13/img/etc/no_img_100.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">130 X 130</div>
+			<div class="tbl-cell">no_img_130.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_130.gif">http:/image.gsshop.com/mi13/img/etc/no_img_130.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">160 X 160</div>
+			<div class="tbl-cell">no_img_160.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_160.gif">http:/image.gsshop.com/mi13/img/etc/no_img_160.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">200 X 200</div>
+			<div class="tbl-cell">no_img_200.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_200.gif">http:/image.gsshop.com/mi13/img/etc/no_img_200.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">214 X 214</div>
+			<div class="tbl-cell">no_img_214.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_50.gif">http:/image.gsshop.com/mi13/img/etc/no_img_214.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">250 X 250</div>
+			<div class="tbl-cell">no_img_250.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_250.gif">http:/image.gsshop.com/mi13/img/etc/no_img_250.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">270 X 270</div>
+			<div class="tbl-cell">no_img_2700.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_270.gif">http:/image.gsshop.com/mi13/img/etc/no_img_270.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">280 X 280</div>
+			<div class="tbl-cell">no_img_280.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_280.gif">http:/image.gsshop.com/mi13/img/etc/no_img_280.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">370 X 370</div>
+			<div class="tbl-cell">no_img_370.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_370.gif">http:/image.gsshop.com/mi13/img/etc/no_img_370.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">500 X 500</div>
+			<div class="tbl-cell">no_img_500.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_500.gif">http:/image.gsshop.com/mi13/img/etc/no_img_500.gif</a></div>
+		</div>
+		<div class="flex-tbl">
+			<div class="tbl-cell">550 X 550</div>
+			<div class="tbl-cell">no_img_550.gif</div>
+			<div class="tbl-cell"><a href="http:/image.gsshop.com/mi13/img/etc/no_img_550.gif">http:/image.gsshop.com/mi13/img/etc/no_img_550.gif</a></div>
+		</div>	
+	
+	</div>
+
+
+
+
 </section>
