@@ -83,9 +83,10 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 .mgt20 {margin-top:20px;}
 .desc {padding-top:5px;}
 
-/* tag color */
+/* tag color
 strong.class {color:#349234;}
 strong.tag {color:#9c318f;}
+ */
 
 /* horizontal nav menu */
 header .head-nav {padding:10px 20px;border-top:1px solid #e0e0e0;}
@@ -110,10 +111,10 @@ header .menu-sub a:hover {opacity:0.8;color:#666;}
 /* footer link */
 .foot-link a {display:block;height:25px;margin-bottom:8px;position:relative;}
 .foot-link img {vertical-align:middle;}
-.foot-link a.gsshop {overflow:hidden;}
-.foot-link a.gsshop img {height:45px;position:absolute;top:-18px;}
-.foot-link a.disqus img {height:16px;}
-.foot-link a.github img {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
+.foot-link .gsshop {overflow:hidden;}
+.foot-link .gsshop img {height:45px;position:absolute;top:-18px;}
+.foot-link .disqus img {height:16px;}
+.foot-link .github img {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
 
 
 /*dim*/

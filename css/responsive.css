@@ -31,14 +31,28 @@
 	.foot-link .github {width:65px;}
 	.foot-link .disqus {width:88px;}
 	.copyright {clear:both;}
+	.snippet-menu {display:none !important;}
+	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
 }
 
-@media (min-width: 980px) {
+@media (min-width: 768px) and (max-width: 980px) {
 	header .menu {width:auto;margin:0 auto;}
+	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
 }
 
-@media (max-width: 374px) {
-	header .wrap {margin-top:-3px;}
-	header a {line-height:40px;}
-	header .wrap h1 a {font-size:15px;}
+@media (max-width: 414px) {
+	body, header {min-width:320px;overflow-hidden:x;}
+	header .wrap h1 {padding:10px 10px 10px 50px;}
+	header small {display:block;}
+	header .head-nav .ico-cate {top:12px;}
+	header .menu {width:60%;}
+	.contents {padding:50px 10px 0;}
+	.contents h1 {top:59px;}
+	.foot-link a {margin-right:10px;}
+	.foot-link .gsshop {width:86px;}
+	.foot-link a.gsshop img {height:39px;top:-14px;}
+	.foot-link a.disqus img {vertical-align:-8px;}
+	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
+	pre ol li {list-style:none;font-size:0.9em;line-height:1.1em;}
+	.snippet-menu {display:none !important;}
 }
