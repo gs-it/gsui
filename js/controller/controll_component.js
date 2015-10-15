@@ -53,6 +53,7 @@ define(['base'], function(Base){
                         tipMsg = '';
 
                     function cautionAlert(msg){
+                        var tipMsg = '';
                         tipMsg += '<div class="tip-wrap">\n';
                         tipMsg += ' <span class="tip-arr"></span>\n';
                         tipMsg += ' <div class="tip-layer">\n';
@@ -64,10 +65,10 @@ define(['base'], function(Base){
                     }
 
                     function upCount(){
-                        topPos = $(this).outerHeight();
-                        leftPos = $(this).position().left;
+                        var topPos = $(this).outerHeight();
+                        var leftPos = $(this).position().left;
 
-                        reCnt = parseInt(_input.val());
+                        var reCnt = parseInt(_input.val());
                         if(reCnt >= option.max) return alert(option.cautionMax); 
                         else return _input.val(reCnt +=1);
 
@@ -75,12 +76,12 @@ define(['base'], function(Base){
                     }
                     
                     function downCount(){
-                        reCnt = parseInt(_input.val());
+                        var reCnt = parseInt(_input.val());
                         
                         if(reCnt <= option.min) {
                             var tiplayer = $('.tip-layer');
-                            topPos = $(this).outerHeight();
-                            leftPos = $(this).position().left + $(this).outerWidth()/2;
+                            var topPos = $(this).outerHeight();
+                            var leftPos = $(this).position().left + $(this).outerWidth()/2;
                             cautionAlert(option.cautionMin, topPos, leftPos);
                             
                             if(_this.find('.tip-layer').length===0) _this.append(tipMsg).addClass('alert');
@@ -364,9 +365,6 @@ define(['base'], function(Base){
 
             //  $('body').append('<input type="text" id="ddd" style="position:fixed;top:340px;left:30%;width:500px;height:50px;font-size:20px;border:2px solid red;z-index:10000">');
         });
-        (function(window, document, $){
-        }(this, document, jQuery));
-
 
         var ele = $('section .tmp-input, section .tmp-check, section .tmp-radio, section .tmp-select, section .tmp-btn, section .tmp-tab');
         function ele_reset(){ele.removeClass('red green lime khaki gray light-gray');}
@@ -439,7 +437,33 @@ define(['base'], function(Base){
             console.log('component destroy');
         },
         xhrCallBack:function(data){
-            $('.contents').html(data);
+            var contents = data;
+            var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
+            var prePattern = /<pre/;
+            var removePattern = /^(html|js|style)$/;
+            var arrCode = contents.split(pattern);
+            var replaceIS = false;
+            var dataTxt = '';
+
+            for(var i=0; i<arrCode.length; i++){
+                if(removePattern.test(arrCode[i]) || arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
+                if(arrCode[i] == '<pre class="html">'|| arrCode[i] == '<pre class="js">' || arrCode[i] == '<pre class="style">') replaceIS = true;
+                if(arrCode[i] == '</pre>') replaceIS = false;
+
+                if(replaceIS){
+                    if(!prePattern.test(arrCode[i])){
+                        arrCode[i] = arrCode[i].replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                    }
+                }
+
+                dataTxt += arrCode[i];
+            }
+
+            $('.contents').html(dataTxt);
+            $('pre.html').snippet('html', {style:'ide-codewarrior'});
+            $('pre.style').snippet('css', {style:'ide-codewarrior'});
+            $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
+
             componentInit();
         }
     }
