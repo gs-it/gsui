@@ -1,13 +1,14 @@
 
 @media (max-width: 767px) {
 	/*header .wrap, footer .wrap, .wrap {padding:5%;}*/
-	.container {padding-top:70px;}
-	.nav {background-color:transparent;}
-	.head-nav .ico-cate {display:block;position:fixed;z-index:501;top:15px;left:10px;cursor:pointer;}
+	.container {margin:46px 0 0 0;}
+	header {position:fixed;left:0;top:0;width:100%;border:0;min-height:auto;z-index:2;}
+	header .head-nav {padding:0;}
+	header .head-nav .ico-cate {display:block;position:fixed;z-index:501;top:15px;left:10px;cursor:pointer;}
+	header .menu li {padding-left:15px;}
 	header .menu li:first-child {display:block;}
-	header .wrap {padding-left:55px;margin-top:-12px;font-weight:normal;}
-	header .wrap h1 a {font-size:18px;}
-	header .menu {width:50%;}
+	header .wrap h1 {background:#fff;padding-left:50px;font-size:20px;}
+	header .menu {width:35%;}
 	header .menu li, header .menu li a {float:none;text-align:left;}
 	header .menu-sub {display:block;position:static;top:auto;left:auto;padding-left:20px;background-color:#fff;box-shadow:none;}
 	header .menu-sub a {display:block;float:none;font-size:13px;line-height:25px;padding:5px 20px;text-align:left;color:#333;}
@@ -15,18 +16,43 @@
 	.menu {display:block;position:fixed;z-index:502;background-color:#fff;left:0;top:0;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);}
 	.menu {width:50%;height:100%;overflow-y:auto;overflow-x:hidden;}
 	.menu {-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%);}
-	.menu li:first-child {padding:10px 0 10px 24px;font-size:14px;display:block;}
-	.menu li .menu-title {}
+	.menu li:first-child {display:block;width:auto;padding:12px 0 12px 24px;font-size:14px;border-bottom:1px solid #e0e0e0;}
+	.menu li .menu-title {font-weight:600;}
 	.menu-title{color:#212121;display:inline-block;}
-	.menu-title:before{content:''; height:3px; width:16px; background:#333; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px; display:block; position:absolute; top:10px; left:3px; box-shadow:0 16px #333, 0 12px #333;-webkit-box-shadow:0 6px #333, 0 12px #333;-moz-box-shadow:0 6px #333, 0 12px #333;}
+	.menu-title:before{content:''; height:3px; width:16px; background:#333; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px; display:block; position:absolute; top:14px; left:3px; box-shadow:0 16px #333, 0 12px #333;-webkit-box-shadow:0 6px #333, 0 12px #333;-moz-box-shadow:0 6px #333, 0 12px #333;}
 	.menu li {width:100%;display:block;float:none;border-right-width:0}
 	.menu li a {color:#373737;font-size:13px;padding:3px 0 3px 10px;}
+
+	.contents {padding:60px 15px 0;}
+	.contents h1 {position:absolute;left:0;right:0;top:62px;width:auto;height:45px;padding-left:10px;line-height:45px;font-size:20px;z-index:1;}
+	footer {position:static;left:auto;bottom:auto;width:auto;}
+	.foot-link a {float:left;margin-right:20px;}
+	.foot-link .gsshop {width:100px;}
+	.foot-link .github {width:65px;}
+	.foot-link .disqus {width:88px;}
+	.copyright {clear:both;}
+	.snippet-menu {display:none !important;}
+	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
 }
-@media (min-width: 980px) {
+
+@media (min-width: 768px) and (max-width: 980px) {
 	header .menu {width:auto;margin:0 auto;}
+	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
 }
-@media (max-width: 374px) {
-	header .wrap {margin-top:-3px;}
-	header a {line-height:40px;}
-	header .wrap h1 a {font-size:15px;}
+
+@media (max-width: 414px) {
+	body, header {min-width:320px;overflow-hidden:x;}
+	header .wrap h1 {padding:10px 10px 10px 50px;}
+	header small {display:block;}
+	header .head-nav .ico-cate {top:12px;}
+	header .menu {width:60%;}
+	.contents {padding:50px 10px 0;}
+	.contents h1 {top:59px;}
+	.foot-link a {margin-right:10px;}
+	.foot-link .gsshop {width:86px;}
+	.foot-link a.gsshop img {height:39px;top:-14px;}
+	.foot-link a.disqus img {vertical-align:-8px;}
+	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
+	pre ol li {list-style:none;font-size:0.9em;line-height:1.1em;}
+	.snippet-menu {display:none !important;}
 }
