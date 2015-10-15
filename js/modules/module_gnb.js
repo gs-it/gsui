@@ -26,21 +26,21 @@ define(['base'], function(Base){
 		        if(_that.evtTarget.hasClass(_that.actClass)){
 		        	_that.setTransition(-100, 0.5);
 		        	_that.setDimTransition(false);
-		        	
 		        }else{
 		        	_that.setTransition(0, 0.5);
 		        	_that.setDimTransition(true);
 				}
 		    });
 
-		    _that.evtTarget.children().each(function(i){
+		    _that.evtTarget.children().find('a').each(function(i){
 		    	var $that = $(this);
 		    	$that.on({
-		    		'mouseenter':function(e){
-		    			$that.find('.menu-sub').css({'display':'block'});
-		    		},
-		    		'mouseleave':function(e){
-		    			$that.find('.menu-sub').removeAttr('style');
+		    		'click':function(e){
+		    			if(Base.agentChk.getDeviceWidth() < 767){
+		    				console.log('fdsaafd');
+		    				_that.setTransition(-100, 0.5);
+							_that.setDimTransition(false);
+		    			}
 		    		}
 		    	});
 		    });
@@ -122,6 +122,13 @@ define(['base'], function(Base){
 					$(this).removeAttr('style');
 					$('body').removeAttr('style');
 				});
+			}
+		},
+		destroy:function(){
+			var _that = this;
+			if(_that.evtTarget.attr('style')){
+				_that.evtTarget.removeAttr('style');
+				_that.setDimTransition(false);
 			}
 		}
 	}

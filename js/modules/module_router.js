@@ -49,7 +49,7 @@ define(['base'], function(Base){
                 }
 
                 _that.currentController = new Module();
-                _that.currentController.loadTemplete(hash);          
+                _that.currentController.loadTemplete(hash);
             });
 
             return _that;
