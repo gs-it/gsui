@@ -1,6 +1,6 @@
 <h1>Event Templates</h1>
 <section>
-	<h2>1. 가로 940 템플릿</h2>
+	<h2>가로 940 템플릿</h2>
 	<ul class="square-list">
 		<li>가로폭 940px 기본 템플릿</li>
 		<li><strong class="tag">#wrap</strong>의 자식요소에 이벤트 영역(div)를 생성해 사용한다.</li>
@@ -21,7 +21,7 @@
 </section>
 
 <section>
-	<h2>2. 가로 와이드 템플릿</h2>
+	<h2>가로 와이드 템플릿</h2>
 	<ul class="square-list">
 		<li>가로 100% 이벤트 템플릿</li>
 		<li><strong class="tag">#wrap</strong>의 형제요소(<strong class="tag">#gs-content</strong>의 자식요소)에 이벤트 영역(div)를 생성해 사용한다.</li>
@@ -44,7 +44,79 @@
 </section>
 
 <section>
-	<h2>3. 이벤트 상단 탭</h2>
+	<h2>이벤트 하단 앱다운</h2>
+	<ul class="square-list">
+		<li>가로 100%의 경우 <strong class="tag">#wrap</strong>의 형제요소로 <strong class="tag">#wrap</strong> 다음에 위치한다.</li>
+		<li>가로 100%가 아닌 경우 가로 940이벤트와 마찬가지로 <strong class="tag">#wrap</strong> 자식요소로 생성한다.</li>
+		<li>CSS는 <a href="#">http://image.gsshop.com/mi13/css/event.css</a>를 참조한다.</li>
+		<li>앱다운 이미지 배경은 이벤트마다 변경되므로 배경은 인라인으로 적용해 사용한다.</li>
+		<li>2015년 10월 현재 앱다운 영역의 높이는 418px로, 변경된다면 CSS 수정이 필요하다.</li>
+	</ul>	
+	<pre class="html">
+<!-- 참조 CSS -->
+<link rel="stylesheet" type="text/css" href="http://image.gsshop.com/mi13/css/event.css" />
+
+<!-- 가로100% 일 때 -->
+<body>
+	<div id="header"></div>
+	<div id="gs-content">
+		<div id="wrap">
+			<div><!-- 이벤트 div 생성 -->
+				이벤트
+			</div>
+		</div>
+		<!-- 앱다운 -->
+		<style type="text/css">
+			#app-wide form {height:418px;background:url('http://image.gsshop.com/mi13/img/event/2015_10/01/img09.gif') no-repeat;}
+		</style>
+		<div id="app-wide">
+			<div class="event-common-wrap">
+				<form id="frm_sender" name="frm" method="post">
+					<fieldset>
+						<legend>앱다운받기 핸드폰 번호 입력</legend>
+						<input type="text" name="telNo" id="telNo" value="예)01012345678" onclick="javascript:valclear();" maxlength="11">
+						<button onclick="javascript:applyApp();" title="앱 다운받기"><span class="blind">앱 다운받기</span></button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+</body>
+
+<!-- 가로 940 일 때 -->
+<body>
+	<div id="header"></div>
+	<div id="gs-content">
+		<div id="wrap">
+			<div><!-- 이벤트 div 생성 -->
+				이벤트
+				<!-- 앱다운 -->
+				<style type="text/css">
+					#app-wide form {height:418px;background:url('http://image.gsshop.com/mi13/img/event/2015_10/01/img09.gif') no-repeat;}
+				</style>
+				<div id="app-wide">
+					<div class="event-common-wrap">
+						<form id="frm_sender" name="frm" method="post">
+							<fieldset>
+								<legend>앱다운받기 핸드폰 번호 입력</legend>
+								<input type="text" name="telNo" id="telNo" value="예)01012345678" onclick="javascript:valclear();" maxlength="11">
+								<button onclick="javascript:applyApp();" title="앱 다운받기"><span class="blind">앱 다운받기</span></button>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+</body>
+	</pre>
+</section>
+
+
+<section>
+	<h2>이벤트 상단 탭</h2>
 	<ul class="square-list">
 		<li><strong class="tag">#wrap</strong>자식요소에 <strong class="class">wide_tabpcEvent</strong> 클래스 템플릿을 추가한다.</li>
 		<li><strong class="class">wide_tabpcEvent</strong> 클래스 하단 마진(11px) 만큼 생성한 이벤트 영역에 음수 마진을 적용한다.</li>
@@ -76,7 +148,7 @@
 </section>
 
 <section>
-	<h2>4. 이벤트 하단 기획전 추가</h2>
+	<h2>이벤트 하단 기획전 추가</h2>
 	<li><strong class="tag">#wrap</strong> 자식요소에 <strong class="tag">#layBody</strong>를 이벤트 담당 개발자가 추가한다.</li>
 	<li><strong class="tag">#prdlist</strong>(기획전 상품 리스트)의 위치를 지정한다.</li>
 	<li>와이드 이벤트의 경우 생성한 이벤트 영역은 <strong class="tag">#wrap</strong> 부모요소(<strong class="tag">#gs-content</strong> 자식요소)에 생성한다.</li>
