@@ -4,7 +4,7 @@
 	.container {margin:46px 0 0 0;}
 	header {position:fixed;left:0;top:0;width:100%;border:0;min-height:auto;z-index:2;}
 	header .head-nav {padding:0;}
-	header .head-nav .ico-cate {display:block;position:fixed;z-index:501;top:15px;left:10px;cursor:pointer;}
+	header .head-nav .ico-cate {display:block;position:absolute;z-index:501;top:15px;left:10px;cursor:pointer;}
 	header .menu li {padding-left:15px;}
 	header .menu li:first-child {display:block;}
 	header .wrap h1 {background:#fff;padding-left:50px;font-size:20px;}
