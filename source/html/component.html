@@ -1,25 +1,7 @@
-<link rel="stylesheet" type="text/css" href="http://devimage.gsshop.com/mi13/css2/default.css" />
-<link rel="stylesheet" type="text/css" href="http://devimage.gsshop.com/mi13/css2/tmp.css" />
-
+<link rel="stylesheet" type="text/css" href="css/tmp.css">
+<link rel="stylesheet" type="text/css" href="css/default.css">
 <style type="text/css">
-.cpn-contorl {border:1px solid #d6d6d6;border-radius:5px;margin:15px 0 0 0;}
-.cpn-contorl dt {font-weight:bold;padding:15px;margin:-25px 0 0 0;}
-.cpn-contorl dt  strong {background-color:#FFF;display:inline-block;padding:0 10px;}
-.cpn-contorl dd {padding:0 0 15px 15px;}
-.cpn-contorl .tmp-btn {margin-bottom:5px}
-.cpn-contorl .tmp-btn a, 
-.cpn-contorl .tmp-btn button {width:50px;font-size:12px;padding:0 5px;font-family:malgun gothic,'맑은 고딕',applegothic,sans-serif;}
-.cpn-contorl .tmp-btn button {width:60px;}
-
-.tmp-tbl {margin:10px 0;border-collapse:collapse}
-.tmp-tbl th, .tmp-tbl td {border:1px solid #c8cacc;padding:10px;background:#fff}
-.tmp-tbl th {background:#878695;color:#fff}
-
-.af-tab a {min-width:120px} 
-
 .cpn-ex {padding:10px;background-color:#fff;border:1px solid #ededed;position:relative;z-index:1;}
-.set-block {display:inline-block;white-space: nowrap;margin:10px 0;}
-
 .design-view {margin-bottom:-12px;position:relative;z-index:2;}
 .design-view span {color:#555;display:inline-block;background-color:#fff;padding:5px 10px;border:1px solid #ededed;border-bottom-color:#fff;}
 .add-option {color:#444;font-weight:normal;padding:0 0 5px;margin-bottom:5px;}
@@ -796,7 +778,7 @@ option/expand
 	<h3 class="design-view"><span>design view</span></h3>
 	<div class="cpn-ex">
 		<p class="add-option">Type(dot)</p>
-		<div class="tmp-nav">
+		<div class="tmp-nav" style="width:200px">
 			<a href="javascript:;" class=""><span>1</span></a>
 			<a href="javascript:;" class="on"><span>2</span></a>
 			<a href="javascript:;"><span>3</span></a>
@@ -823,6 +805,59 @@ option/expand
 	<a href="javascript:;"><span>4</span></a>
 	<a href="javascript:;"><span>5</span></a>
 	<a href="javascript:;"><span>6</span></a>
+</div>
+	</pre>
+	
+	<!-- number paging -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(number)</p>
+		<div class="paging" style="width:500px">
+			<a class="btn go-first" href="javascript:;"><span class="hide">처음</span></a>
+			<a class="btn go-prev" href="javascript:;"><span class="hide">이전</span></a>
+			<strong><span class="hide">현재</span>1<span class="hide">페이지</span></strong>
+			<a href="javascript:;">2<span class="hide">페이지</span></a>
+			<a href="javascript:;">3<span class="hide">페이지</span></a>
+			<a href="javascript:;">4<span class="hide">페이지</span></a>
+			<a href="javascript:;">5<span class="hide">페이지</span></a>
+			<a href="javascript:;">6<span class="hide">페이지</span></a>
+			<a href="javascript:;">7<span class="hide">페이지</span></a>
+			<a href="javascript:;">8<span class="hide">페이지</span></a>
+			<a href="javascript:;">9<span class="hide">페이지</span></a>
+			<a href="javascript:;">10<span class="hide">페이지</span></a>
+			<a class="btn go-next" href="javascript:;"><span class="hide">다음</span></a>
+			<a class="btn go-last" href="javascript:;"><span class="hide">마지막</span></a>
+		</div>
+	</div>
+	<pre class="html">
+default
+<div class="paging">
+	<a class="btn go-first" href="javascript:;"><span class="hide">처음</span></a>
+	<a class="btn go-prev" href="javascript:;"><span class="hide">이전</span></a>
+	<strong><span class="hide">현재</span>1<span class="hide">페이지</span></strong>
+	<a href="javascript:;">2<span class="hide">페이지</span></a>
+	<a href="javascript:;">3<span class="hide">페이지</span></a>
+	<a href="javascript:;">4<span class="hide">페이지</span></a>
+	<a href="javascript:;">5<span class="hide">페이지</span></a>
+	<a href="javascript:;">6<span class="hide">페이지</span></a>
+	<a href="javascript:;">7<span class="hide">페이지</span></a>
+	<a href="javascript:;">8<span class="hide">페이지</span></a>
+	<a href="javascript:;">9<span class="hide">페이지</span></a>
+	<a href="javascript:;">10<span class="hide">페이지</span></a>
+	<a class="btn go-next" href="javascript:;"><span class="hide">다음</span></a>
+	<a class="btn go-last" href="javascript:;"><span class="hide">마지막</span></a>
+</div>
+option/expand
+<div class="paging red"><!-- color : red, green -->
+	<a class="btn go-first" href="javascript:;"><span class="hide">처음</span></a>
+	<a class="btn go-prev" href="javascript:;"><span class="hide">이전</span></a>
+	<strong><span class="hide">현재</span>1<span class="hide">페이지</span></strong>
+	<a href="javascript:;">2<span class="hide">페이지</span></a>
+~
+	<a href="javascript:;">9<span class="hide">페이지</span></a>
+	<a href="javascript:;">10<span class="hide">페이지</span></a>
+	<a class="btn go-next" href="javascript:;"><span class="hide">다음</span></a>
+	<a class="btn go-last" href="javascript:;"><span class="hide">마지막</span></a>
 </div>
 	</pre>
 
