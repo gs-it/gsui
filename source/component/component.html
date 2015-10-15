@@ -1,0 +1,866 @@
+<link rel="stylesheet" type="text/css" href="css/tmp.css">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<style type="text/css">
+.cpn-ex {padding:10px;background-color:#fff;border:1px solid #ededed;position:relative;z-index:1;}
+.design-view {margin-bottom:-12px;position:relative;z-index:2;}
+.design-view span {color:#555;display:inline-block;background-color:#fff;padding:5px 10px;border:1px solid #ededed;border-bottom-color:#fff;}
+.add-option {color:#444;font-weight:normal;padding:0 0 5px;margin-bottom:5px;}
+</style>
+
+<h1>Components for GS SHOP</h1>
+<section>
+	<h2>Common JS/CSS</h2>
+	<pre class="html">
+<!-- 관련 CSS -->
+<link rel="stylesheet" type="text/css" href="http://devimage.gsshop.com/mi13/css2/tmp.css" />		
+<!-- 스크립트선언 -->
+<link rel="stylesheet" type="text/css" href="http://devimage.gsshop.com/mi13/js/global-2.0.js" />
+	</pre>
+
+</section>
+
+<section>
+
+	<h2>수량 input</h2>
+	<!-- 기본input -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<strong>입력창:</strong> <input type="text" class="tmp-input only-num">
+	</div>
+	<pre class="html">
+default
+<span class="tmp-cnt-box">
+	<input type="text" class="tmp-input">
+</span>	
+option/expand
+<input type="text" class="tmp-input only-num"><!-- 숫자만 입력창 -->
+<input type="text" class="tmp-input only-price"><!-- 가격 단위변환 입력창 -->
+	</pre>
+	
+	<!-- 수량변경 -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<span class="tmp-cnt-box h30">
+			<input type="text" class="tmp-input h30 num-only" value="1" />
+			<a class="tmp-btn type-ico h30 plus" href="javascript:;" role="button"><span class="tmp-ico v9">수량 올림</span></a>
+			<a class="tmp-btn type-ico h30 minus" href="javascript:;" role="button"><span  class="tmp-ico v10">수량 내림</span></a>
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-cnt-box">
+	<input type="text" class="tmp-input num-only" value="1" />
+	<a class="tmp-btn type-ico plus" href="javascript:;" role="button"><span class="tmp-ico v9">수량 올림</span></a>
+	<a class="tmp-btn type-ico minus" href="javascript:;" role="button"><span  class="tmp-ico v10">수량 내림</span></a>
+</span>	
+option/expand
+<input type="text" class="tmp-input h30 num-only" value="1" /><!-- h30 높이값 설정 -->
+	</pre>
+
+	<!-- 수량변경 아이콘 사이즈 -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<a role="button" class="tmp-btn type-ico h40" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h40" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+
+		<a role="button" class="tmp-btn type-ico h40 red" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h40 green" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+
+		<a role="button" class="tmp-btn type-ico h40 lime" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h40 khaki" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+
+		<a role="button" class="tmp-btn type-ico h40 gray" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h40 light-gray" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+	</div>
+	<pre class="html">
+default
+<a role="button" class="tmp-btn type-ico h40" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a>
+<a role="button" class="tmp-btn type-ico h40" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+option/expand
+<a class="tmp-btn type-ico h44" href="javascript:;" role="button"><span class="tmp-ico v9">아이콘 버튼</span></a><!-- 아이콘 크기 설정 h44  -->
+<a class="tmp-btn type-ico h44" href="javascript:;" role="button"><span  class="tmp-ico v10">아이콘 버튼</span></a><!-- 아이콘 크기 설정 h44  -->
+<a role="button" class="tmp-btn type-ico h40 red" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a><!-- 칼라값 red -->
+<a role="button" class="tmp-btn type-ico h40 green" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a><!-- 칼라값 green -->
+<a role="button" class="tmp-btn type-ico h40 lime" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a><!-- 칼라값 lime -->
+<a role="button" class="tmp-btn type-ico h40 khaki" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a><!-- 칼라값 khaki  -->
+<a role="button" class="tmp-btn type-ico h40 gray" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a><!-- 칼라값 gray -->
+<a role="button" class="tmp-btn type-ico h40 light-gray" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a><!-- 칼라값 light-gray -->
+	</pre>
+
+</section>
+
+<section>
+
+	<h2>checkbox &amp; radio</h2>
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<div class="tmp-check disabled">
+			<input type="checkbox" name="a" id="a" value="" disabled />
+			<label for="a"><i></i>선택1</label>
+		</div>
+		<div class="tmp-check">
+			<input type="checkbox" name="a1" id="a1" value="" />
+			<label for="a1"><i></i>선택2</label>
+		</div>
+
+		<div class="tmp-radio disabled">
+			<input type="radio" name="radio2" id="b" value="" disabled="disabled" />
+			<label for="b"><i></i>선택3</label>
+		</div>
+		<div class="tmp-radio">
+			<input type="radio" name="radio2" id="b1" value="" />
+			<label for="b1"><i></i>선택4</label>
+		</div>
+
+		<div class="tmp-check type2 disabled">
+			<input type="checkbox" name="aa" id="aa" value="" disabled />
+			<label for="aa"><i></i>선택5</label>
+		</div>
+		<div class="tmp-check type2">
+			<input type="checkbox" name="aa1" id="aa1" value="" />
+			<label for="aa1"><i></i>선택6</label>
+		</div>
+
+		<div class="tmp-radio type2 disabled">
+			<input type="radio" name="radio3" id="bb" value="" disabled="disabled" />
+			<label for="bb"><i></i>선택7</label>
+		</div>
+		<div class="tmp-radio type2">
+			<input type="radio" name="radio3" id="bb1" value="" />
+			<label for="bb1"><i></i>선택8</label>
+		</div>
+	</div>
+	<pre class="html">
+default
+<div class="tmp-check"><!-- 체크박스 -->
+	<input type="checkbox" name="a1" id="a1" value="" />
+	<label for="a1"><i></i>선택2</label>
+</div>
+<div class="tmp-radio"><!-- 라디오버튼형식 -->
+	<input type="radio" name="radio2" id="b1" value="" />
+	<label for="b1"><i></i>선택4</label>
+</div>
+option/expand
+<div class="tmp-check disabled"><!-- disabled -->
+	<input type="checkbox" name="a" id="a" value="" disabled />
+	<label for="a"><i></i>선택1</label>
+</div>
+<div class="tmp-check type2"> ~ </div><!-- 채운 박스 타입 -->
+<div class="tmp-radio type2"> ~ </div><!-- 채운 라디오 타입 -->
+	</pre>
+</section>
+
+<section>
+	<h2>selectbox</h2>
+	<!-- default -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(system)</p>
+		<span class="tmp-select ddx">
+			<span class="current">선택하세요</span><span class="btn-opt"><i></i></span>
+			<select name="" id="">
+				<option value="">인기순</option>
+				<option value="">오픈순</option>
+				<option value="">낮은가격순</option>
+				<option value="">높은가격순</option>
+				<option value="">상품평순</option>
+				<option value="">마감순</option>
+				<option value="">오픈되었을때 컨텐츠의 길이에 따라 늘어납니다.</option>
+			</select>			 
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-select ddx">
+	<span class="current">선택하세요</span><span class="btn-opt"><i></i></span>
+	<select name="" id="">
+		<option value="">인기순</option>
+		<option value="">오픈순</option>
+		<option value="">낮은가격순</option>
+		<option value="">높은가격순</option>
+		<option value="">상품평순</option>
+		<option value="">마감순</option>
+		<option value="">오픈되었을때 컨텐츠의 길이에 따라 늘어납니다.</option>
+	</select>			
+</span>
+	</pre>
+	
+	<!-- image type -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(image)</p>
+		<span class="tmp-select img-type ddx">
+			<a class="current" href="#콤보박스" role="button">상품을 선택해주세요</a><span class="btn-opt line"><i class="arr2">옵션열기</i></span>
+			<ul>
+				<li>
+					<a href="javascript:;">
+						<span class="opt-img pt14"><img src="http://dummyimage.com/70x70/acacac/fff" alt="샘플이미지"></span>
+						<span class="opt-txt pt14"><em class="black">선택1)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+						<span class="opt-cnt">(999,090)</span>
+					</a>
+				</li>
+				<li class="on">
+					<a href="javascript:;" role="button">
+						<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W1.jpg" alt=""></span>
+						<span class="opt-txt pt14"><em class="black">선택2)</em> [ROCKFISH] 락피쉬 루시 </span> 
+						<span class="opt-cnt">(37,022)</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W2.jpg" alt=""></span>
+						<span class="opt-txt pt14"><em class="black">선택3)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+						<span class="opt-cnt">(55,090)</span>
+					</a>
+				</li>
+				<li class="disabled" data-alim="">
+					<a href="javascript:;" role="button">
+						<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W3.jpg" alt=""></span>
+						<span class="opt-txt pt14"><em class="black">선택4)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+						<span class="opt-cnt">(0)</span>
+					</a>
+				</li><!-- 상품평이 없는 상품의 경우 -->
+				<li>
+					<a href="javascript:;" role="button">
+						<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W4.jpg" alt=""></span>
+						<span class="opt-txt pt14"><em class="black">선택5)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+						<span class="opt-cnt">(32,090)</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" role="button">
+						<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W5.jpg" alt=""></span>
+						<span class="opt-txt pt14"><em class="black">선택10)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+						<span class="opt-cnt">(540)</span>
+					</a>
+				</li>
+			</ul>
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-select img-type ddx">
+	<a class="current" href="#콤보박스" role="button">상품을 선택해주세요</a><span class="btn-opt line"><i class="arr2">옵션열기</i></span><!-- 로딩시 기본값 -->
+	<ul>
+		<li>
+			<a href="javascript:;">
+				<span class="opt-img pt14"><img src="http://dummyimage.com/70x70/acacac/fff" alt="샘플이미지"></span>
+				<span class="opt-txt pt14"><em class="black">선택1)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+				<span class="opt-cnt">(999,090)</span>
+			</a>
+		</li>
+		<li class="on"><!-- 현재 선택값 -->
+			<a href="javascript:;" role="button">
+				<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W1.jpg" alt=""></span>
+				<span class="opt-txt pt14"><em class="black">선택2)</em> [ROCKFISH] 락피쉬 루시 </span> 
+				<span class="opt-cnt">(37,022)</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" role="button"><!-- 컨텐츠길이가 길경우 -->
+				<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W2.jpg" alt=""></span>
+				<span class="opt-txt pt14"><em class="black">선택3)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+				<span class="opt-cnt">(55,090)</span>
+			</a>
+		</li>
+		<li class="disabled" data-alim=""><!-- 비활성처리-->
+			<a href="javascript:;" role="button">
+				<span class="opt-img pt14"><img src="http://image.gsshop.com/image/10/01/10011790_W3.jpg" alt=""></span>
+				<span class="opt-txt pt14"><em class="black">선택4)</em> [ROCKFISH] 락피쉬 루시 레이스업 숏레인부츠 - 4COLOR</span>
+				<span class="opt-cnt">(0)</span>
+			</a>
+		</li>
+	</ul>
+</span>
+option/expand
+	</pre>
+
+	<!-- a 링크 타입 -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(a link)</p>
+		<span class="tmp-select clicked ddx">
+			<a class="current" href="#콤보박스" role="button">a 링크 타입</a><span class="btn-opt"><i></i></span>
+			<ul>
+				<li><a href="javascript:;">상세정보</a></li>
+				<li class="disabled"><a href="javascript:;">상품평</a></li>
+				<li><a href="javascript:;">Q&A</a></li>
+				<li><a href="javascript:;">일반정보</a></li>
+				<li><a href="javascript:;">배송/교환/반품</a></li>
+			</ul>				
+		</span>
+
+		<span class="tmp-select spread">
+			<a class="current" href="#콤보박스" role="button">a 링크 타입</a><span class="btn-opt"><i></i></span>
+			<ul>
+				<li class="on"><a href="javascript:;">상세정보</a></li>
+				<li><a href="javascript:;">상품평</a></li>
+				<li><a href="javascript:;">Q&A</a></li>
+				<li><a href="javascript:;">일반정보</a></li>
+				<li><a href="javascript:;">배송/교환/반품</a></li>
+			</ul>				
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-select clicked ddx">
+	<a class="current" href="#콤보박스" role="button">a 링크 타입</a><span class="btn-opt"><i></i></span>
+	<ul>
+		<li><a href="javascript:;">상세정보</a></li>
+		<li class="disabled"><a href="javascript:;">상품평</a></li>
+		<li><a href="javascript:;">Q&A</a></li>
+		<li><a href="javascript:;">일반정보</a></li>
+		<li><a href="javascript:;">배송/교환/반품</a></li>
+	</ul>				
+</span>
+option/expand
+<span class="tmp-select spread"><!-- 펼침형 -->
+	<a class="current" href="#콤보박스" role="button">a 링크 타입</a><span class="btn-opt"><i></i></span>
+	<ul>
+		<li class="on"><a href="javascript:;">상세정보</a></li>
+		<li><a href="javascript:;">상품평</a></li>
+		<li><a href="javascript:;">Q&A</a></li>
+		<li><a href="javascript:;">일반정보</a></li>
+		<li><a href="javascript:;">배송/교환/반품</a></li>
+	</ul>				
+</span>
+	</pre>
+
+	<!-- input 타입 -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(radio)</p>
+		<span class="tmp-select" id="dddd">
+			<span class="current">인기순</span><span class="btn-opt"><i></i></span>
+			<ul class="chk-lst">
+				<li class="on">
+					<input type="radio" name="d" id="d1" value="" checked />
+					<label for="d1"><i></i>인기순</label>
+				</li>
+				<li>
+					<input type="radio" name="d" id="d2" value="" />
+					<label for="d2"><i></i>오픈순</label>
+				</li>
+				<li>
+					<input type="radio" name="d" id="d3" value="" />
+					<label for="d3"><i></i>낮은가격순</label>
+				</li>
+				<li>
+					<input type="radio" name="d" id="d4" value="" />
+					<label for="d4"><i></i>높은가격순</label>
+				</li>
+				<li>
+					<input type="radio" name="d" id="d5" value="" />
+					<label for="d5"><i></i>상품평순</label>
+				</li>
+				<li>
+					<input type="radio" name="d" id="d6" value="" />
+					<label for="d6"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+		
+		<!-- 펼침형 -->
+		<span class="tmp-select spread">
+			<span class="current">인기순</span><span class="btn-opt"><i></i></span>
+			<ul class="chk-lst">
+				<li class="on">
+					<input type="radio" name="e" id="e1" value=""  />
+					<label for="e1"><i></i>인기순</label>
+				</li>
+				<li style="display:none"><!-- 안보여줌 -->
+					<input type="radio" name="e" id="e2" value=""  disabled />
+					<label for="e2"><i></i>오픈순</label>
+				</li>
+				<li>
+					<input type="radio" name="e" id="e3" value=""   />
+					<label for="e3"><i></i>낮은가격순</label>
+				</li>
+				<li>
+					<input type="radio" name="e" id="e4" value=""  />
+					<label for="e4"><i></i>높은가격순</label>
+				</li>
+				<li>
+					<input type="radio" name="e" id="e5" value="" />
+					<label for="e5"><i></i>상품평순</label>
+				</li>
+				<li>
+					<input type="radio" name="e" id="e6" value="" />
+					<label for="e6"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+
+		<!-- 펼침형2 -->
+		<span class="tmp-select spread type2" style="margin-left:20px">
+			<span class="current">인기순</span><span class="btn-opt"><i></i></span>
+			<ul class="chk-lst">
+				<li class="on">
+					<input type="radio" name="e2" id="e21" value=""  />
+					<label for="e21"><i></i>인기순</label>
+				</li>
+				<li>
+					<input type="radio" name="e2" id="e22" value="" />
+					<label for="e22"><i></i>오픈순</label>
+				</li>
+				<li>
+					<input type="radio" name="e2" id="e23" value="" />
+					<label for="e23"><i></i>낮은가격순</label>
+				</li>
+				<li>
+					<input type="radio" name="e2" id="e24" value="" />
+					<label for="e24"><i></i>높은가격순</label>
+				</li>
+				<li>
+					<input type="radio" name="e2" id="e25" value="" />
+					<label for="e25"><i></i>상품평순</label>
+				</li>
+				<li>
+					<input type="radio" name="e2" id="e26" value="" />
+					<label for="e26"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-select" id="dddd">
+	<span class="current">인기순</span><span class="btn-opt"><i></i></span>
+	<ul class="chk-lst">
+		<li class="on">
+			<input type="radio" name="d" id="d1" value="" checked />
+			<label for="d1"><i></i>인기순</label>
+		</li>
+		<li>
+			<input type="radio" name="d" id="d2" value="" />
+			<label for="d2"><i></i>오픈순</label>
+		</li>
+		<li>
+			<input type="radio" name="d" id="d3" value="" />
+			<label for="d3"><i></i>낮은가격순</label>
+		</li>
+~
+	</ul>				
+</span>
+option/expand
+<span class="tmp-select spread"><!-- 펼침형 -->
+	<span class="current">인기순</span><span class="btn-opt"><i></i></span>
+	<ul class="chk-lst">
+		<li class="on">
+			<input type="radio" name="e" id="e1" value=""  />
+			<label for="e1"><i></i>인기순</label>
+		</li>
+		<li style="display:none"><!-- 안보여줌 -->
+			<input type="radio" name="e" id="e2" value=""  disabled />
+			<label for="e2"><i></i>오픈순</label>
+		</li>
+~
+	</ul>				
+</span>
+
+<span class="tmp-select spread type2"><!-- 펼침형 type2 -->
+	<span class="current">인기순</span><span class="btn-opt"><i></i></span>
+	<ul class="chk-lst">
+		<li class="on">
+			<input type="radio" name="e2" id="e21" value=""  />
+			<label for="e21"><i></i>인기순</label>
+		</li>
+		<li>
+			<input type="radio" name="e2" id="e22" value="" />
+			<label for="e22"><i></i>오픈순</label>
+		</li>
+		<li>
+			<input type="radio" name="e2" id="e23" value="" />
+			<label for="e23"><i></i>낮은가격순</label>
+		</li>
+~
+	</ul>				
+</span>
+	</pre>
+
+	<!-- input 타입 checkbox 다중선택 -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(checkbox) multi select 1</p>
+		<span class="tmp-select multi">
+			<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+			<ul>
+				<li class="tmp-check disabled">
+					<input type="checkbox" name="g1" id="g1" value="" />
+					<label for="g1"><i></i>인기순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="g2" id="g2" value="" />
+					<label for="g2"><i></i>오픈순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="g3" id="g3" value="" />
+					<label for="g3"><i></i>낮은가격순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="g4" id="g4" value="" />
+					<label for="g4"><i></i>높은가격순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="g5" id="g5" value="" />
+					<label for="g5"><i></i>상품평순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="g6" id="g6" value="" />
+					<label for="g6"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+		
+		<!-- 펼침 -->
+		<span class="tmp-select multi spread">
+			<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+			<ul>
+				<li class="tmp-check">
+					<input type="checkbox" name="j1" id="j1" value="" />
+					<label for="j1"><i></i>인기순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="j2" id="j2" value="" />
+					<label for="j2"><i></i>오픈순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="j3" id="j3" value="" />
+					<label for="j3"><i></i>낮은가격순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="j4" id="j4" value="" />
+					<label for="j4"><i></i>높은가격순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="j5" id="j5" value="" />
+					<label for="j5"><i></i>상품평순</label>
+				</li>
+				<li class="tmp-check">
+					<input type="checkbox" name="j6" id="j6" value="" />
+					<label for="j6"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-select multi">
+	<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+	<ul>
+		<li class="tmp-check disabled">
+			<input type="checkbox" name="g1" id="g1" value="" />
+			<label for="g1"><i></i>인기순</label>
+		</li>
+		<li class="tmp-check">
+			<input type="checkbox" name="g2" id="g2" value="" />
+			<label for="g2"><i></i>오픈순</label>
+		</li>
+~
+	</ul>				
+</span>
+option/expand
+<span class="tmp-select multi spread"><!-- 펼침 -->
+	<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+	<ul>
+		<li class="tmp-check">
+			<input type="checkbox" name="j1" id="j1" value="" />
+			<label for="j1"><i></i>인기순</label>
+		</li>
+		<li class="tmp-check">
+			<input type="checkbox" name="j2" id="j2" value="" />
+			<label for="j2"><i></i>오픈순</label>
+		</li>
+~
+	</ul>				
+</span>
+	</pre>
+
+	<!-- input 타입 - checkbox 다중 선택2 ( form 전송형)  -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(checkbox) multi select 2</p>
+		<span class="tmp-select multi">
+			<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+			<ul>
+				<li class="tmp-check type2 disabled">
+					<input type="checkbox" name="k1" id="k1" value="" />
+					<label for="k1"><i></i>인기순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="k2" id="k2" value="" />
+					<label for="k2"><i></i>오픈순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="k3" id="k3" value="" />
+					<label for="k3"><i></i>낮은가격순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="k4" id="k4" value="" />
+					<label for="k4"><i></i>높은가격순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="k5" id="k5" value="" />
+					<label for="k5"><i></i>상품평순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="k6" id="k6" value="" />
+					<label for="k6"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+		
+		<!-- 펼침 -->
+		<span class="tmp-select multi spread">
+			<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+			<ul>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="m1" id="m1" value="" />
+					<label for="m1"><i></i>인기순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="m2" id="m2" value="" />
+					<label for="m2"><i></i>오픈순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="m3" id="m3" value="" />
+					<label for="m3"><i></i>낮은가격순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="m4" id="m4" value="" />
+					<label for="m4"><i></i>높은가격순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="m5" id="m5" value="" />
+					<label for="m5"><i></i>상품평순</label>
+				</li>
+				<li class="tmp-check type2">
+					<input type="checkbox" name="m6" id="m6" value="" />
+					<label for="m6"><i></i>마감순</label>
+				</li>
+			</ul>				
+		</span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-select multi">
+	<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+	<ul>
+		<li class="tmp-check type2 disabled">
+			<input type="checkbox" name="k1" id="k1" value="" />
+			<label for="k1"><i></i>인기순</label>
+		</li>
+		<li class="tmp-check type2">
+			<input type="checkbox" name="k2" id="k2" value="" />
+			<label for="k2"><i></i>오픈순</label>
+		</li>
+~
+	</ul>				
+</span>
+option/expand
+<span class="tmp-select multi spread"><!-- 펼침 -->
+	<a class="current" href="#콤보박스" role="button">선택하세요</a><span class="btn-opt"><i></i></span>
+	<ul>
+		<li class="tmp-check type2">
+			<input type="checkbox" name="m1" id="m1" value="" />
+			<label for="m1"><i></i>인기순</label>
+		</li>
+		<li class="tmp-check type2">
+			<input type="checkbox" name="m2" id="m2" value="" />
+			<label for="m2"><i></i>오픈순</label>
+		</li>
+~
+	</ul>				
+</span>
+	</pre>
+</section>
+
+<section>
+	<h2>button</h2>
+	<!-- default -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<span class="tmp-btn"><i class="tmp-ico v1 left"></i><input type="submit" value="바로구매"></span>
+		<span class="tmp-btn "><i class="tmp-ico v1 left"></i><button>바로구매</button></span>
+		<span class="tmp-btn "><i class="tmp-ico v1 right"></i><a href="javascript:;">바로구매</a></span>
+	</div>
+	<pre class="html">
+default
+<span class="tmp-btn"><i class="tmp-ico v1 left"></i><input type="submit" value="바로구매"></span><!-- default Height 36px --><!-- input type -->
+<span class="tmp-btn "><i class="tmp-ico v1 left"></i><button>바로구매</button></span><!-- button type -->
+<span class="tmp-btn "><i class="tmp-ico v1 left"></i><a href="javascript:;">바로구매</a></span><!-- a link type -->
+option/expand
+<span class="tmp-btn h23"><i class="tmp-ico v1 left"></i><input type="submit" value="바로구매"></span><!-- Height 23px -->
+<span class="tmp-btn h28"><i class="tmp-ico v1 right"></i><button>바로구매</button></span><!-- Height 28px --><!-- right icon -->
+<span class="tmp-btn h30"><i class="tmp-ico v1 left"></i><a href="javascript:;" class="bold">바로구매</a></span><!-- Height 30px --><!-- font weight Bold -->
+<span class="tmp-btn h50"><i class="tmp-ico v1 left"></i><a href="javascript:;">바로구매</a></span><!-- Height 50px -->
+	</pre>
+
+	<!-- icon button -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">icon button</p>
+		<a role="button" class="tmp-btn type-ico h28" href="javascript:;"><span class="tmp-ico v21">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h30" href="javascript:;"><span class="tmp-ico v22">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h40" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h44" href="javascript:;"><span class="tmp-ico v41">아이콘 버튼</span></a>
+		<a role="button" class="tmp-btn type-ico h50" href="javascript:;"><span  class="tmp-ico v42">아이콘 버튼</span></a>
+
+		<span class="tmp-btn type-ico h28 "><i class="tmp-ico v45"></i><button>아이콘 버튼</button></span>
+		<span class="tmp-btn type-ico h30 "><i class="tmp-ico v46"></i><button>아이콘 버튼</button></span>
+		<span class="tmp-btn type-ico"><i class="tmp-ico v47"></i><button>아이콘 버튼</button></span>
+		<span class="tmp-btn type-ico h40"><i class="tmp-ico v48"></i><button>아이콘 버튼</button></span>
+		<span class="tmp-btn type-ico h44"><i class="tmp-ico v49"></i><button>아이콘 버튼</button></span>
+		<span class="tmp-btn type-ico h50"><i class="tmp-ico v50"></i><button>아이콘 버튼</button></span>
+	</div>
+	<pre class="html">
+default
+<a role="button" class="tmp-btn type-ico h28" href="javascript:;"><span class="tmp-ico v21">아이콘 버튼</span></a><!-- a link type -->
+<a role="button" class="tmp-btn type-ico h30" href="javascript:;"><span class="tmp-ico v22">아이콘 버튼</span></a>
+<a role="button" class="tmp-btn type-ico" href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a><!-- default Height 36px -->
+<a role="button" class="tmp-btn type-ico h40" href="javascript:;"><span  class="tmp-ico v10">아이콘 버튼</span></a>
+<a role="button" class="tmp-btn type-ico h44" href="javascript:;"><span class="tmp-ico v41">아이콘 버튼</span></a>
+<a role="button" class="tmp-btn type-ico h50" href="javascript:;"><span  class="tmp-ico v42">아이콘 버튼</span></a>
+
+<span class="tmp-btn type-ico h28"><i class="tmp-ico v45"></i><button>아이콘 버튼</button></span><!-- button type -->
+<span class="tmp-btn type-ico h30"><i class="tmp-ico v46"></i><button>아이콘 버튼</button></span>
+<span class="tmp-btn type-ico"><i class="tmp-ico v47"></i><button>아이콘 버튼</button></span>
+<span class="tmp-btn type-ico h40"><i class="tmp-ico v48"></i><button>아이콘 버튼</button></span>
+<span class="tmp-btn type-ico h44"><i class="tmp-ico v49"></i><button>아이콘 버튼</button></span>
+<span class="tmp-btn type-ico h50"><i class="tmp-ico v50"></i><button>아이콘 버튼</button></span>
+option/expand
+<a role="button" class="tmp-btn type-ico h28" href="javascript:;"><span class="tmp-ico v21">아이콘 버튼</span></a><!-- Height 28px  -->
+<a role="button" class="tmp-btn type-ico h30 gradient" href="javascript:;"><span class="tmp-ico v22">아이콘 버튼</span></a><!-- Gradient  -->
+<a role="button" class="tmp-btn type-ico round3 " href="javascript:;"><span class="tmp-ico v9">아이콘 버튼</span></a><!-- border radius  -->
+	</pre>
+</section>
+
+<section>
+	<h2>tab</h2>
+	<!-- default -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<div class="tmp-tab h48 af-tab">
+			<ul>
+				<li class="on"><a href="#타겟"><strong>상세정보</strong></a></li>
+				<li><a href="#타겟"><strong>상품평</strong><span class="cnt">19,223</span></a></li>
+				<li><a href="#타겟"><strong>상품문의</strong><span class="cnt">671</span></a></li>
+				<li><a href="#타겟"><strong>일반정보</strong></a></li>
+				<li><a href="#타겟"><strong>배송/교환/반품</strong></a></li>
+			</ul>
+		</div>
+	</div>
+	<pre class="html">
+default
+<div class="tmp-tab h48 af-tab">
+	<ul>
+		<li class="on"><a href="#타겟"><strong>상세정보</strong></a></li>
+		<li><a href="#타겟"><strong>상품평</strong><span class="cnt">19,223</span></a></li>
+		<li><a href="#타겟"><strong>상품문의</strong><span class="cnt">671</span></a></li>
+		<li><a href="#타겟"><strong>일반정보</strong></a></li>
+		<li><a href="#타겟"><strong>배송/교환/반품</strong></a></li>
+	</ul>
+</div>
+option/expand
+<div class="tmp-tab h40 af-tab"><!-- Height 40px / h36/h40/h44 -->
+	<ul>
+		<li class="on"><a href="#타겟"><strong>전체</strong><span class="cnt">19,223</span></a></li>
+		<li><a href="#타겟"><strong>오늘의 딜</strong><span class="cnt">841</span></a></li>
+		<li><a href="#타겟"><strong>일반상품</strong><span class="cnt">902</span></a></li>
+	</ul>
+</div>
+	</pre>
+
+</section>
+
+<section>
+	<h2>Pagination</h2>
+	<!-- default -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(dot)</p>
+		<div class="tmp-nav" style="width:200px">
+			<a href="javascript:;" class=""><span>1</span></a>
+			<a href="javascript:;" class="on"><span>2</span></a>
+			<a href="javascript:;"><span>3</span></a>
+			<a href="javascript:;"><span>4</span></a>
+			<a href="javascript:;"><span>5</span></a>
+			<a href="javascript:;"><span>6</span></a>
+		</div>
+	</div>
+	<pre class="html">
+default
+<div class="tmp-nav">
+	<a href="javascript:;" class=""><span>1</span></a>
+	<a href="javascript:;" class="on"><span>2</span></a>
+	<a href="javascript:;"><span>3</span></a>
+	<a href="javascript:;"><span>4</span></a>
+	<a href="javascript:;"><span>5</span></a>
+	<a href="javascript:;"><span>6</span></a>
+</div>
+option/expand
+<div class="tmp-nav green"><!-- color : green, red -->
+	<a href="javascript:;" class=""><span>1</span></a>
+	<a href="javascript:;" class="on"><span>2</span></a>
+	<a href="javascript:;"><span>3</span></a>
+	<a href="javascript:;"><span>4</span></a>
+	<a href="javascript:;"><span>5</span></a>
+	<a href="javascript:;"><span>6</span></a>
+</div>
+	</pre>
+	
+	<!-- number paging -->
+	<h3 class="design-view"><span>design view</span></h3>
+	<div class="cpn-ex">
+		<p class="add-option">Type(number)</p>
+		<div class="paging" style="width:500px">
+			<a class="btn go-first" href="javascript:;"><span class="hide">처음</span></a>
+			<a class="btn go-prev" href="javascript:;"><span class="hide">이전</span></a>
+			<strong><span class="hide">현재</span>1<span class="hide">페이지</span></strong>
+			<a href="javascript:;">2<span class="hide">페이지</span></a>
+			<a href="javascript:;">3<span class="hide">페이지</span></a>
+			<a href="javascript:;">4<span class="hide">페이지</span></a>
+			<a href="javascript:;">5<span class="hide">페이지</span></a>
+			<a href="javascript:;">6<span class="hide">페이지</span></a>
+			<a href="javascript:;">7<span class="hide">페이지</span></a>
+			<a href="javascript:;">8<span class="hide">페이지</span></a>
+			<a href="javascript:;">9<span class="hide">페이지</span></a>
+			<a href="javascript:;">10<span class="hide">페이지</span></a>
+			<a class="btn go-next" href="javascript:;"><span class="hide">다음</span></a>
+			<a class="btn go-last" href="javascript:;"><span class="hide">마지막</span></a>
+		</div>
+	</div>
+	<pre class="html">
+default
+<div class="paging">
+	<a class="btn go-first" href="javascript:;"><span class="hide">처음</span></a>
+	<a class="btn go-prev" href="javascript:;"><span class="hide">이전</span></a>
+	<strong><span class="hide">현재</span>1<span class="hide">페이지</span></strong>
+	<a href="javascript:;">2<span class="hide">페이지</span></a>
+	<a href="javascript:;">3<span class="hide">페이지</span></a>
+	<a href="javascript:;">4<span class="hide">페이지</span></a>
+	<a href="javascript:;">5<span class="hide">페이지</span></a>
+	<a href="javascript:;">6<span class="hide">페이지</span></a>
+	<a href="javascript:;">7<span class="hide">페이지</span></a>
+	<a href="javascript:;">8<span class="hide">페이지</span></a>
+	<a href="javascript:;">9<span class="hide">페이지</span></a>
+	<a href="javascript:;">10<span class="hide">페이지</span></a>
+	<a class="btn go-next" href="javascript:;"><span class="hide">다음</span></a>
+	<a class="btn go-last" href="javascript:;"><span class="hide">마지막</span></a>
+</div>
+option/expand
+<div class="paging red"><!-- color : red, green -->
+	<a class="btn go-first" href="javascript:;"><span class="hide">처음</span></a>
+	<a class="btn go-prev" href="javascript:;"><span class="hide">이전</span></a>
+	<strong><span class="hide">현재</span>1<span class="hide">페이지</span></strong>
+	<a href="javascript:;">2<span class="hide">페이지</span></a>
+~
+	<a href="javascript:;">9<span class="hide">페이지</span></a>
+	<a href="javascript:;">10<span class="hide">페이지</span></a>
+	<a class="btn go-next" href="javascript:;"><span class="hide">다음</span></a>
+	<a class="btn go-last" href="javascript:;"><span class="hide">마지막</span></a>
+</div>
+	</pre>
+
+</section>
