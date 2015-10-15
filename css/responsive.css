@@ -32,12 +32,12 @@
 	.foot-link .disqus {width:88px;}
 	.copyright {clear:both;}
 	.snippet-menu {display:none !important;}
-	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
+	.snippet-container {border:0;overflow-x:scroll;white-space:nowrap;}
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
 	header .menu {width:auto;margin:0 auto;}
-	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
+	.snippet-container {border:0;overflow-x:scroll;white-space:nowrap;}
 }
 
 @media (max-width: 414px) {
@@ -52,7 +52,7 @@
 	.foot-link .gsshop {width:86px;}
 	.foot-link a.gsshop img {height:39px;top:-14px;}
 	.foot-link a.disqus img {vertical-align:-8px;}
-	pre ol {border:0;overflow-x:scroll;white-space:nowrap;}
+	.snippet-container {border:0;overflow-x:scroll;white-space:nowrap;}
 	pre ol li {list-style:none;font-size:0.9em;line-height:1.1em;}
 	.snippet-menu {display:none !important;}
 
