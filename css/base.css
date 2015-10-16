@@ -22,27 +22,27 @@ body {height:100%;}
 caption {margin:20px 0 5px;font-weight:bold;text-align:left;}
 
 /* header */
-header {position:fixed;width:230px;left:0;top:0;border-right:1px solid #e0e0e0;color:#555;/*background:#373737 ;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);*/}
+header {position:fixed;width:230px;left:0;top:0;color:#555;/*background:#373737 ;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);*/}
 .left-nav a,
 .left-nav a:hover,
 header a,
 header a:hover {text-decoration:none;}
 
 /* logo */
-header .wrap {width:auto;}
-header .wrap h1 {padding:20px;font-weight:600;font-size:22px;letter-spacing:0.1em;}
-header .wrap.mini {margin-top:-12px;padding-left:10px;}
-header .wrap.mini h1 a {font-size:20px;line-height:48px;}
+header .wrap {width:auto;height:102px;overflow:hidden;}
+header .wrap h1 {padding:20px 0 0 20px;height:81px;font-weight:600;font-size:22px;letter-spacing:0.1em;border-bottom:1px solid #e0e0e0;}
+/*header .wrap.mini {margin-top:-12px;padding-left:10px;}
+header .wrap.mini h1 a {font-size:20px;line-height:48px;}*/
 header small {opacity:0.5;font-size:12px;} /* for gsshop it group */
 header .for {}
 header em {/*color:#bed730;*/}
 
 /* footer */
-footer {position:fixed;left:0;bottom:0;width:230px;border-top:1px solid #e0e0e0;}
+footer {position:fixed;left:0;bottom:0;width:230px;border-top:1px solid #e0e0e0;z-index:1;}
 footer .wrap {padding:15px 20px;line-height:1.2;font-size:10px;}
 
 /* layout setting */
-.container {margin-left:230px;background:#fafafa;}
+.container {margin-left:230px;background:#fafafa;border-left:1px solid #e0e0e0;}
 /*.nav {margin-top:40px;background-color:#f7f7f7;}*/
 section {margin-top:30px;}
 .contents {padding:102px 30px 0;}
@@ -125,9 +125,9 @@ strong.tag {color:#9c318f;}
  */
 
 /* horizontal nav menu */
-header .head-nav {padding:10px 20px;border-top:1px solid #e0e0e0;}
-header .head-nav,
-.left-nav .menu a {font-weight:800;font-size:13px;display:block;padding:5px 0;line-height:25px;}
+header .head-nav {padding:10px 20px;top:15px;}
+.left-nav {position:fixed;left:0;top:102px;background-color:#FFF;z-index:2;width:190px;}
+.left-nav .menu a {font-weight:800;font-size:13px;display:block;padding:5px 0 5px 20px;line-height:25px;}
 .left-nav .menu {width:auto;margin:0 auto;}
 .left-nav .menu:after {content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
 .left-nav .menu li {position:relative;list-style-type:none;padding:0;margin-left:0;}
