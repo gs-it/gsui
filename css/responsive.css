@@ -1,6 +1,7 @@
 @media (max-width: 767px) {
 	.container {margin:46px 0 0 0;}
-	header {position:fixed;left:0;top:0;width:100%;border:0;z-index:2;}
+	header {position:fixed;left:0;top:0;width:100%;border:0;z-index:3;background-color:#FFF;}
+	header .wrap {height:auto;}
 	header .head-nav {padding:0;}
 	header .head-nav .ico-cate {display:block;position:absolute;z-index:501;top:15px;left:10px;cursor:pointer;}
 	.left-nav {z-index:5;}
