@@ -5,24 +5,41 @@
 	<ul class="square-list">
 		<li>마크업 개발은 프론트엔드 페이지의 기본을 형성한다.</li>
 		<li>마크업 개발을 잘해야 모든 브라우저에서 콘텐츠의 손실 없이, 빠르고 쉽게 이용자에게 전달할 수 있다.</li>
-		<li>위의 두가지를 만족시키기위해 마크업 개발자가 지켜야할 표준이 코딩켄벤션이다.</li>
-		<li>처음 코드를 작성자가 아니어도 이해할 수 있도록 작성하여 운영의 용이성을 제공한다. 이는 유지보수 비용을 절감하고 업무 효율을 높이는 역할을 한다.</li>
-		<li>다수의 프로젝트 진행시 통일된 기준으로 소스 코드를 작성 할 수 있는 기준이 된다.</li>
+		<li>올바른 HTML과 CSS로 다양한 브라우징 환경에 대응하는 접근 가능한 웹페이지를 만들 수 있다.</li>
+		<li>적절하게 구조화되고 깨끗하게 정리된 소스는 검색엔진 최적화(SEO)에 기여한다.</li>
+		<li>파일 크기를 줄이고 서버 저장 공간을 절약할 수 있다. 동시에 화면표시에 걸리는 시간이 줄고 서버 부담도 덜 수 있다.</li>
+		<li>올바르게 작성한 웹페이지는 오래된 브라우저에서도 콘텐츠가 적절하게 표시되고 상위 호환성과 상호운용성이 확보된다.</li>
 	</ul>
 </section>
  
 <section>
 	<h2>용어</h2>
 	<dl class="desc-list">
-		<dt>엘리먼트(element)</dt>
-		<dd>HTML문서를 구성하는 모든 태그요소</dd>
+		<dt>요소(Elements)</dt>
+		<dd>페이지 안에서 구조와 컨텐츠를 포함하는 객체</dd>
 		<dd>
 			<div class="cpn-ex">head, body, div, p, span, table, img, form .... </div>
 		</dd>
 	</dl>
 	<dl class="desc-list">
-		<dt>애트리뷰(attribute)</dt>
-		<dd>엘리먼트의 특성(애트리뷰 값은 큰따옴표("")로 묶는다)</dd>
+		<dt>태그(Tags)</dt>
+		<dd>요소의 시작과 끝을 구성</dd>
+		<dd>
+			<pre class="html">
+<div>태그</div>
+			</pre>
+		</dd>
+	</dl>
+	<dl class="desc-list">
+		<dt>속성(Attribute)</dt>
+		<dd>요소에 추가적으로 주어지는 속성.</dd>
+		<dd>
+			<div class="cpn-ex">src, href, class, id, alt, style ...</div>
+		</dd>
+	</dl>
+	<dl class="desc-list">
+		<dt>속성값(Property)</dt>
+		<dd>추가된 속성의 값. 속성값은 큰 따옴표("")로 묶는다.</dd>
 		<dd>
 			<pre class="html">
 <img src="sample.jpg" alt="샘플 이미지" width="100" height="100" />
@@ -30,22 +47,15 @@
 		</dd>
 	</dl>
 	<dl class="desc-list">
-		<dt>선택자(selector)</dt>
-		<dd>엘리먼트에 CSS 스타일적용할 수있는 객체</dd>
+		<dt>선택자(Selector)</dt>
+		<dd>엘리먼트에 스타일을 적용할 수 있게 특정 엘리먼트를 선택</dd>
 		<dd>
 			<div class="cpn-ex">*, div, div p, div > p, div#id, div.class, div:nth-child ...</div>
 		</dd>
 	</dl>
 	<dl class="desc-list">
-		<dt>속성(property)</dt>
-		<dd>엘리먼트 CSS 특성</dd>
-		<dd>
-			<div class="cpn-ex">font-weight(property):bold(value)</div>
-		</dd>
-	</dl>
-	<dl class="desc-list">
 		<dt>예약어</dt>
-		<dd>객체, 이미지, 파일 및 폴더등 네이밍시 의미를 일관되게 표현하기 위해 미리 정해 놓은 언어 규칙</dd>
+		<dd>객체, 이미지, 파일 및 폴더등 의미를 일관되게 표현하기 위해 미리 정해 놓은 언어 규칙</dd>
 		<dd>
 			<div class="cpn-ex">#wrap, #header, #content,...</div>
 		</dd>
