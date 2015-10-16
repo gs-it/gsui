@@ -22,7 +22,7 @@ body {height:100%;}
 caption {margin:20px 0 5px;font-weight:bold;text-align:left;}
 
 /* header */
-header {position:fixed;width:230px;left:0;top:0;color:#555;/*background:#373737 ;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);*/}
+header {position:fixed;width:230px;left:0;top:0;color:#555;}
 .left-nav a,
 .left-nav a:hover,
 header a,
@@ -30,9 +30,7 @@ header a:hover {text-decoration:none;}
 
 /* logo */
 header .wrap {width:auto;height:102px;overflow:hidden;}
-header .wrap h1 {padding:20px 0 0 20px;height:81px;font-weight:600;font-size:22px;letter-spacing:0.1em;border-bottom:1px solid #e0e0e0;}
-/*header .wrap.mini {margin-top:-12px;padding-left:10px;}
-header .wrap.mini h1 a {font-size:20px;line-height:48px;}*/
+header .wrap h1 {padding:20px 20px 0 20px;height:81px;font-weight:600;font-size:22px;letter-spacing:0.1em;border-bottom:1px solid #e0e0e0;}
 header small {opacity:0.5;font-size:12px;} /* for gsshop it group */
 header .for {}
 header em {/*color:#bed730;*/}
@@ -119,11 +117,6 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 .mgt20 {margin-top:20px;}
 .desc {padding-top:5px;}
 
-/* tag color
-strong.class {color:#349234;}
-strong.tag {color:#9c318f;}
- */
-
 /* horizontal nav menu */
 header .head-nav {padding:10px 20px;top:15px;}
 .left-nav {position:fixed;left:0;top:102px;background-color:#FFF;z-index:2;width:190px;}
@@ -136,7 +129,7 @@ header .head-nav {padding:10px 20px;top:15px;}
 .left-nav .menu li.on {background:#bed730;}
 .left-nav .menu li.on a {color:#333;}
 .left-nav .wrap.mini .head-nav a {font-size:13px;}
-.left-nav .menu-sub {display:block;/*position:absolute;left:0;top:35px;min-width:200px;background:#bed730;box-shadow:0 2px 4px #ddd;*/}
+.left-nav .menu-sub {display:block;}
 .left-nav .menu-sub .wrap {margin:0 auto;width:auto;}
 .left-nav .menu-sub a {display:block;font-weight:600;line-height:25px;padding:5px 0 0 40px;}
 .left-nav .menu-sub a:hover {opacity:0.8;color:#666;} 
