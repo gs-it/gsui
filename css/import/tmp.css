@@ -174,13 +174,13 @@ html {scrollbar-base-color:#5a5b5c;scrollbar-face-color:#fff;scrollbar-shadow-co
 .tmp-select.h30 li a, .tmp-select.h30 li label {padding:3px 9px 4px}
 
 /*└ 이미지형  ****/
-.tmp-select.img-type {min-width:432px}
+.tmp-select.img-type {min-width:282px}
 .tmp-select.img-type ul, .tmp-select.img-type li a {padding:0}
 .tmp-select.img-type li {border-top:1px solid #edf0f2}
 .tmp-select.img-type li:first-child {border:0 none}
 .tmp-select .opt-img {display:inline-block;vertical-align:middle;background:#eee}
 .tmp-select .opt-img img {width:70px;height:70px}
-.tmp-select .opt-txt {display:inline-block;vertical-align:middle;overflow:hidden;width:255px;padding:0 0 0 8px;max-height:38px;line-height:19px}
+.tmp-select .opt-txt {display:inline-block;vertical-align:middle;overflow:hidden;width:105px;padding:0 0 0 8px;max-height:38px;line-height:19px}
 .tmp-select .opt-cnt {display:inline-block;vertical-align:middle;width:60px;text-align:right;color:#333;font-weight:normal}
 .tmp-select .on .opt-txt em {color:#7da11e}
 .tmp-select.img-type .current {top:0}
