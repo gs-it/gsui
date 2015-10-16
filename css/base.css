@@ -158,3 +158,4 @@ header .head-nav {padding:10px 20px;top:15px;}
 .design-view {margin-bottom:-12px;position:relative;z-index:2;}
 .design-view span {font-weight:600;color:#555;display:inline-block;background-color:#fff;padding:5px 10px;border:1px solid #ededed;border-bottom-color:#fff;}
 .add-option {color:#444;font-weight:normal;padding:0 0 5px;margin-bottom:5px;}
+.mobile-nowrap {display:inline-block;}
