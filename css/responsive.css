@@ -33,6 +33,7 @@
 	.copyright {clear:both;}
 	.snippet-menu {display:none !important;}
 	.snippet-container {border:0;overflow-x:scroll;white-space:nowrap;}
+	pre {white-space:nowrap;}
 	pre ol {border-left-width:0}
 	pre ol li {list-style:none;}
 }
@@ -40,6 +41,7 @@
 @media (min-width: 768px) and (max-width: 980px) {
 	header .menu {width:auto;margin:0 auto;}
 	.snippet-container {border:0;overflow-x:scroll;white-space:nowrap;}
+	pre {white-space:nowrap;}
 	pre ol {border-left-width:0}
 	pre ol li {list-style:none;}
 }
@@ -57,6 +59,7 @@
 	.foot-link a.gsshop img {height:39px;top:-14px;}
 	.foot-link a.disqus img {vertical-align:-8px;}
 	.snippet-container {border:0;overflow-x:scroll;white-space:nowrap;}
+	pre {white-space:nowrap;}
 	pre ol li {list-style:none;font-size:0.9em;line-height:1.1em;}
 	pre ol {border-left-width:0}
 	.snippet-menu {display:none !important;}
