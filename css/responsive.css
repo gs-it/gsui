@@ -34,7 +34,7 @@
 	.snippet-menu {display:none !important;}
 	.snippet-container {border:0;overflow:hidden;position:static;}
 	.snippet-wrap {overflow-x:scroll;overflow-y:auto;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0);width:100%;background-color:#272822;-moz-overflow-scrolling: touch;-ms-scroll-chaining:chained; overflow-x: visible;}
-	pre {white-space:nowrap;}
+	pre {white-space:nowrap;border-right:10px solid #272822}
 	pre ol {border-left-width:0}
 	pre ol li {list-style:none;}
 }
@@ -44,7 +44,7 @@
 	header .menu {width:auto;margin:0 auto;}
 	.snippet-container {border:0;overflow:hidden;position:static;}
 	.snippet-wrap {overflow-x:scroll;overflow-y:auto;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0);width:100%;background-color:#272822;-moz-overflow-scrolling: touch;-ms-scroll-chaining:chained; overflow-x: visible;}
-	pre {white-space:nowrap;}
+	pre {white-space:nowrap;border-right:10px solid #272822}
 	pre ol {border-left-width:0}
 	pre ol li {list-style:none;}
 }
@@ -64,7 +64,7 @@
 	.foot-link a.disqus img {vertical-align:-8px;}
 	.snippet-container {border:0;overflow:hidden;position:static;}
 	.snippet-wrap {overflow-x:scroll;overflow-y:auto;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0);width:100%;background-color:#272822;-moz-overflow-scrolling: touch;-ms-scroll-chaining:chained; overflow-x: visible;}
-	pre {white-space:nowrap;}
+	pre {white-space:nowrap;border-right:10px solid #272822}
 	pre ol li {list-style:none;font-size:0.9em;line-height:1.1em;}
 	pre ol {border-left-width:0}
 	.snippet-menu {display:none !important;}
