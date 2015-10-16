@@ -22,12 +22,14 @@ body {height:100%;}
 caption {margin:20px 0 5px;font-weight:bold;text-align:left;}
 
 /* header */
-header {position:fixed;width:230px;left:0;top:0;min-height:100%;border-right:1px solid #e0e0e0;color:#555;/*background:#373737 ;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);*/}
-header a {text-decoration:none;}
+header {position:fixed;width:230px;left:0;top:0;border-right:1px solid #e0e0e0;color:#555;/*background:#373737 ;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);*/}
+.left-nav a,
+.left-nav a:hover,
+header a,
 header a:hover {text-decoration:none;}
 
 /* logo */
-header .wrap {width:auto;min-height:100%;}
+header .wrap {width:auto;}
 header .wrap h1 {padding:20px;font-weight:600;font-size:22px;letter-spacing:0.1em;}
 header .wrap.mini {margin-top:-12px;padding-left:10px;}
 header .wrap.mini h1 a {font-size:20px;line-height:48px;}
@@ -41,7 +43,7 @@ footer .wrap {padding:15px 20px;line-height:1.2;font-size:10px;}
 
 /* layout setting */
 .container {margin-left:230px;background:#fafafa;}
-.nav {margin-top:40px;background-color:#f7f7f7;}
+/*.nav {margin-top:40px;background-color:#f7f7f7;}*/
 section {margin-top:30px;}
 .contents {padding:102px 30px 0;}
 
@@ -128,19 +130,20 @@ strong.tag {color:#9c318f;}
 
 /* horizontal nav menu */
 header .head-nav {padding:10px 20px;border-top:1px solid #e0e0e0;}
-header .head-nav a {font-weight:800;font-size:13px;display:block;padding:5px 0;line-height:25px;}
-header .menu {width:auto;margin:0 auto;}
-header .menu:after {content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
-header .menu li {position:relative;list-style-type:none;padding:0;margin-left:0;}
-header .menu li:last-child {border-width:0}
-header .menu li:first-child {display:none;}
-header .menu li.on {background:#bed730;}
-header .menu li.on a {color:#333;}
-header .wrap.mini .head-nav a {font-size:13px;}
-header .menu-sub {display:block;/*position:absolute;left:0;top:35px;min-width:200px;background:#bed730;box-shadow:0 2px 4px #ddd;*/}
-header .menu-sub .wrap {margin:0 auto;width:auto;}
-header .menu-sub a {display:block;font-weight:600;line-height:25px;padding:5px 0 0 40px;}
-header .menu-sub a:hover {opacity:0.8;color:#666;} 
+header .head-nav,
+.left-nav .menu a {font-weight:800;font-size:13px;display:block;padding:5px 0;line-height:25px;}
+.left-nav .menu {width:auto;margin:0 auto;}
+.left-nav .menu:after {content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
+.left-nav .menu li {position:relative;list-style-type:none;padding:0;margin-left:0;}
+.left-nav .menu li:last-child {border-width:0}
+.left-nav .menu li:first-child {display:none;}
+.left-nav .menu li.on {background:#bed730;}
+.left-nav .menu li.on a {color:#333;}
+.left-nav .wrap.mini .head-nav a {font-size:13px;}
+.left-nav .menu-sub {display:block;/*position:absolute;left:0;top:35px;min-width:200px;background:#bed730;box-shadow:0 2px 4px #ddd;*/}
+.left-nav .menu-sub .wrap {margin:0 auto;width:auto;}
+.left-nav .menu-sub a {display:block;font-weight:600;line-height:25px;padding:5px 0 0 40px;}
+.left-nav .menu-sub a:hover {opacity:0.8;color:#666;} 
 
 /* reply form */
 #disqus_thread {padding:50px 30px 0;}
@@ -154,10 +157,10 @@ header .menu-sub a:hover {opacity:0.8;color:#666;}
 .foot-link .github img {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
 
 /*dim*/
-.dim {display:none; position:fixed; top:0; left:0; width:100%; height:100%; opacity:0; background:#000; z-index:1;}
+.dim {display:none; position:fixed; top:0; left:0; width:100%; height:100%; opacity:0; background:#000; z-index:2;}
 
 /* component */
-.cpn-ex {padding:10px;background-color:#fff;border:1px solid #ededed;position:relative;z-index:1;}
-.design-view {margin-bottom:-12px;position:relative;z-index:2;}
+.cpn-ex {padding:10px;background-color:#fff;border:1px solid #ededed;position:relative;z-index:0;overflow:hidden;}
+.design-view {margin-bottom:-12px;position:relative;z-index:1;}
 .design-view span {font-weight:600;color:#555;display:inline-block;background-color:#fff;padding:5px 10px;border:1px solid #ededed;border-bottom-color:#fff;}
 .add-option {color:#444;font-weight:normal;padding:0 0 5px;margin-bottom:5px;}
