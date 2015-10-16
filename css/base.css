@@ -65,6 +65,10 @@ h2+h3 {padding-top:0;}
 pre {position:relative;margin:10px 0;padding:0;line-height:20px;white-space:pre-line;font-family:Consolas,Inconsolata-g,'Dejavu Sans Mono','Malgun Gothic';font-size:1.1em;}
 pre ol {border-left:50px solid #606060;padding:10px 0;background:#272822;}
 pre ol li {padding:0 10px;list-style:decimal-leading-zero outside none;color:#f8f8f2;background-color:#272822;}
+.snippet-wrap .snippet-menu, .snippet-wrap .snippet-hide {top:0 !important;}
+.snippet-wrap pre.snippet-textonly {padding:0 10px !important;line-height:24px;color:#000;border:1px solid #BBD0DE;background:url('../img/k_pre.gif') repeat;}
+.snippet-wrap .snippet-menu a, .snippet-wrap .snippet-hide a {margin-left:5px;color:#ccc;text-decoration:none !important;/*background:#272822;border:1px solid #000;border-radius:10px;*/text-transform:uppercase;}
+
 
 /* list */
 .square-list {padding-left:15px;list-style-type: square;}
