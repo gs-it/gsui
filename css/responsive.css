@@ -108,4 +108,6 @@
 	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell,
 	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell,
 	.flex-table.col-group5 .flex-tbl.tbl-header .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell{text-align:left;background-color:#f5f7fa;display:none;}
+
+	.cpn-ex {padding:20px 10px;}
 }
