@@ -1,0 +1,158 @@
+@charset "utf-8";
+/*
+ * 작성자	 : 이재욱 (4541)
+ * 이메일	 : ray0506@gsshop.com
+ * 설명	 : 상품 스타일 CSS
+ ----------------------------------------------------------------
+ 1. Icon Templete
+ 2. Product Style
+ 0. Media Queries 
+
+ 1. Icon Templete ***********************************/ 
+/*└ 상품 딱지 */
+.badge {display:block;overflow:hidden;width:60px;height:24px;position:absolute;bottom:0;right:0;background:url(http://image.gsshop.com/mi13/img/ico/tmp_label02.png) no-repeat -300px 0;font:0/0 m}
+.badge.ico-hyundai {width:84px;background-position:-300px -30px}
+.badge.ico-lotte {width:80px;background-position:-300px -60px}
+.badge.ico-ditto {width:54px;background-position:-300px -90px}
+.badge.ico-best-deal {top:0;left:0;width:90px;height:90px;background-position:-120px 0}
+.badge.ico-quick {bottom:10px;left:10px;width:60px;height:60px;background-position:-400px 0}
+.badge.ico-deal {width:70px;height:20px;background-position:0 -120px}
+/* Best 12 */
+.ico-best {display:block;overflow:hidden;width:50px;height:50px;position:absolute;top:0;left:0;background:url(http://image.gsshop.com/mi13/img/ico/tmp_best12.png) no-repeat;font:0/0 m;text-indent:-999em}
+.ico-best.best2{background-position:-50px 0}.ico-best.best3{background-position:-100px 0}.ico-best.best4{background-position:0 -50px}.ico-best.best5{background-position:-50px -50px}.ico-best.best6{background-position:-100px -50px}.ico-best.best7{background-position:0 -100px}.ico-best.best8{background-position:-50px -100px}.ico-best.best9{background-position:-100px -100px}.ico-best.best10{background-position:0 -150px}.ico-best.best11{background-position:-50px -150px}.ico-best.best12{background-position:-100px -150px}
+/* 딱지 wrap */
+.badge-pos {position:absolute;*zoom:1}
+.badge-pos:after {display:block;clear:both;content:''}
+.badge-pos.tl {top:0;left:0}
+.badge-pos.tr {top:0;right:0}
+.badge-pos.bl {bottom:0;left:0} 
+.badge-pos.br {bottom:0;right:0}
+.badge-pos .badge, .badge-pos .ico-best {position:static;float:left}
+
+/* 2. Product Style **********************************/
+.goods h3 {position:relative;font-size:28px;font-weight:normal;color:#333;letter-spacing:-1.5px}
+.goods h3 .green {color:#00838f}
+.goods h3 .total {position:relative;top:-3px;margin-left:5px;font-size:14px;color:#666;vertical-align:bottom}
+.goods h3 .total.pt17 {font-size:17px}
+.goods h3 .sub-txt {margin-left:18px;font-size:18px;vertical-align:2px;letter-spacing:-1px}
+.goods ul {width:105%;*zoom:1}
+.goods ul:after {display:block;overflow:hidden;clear:both;content:""}
+.goods li {float:left;padding:0 20px 20px 0;font-size:14px} 
+.goods li a {display:block;position:relative;width:298px;min-height:372px;background:#fff;border:1px solid #d9dbe2;position:relative\9}
+.goods li a:hover, .goods li a:focus {border-color:#91bb21 /*#01aebe*/;text-decoration:none}
+.goods li.ban a {min-height:0}
+.goods .img {overflow:hidden;position:relative;height:270px;margin:14px;*height:auto;background:url(http://image.gsshop.com/mi13/img/etc/282.GIF) no-repeat center;*overflow:visible}
+.goods .img img, .goods .goods_pic {width:100%}
+.goods .soldout {position:absolute;bottom:0;left:0;width:100%;height:24px;line-height:24px;background-color:rgba(0, 0, 0, 0.5);color:#fff;font-weight:bold;font-size:16px;text-align:center;z-index:10}
+.goods .info {position:relative;overflow:hidden;height:60px;padding:0 13px}
+.goods .info dt {overflow:hidden;height:22px;padding:0 0 1px;margin-bottom:4px;line-height:22px;font-size:16px;letter-spacing:-1px;color:#333}
+.goods .info dt .badge {position:static;display:inline-block;vertical-align:middle;margin-right:5px;*display:inline;*zoom:1}
+.goods dfn.visible {position:static;height:auto;visibility:visible;font-size:14px;font-family:malgun gothic, applegothic}
+.goods .disc,.goods .normal {display:inline-block;height:28px;line-height:24px;margin-right:5px;color:#ec1f60;vertical-align:middle;*margin-right:8px;*display:inline;*zoom:1}
+.goods .disc {*position:relative;*top:-7px;*line-height:normal;font-size:16px}
+.goods .disc span {font-size:24px}
+.goods .normal {font-size:20px;line-height:26px}
+.goods .price, .goods .rental {display:inline-block;height:28px;line-height:28px;color:#333;vertical-align:middle;*display:inline;*zoom:1}
+.goods .price strong {font-size:20px;font-weight:600;vertical-align:-2px}
+.goods .gray {color:#888}
+.goods .rental dfn {position:static;height:auto;visibility:visible;font-size:14px;font-family:malgun gothic, applegothic}
+.goods .cnt {position:absolute;bottom:3px;right:15px;height:28px;line-height:26px;font-size:12px;color:#666}
+.goods .cnt strong {padding:0 1px}
+.goods .merit {position:relative;overflow:hidden;width:auto;height:20px;padding-bottom:12px}
+.goods .merit span {float:left;height:20px;line-height:18px;padding:0 0 0 12px;margin:0;background:url(http://image.gsshop.com/mi13/img/ico/dotx2_gray.gif) no-repeat 5px 10px;font-size:13px;color:#666}
+.goods .merit span:first-child {margin-left:2px;background:none}
+.goods .merit span.red {color:#ec1f60}
+.goods .merit span.green {color:#058591}
+.goods .side {position:relative;width:auto;height:40px;padding:0 8px;border-top:1px solid #f4f4f4;text-align:right}
+.goods .side span {display:inline-block;min-width:30px;height:30px;margin:5px -2px 0;vertical-align:middle}
+.goods .side button {overflow:visible;width:auto;height:30px;border:0 none;background:none;font-size:13px;color:#666;line-height:normal}
+.goods .side button i {display:inline-block;width:30px;height:30px;background:url(http://image.gsshop.com/mi13/img/ico/tmp_label.png) no-repeat -460px 0;font:0/0 m;vertical-align:middle;opacity:0.4}
+.goods .side button:hover {color:#333}
+.goods .side button:hover i {opacity:1}
+.goods .side .comment {position:absolute;top:0;left:5px;margin:5px 0 0;letter-spacing:-1px} 
+.goods .side .comment button {padding-right:5px}
+.goods .side .new-open i {background-position:-460px -60px}
+.goods .side .zzim {position:relative}
+.goods .side .zzim i {background-position:-460px -30px}
+.goods .side .zzim .tooltip {display:none;position:absolute;top:-40px;left:-47px;width:auto;height:30px;padding-bottom:5px;background:url(http://image.gsshop.com/mi13/img/ico/arrow_btm11x6_gray.gif) no-repeat  center bottom;text-align:center}
+.goods .side .zzim .tooltip em {display:block;width:128px;height:30px;background:#dedede;line-height:29px;font-size:13px;white-space:nowrap;color:#111}
+.goods .side .zzim.on i {background-position:-490px -30px;opacity:1}
+.goods .side .zzim.on .tooltip {left:-33px;background:url(http://image.gsshop.com/mi13/img/ico/arrow_btm11x6_ygreen.gif) no-repeat  center bottom;}
+.goods .side .zzim.on .tooltip em {width:102px;background:#cbdb2a}
+.srch-result {font-size:24px;color:#333}
+
+/*└ 검색상품 영역 (940사이즈) */
+.goods.w940 li {padding:0 16px 16px 0}
+.goods.w940 li a {width:234px;min-height:320px}
+.goods.w940 .img {height:214px;margin:10px 10px 8px}
+.goods.w940 .info {height:82px;padding:0 10px}
+.goods.w940 .info dt {height:42px;margin-bottom:5px;font-size:14px}
+.goods.w940 .disc {font-size:14px}
+.goods.w940 .disc, .goods.w940 .normal {margin-right:1px}
+.goods.w940 .disc span {font-size:22px}
+.goods.w940 .normal {font-size:18px;line-height:22px}
+.goods.w940 .price, .goods.w940 .rental {line-height:24px}
+.goods.w940 .price strong {font-size:18px}
+.goods.w940 .cnt {line-height:23px;font-size:12px;top:22px;right:11px;letter-spacing:-1px}
+.goods.w940 .cnt strong {letter-spacing:0}
+.goods.w940 .merit {margin-top:-3px}
+.goods.w940 .merit span {font-size:12px}
+.goods.w940 .merit span:first-child {margin-left:-2px}
+.goods.w940 .badge.ico-quick {bottom:3px;left:3px}
+.goods.w940 .soldout {height:24px;line-height:23px;font-size:13px}
+/*└ 상품 타이틀 영역 */
+.goods .index {position:relative;min-height:32px}
+.goods .sort {position:absolute;bottom:0px;right:1px}
+.goods .sort a {position:relative;float:left;display:block;width:96px;height:34px;line-height:32px;margin-right:-1px;border:1px solid #d9dbe2;background:#f4f4f4;font-size:14px;color:#666;text-align:center} 
+.goods .sort a span {padding:0 5px 0}
+.goods .sort a:focus {text-decoration:none;color:#333}
+.goods .sort a.on {background:#fff;color:#7da11e;border-color:#91bb21;z-index:10}
+.goods .sort a.on span {padding-left:18px;background:url(http://image.gsshop.com/mi13/img/ico/ico_ok_ygreen.png) no-repeat 0 6px}
+.goods .sort a:hover {text-decoration:none;border-color:#91bb21;background:#fff;z-index:11}
+.goods .sort.green a.on {color:#00838f;border-color:#c7cad0}
+.goods .sort.green a.on span {background-image:url(http://image.gsshop.com/mi13/img/ico/ico_ok_green.png)}
+.goods .sort.green a:hover {border-color:#01aebe}
+
+.goods .more-view {position:absolute;bottom:4px;right:0;background:none;font-size:14px;color:#00838f}
+.goods .more-view a {color:#00838f;letter-spacing:-1px}
+.goods .more-view a:hover {color:#00838f;text-decoration:underline} 
+
+/* 00. Media Queries ********************************/
+@media screen and (max-width:1200px){
+/* 상품딱지 : 백그라운드 사이즈 조절의 경우  IE 이미지 랜더링 흐림! 작은 이미지로 대체 
+.badge {width:60px;height:24px;background-position:-300px 0} 
+.badge.ico-hyundai {width:84px;background-position:-300px -30px}
+.badge.ico-lotte {width:80px;background-position:-300px -60px}
+.badge.ico-ditto {width:54px;background-position:-300px -90px}
+.badge.ico-quick {bottom:10px;left:10px;width:60px;height:60px;background-position:-400px 0}
+.goods .soldout {height:24px;line-height:24px}
+.goods.w940 .badge {height:30px}
+.goods.w940 .badge.ico-tv {width:78px;background-position:0 0}
+.goods.w940 .badge.ico-hyundai {width:106px;background-position:0 -30px}
+.goods.w940 .badge.ico-lotte {width:100px;background-position:0 -60px}
+.goods.w940 .badge.ico-ditto {width:68px;background-position:0 -90px}
+.goods.w940 .badge.ico-best-deal {top:0;left:0;width:90px;height:90px;background-position:-120px 0}
+.goods.w940 .badge.ico-quick {bottom:0;left:0;width:90px;height:90px;background-position:-210px 0}
+.goods.w940 .badge.ico-deal {width:70px;height:20px;background-position:0 -120px}
+.goods.w940 .soldout {height:30px;line-height:30px}
+*/
+/* Product 
+.goods li {padding-right:20px}
+.goods li a {width:298px;min-height:372px}
+.goods .img {height:270px;*height:auto}
+
+.goods.w940 li {padding:0 16px 16px 0}
+.goods.w940 li a {width:360px;min-height:456px}
+.goods.w940 .img {height:332px;*height:auto}
+.goods.w940 .cnt {bottom:3px}
+
+.goods.x4 li  {padding-right:20px}
+.goods.x4 li a {width:298px;min-height:372px}
+.goods.x4 .img {height:270px;*height:auto}
+.goods.x4 .info dt {margin-bottom:6px}
+.goods.x4 .disc span {font-size:26px}
+.goods.x4 .normal {font-size:22px}
+.goods.x4 .price strong {font-size:18px}
+.goods.x4 .cnt  {font-size:13px;bottom:10px}
+*/
+}
