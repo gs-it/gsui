@@ -24,11 +24,9 @@ define(['base'], function(Base){
 
 			Base.support.addEvent(_that.target[0], _that.setup.evtType, function(e){
 		        if(_that.evtTarget.hasClass(_that.actClass)){
-		        	_that.setTransition(-100, 0.5);
-		        	_that.setDimTransition(false);
+		        	_that.setGnbStatus(false);
 		        }else{
-		        	_that.setTransition(0, 0.5);
-		        	_that.setDimTransition(true);
+		        	_that.setGnbStatus(true);
 				}
 		    });
 
@@ -37,9 +35,7 @@ define(['base'], function(Base){
 		    	$that.on({
 		    		'click':function(e){
 		    			if(Base.agentChk.getDeviceWidth() < 767){
-		    				console.log('fdsaafd');
-		    				_that.setTransition(-100, 0.5);
-							_that.setDimTransition(false);
+		    				_that.setGnbStatus(false);
 		    			}
 		    		}
 		    	});
@@ -48,8 +44,7 @@ define(['base'], function(Base){
 		    _that.closeTarget.on({
 		    	click:function(e){
 		    		e.preventDefault();
-		    		_that.setTransition(-100, 0.5);
-					_that.setDimTransition(false);
+		    		_that.setGnbStatus(false);
 		    	}
 		    });
 
@@ -85,17 +80,27 @@ define(['base'], function(Base){
 				startX = 0;
 				if(activeIS){
 					activeIS = false;
-					_that.setTransition(0, 0.5);
-					_that.setDimTransition(true);
+					_that.setGnbStatus(true);
 				}else{
-					_that.setTransition(-100, 0.5);
-					_that.setDimTransition(false);
+					_that.setGnbStatus(false);
 				}
 
 				if(Base.support.touch){
 			        Base.support.removeEvent(window, 'touchmove', touchMove);
 			        Base.support.removeEvent(window, 'touchend', touchEnd);
 			    }
+			}
+		},
+		setGnbStatus:function($param){
+			var _that = this;
+			if($param){
+				_that.setTransition(0, 0.5);
+	        	_that.setDimTransition(true);
+	        	$('header').addClass('ov-menu');
+			}else{
+				_that.setTransition(-100, 0.5);
+	        	_that.setDimTransition(false);
+	        	$('header').removeClass('ov-menu');
 			}
 		},
 		setTransition:function(posX, fps){
@@ -113,12 +118,13 @@ define(['base'], function(Base){
 		},
 		setDimTransition:function(IS){
 			var _that = this;
+			var fps = 0;
 
 			if(IS){
-				_that.closeTarget.css({display:'block'}).stop().animate({opacity:0.5}, 500);
+				_that.closeTarget.css({display:'block'}).stop().animate({opacity:0.5}, fps);
 				$('body').css('overflow', 'hidden');
 			}else{
-				_that.closeTarget.stop().animate({opacity:0}, 500, function(){
+				_that.closeTarget.stop().animate({opacity:0}, fps, function(){
 					$(this).removeAttr('style');
 					$('body').removeAttr('style');
 				});
@@ -129,9 +135,11 @@ define(['base'], function(Base){
 			if(_that.evtTarget.attr('style')){
 				_that.evtTarget.removeAttr('style');
 				_that.setDimTransition(false);
+				$('header').removeClass('ov-menu');
 			}
 		}
 	}
+
 	Gnb.prototype.constructor = Gnb;
 	return Gnb;
 });
