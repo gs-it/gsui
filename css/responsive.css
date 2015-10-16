@@ -2,16 +2,16 @@
 	/*header .wrap, footer .wrap, .wrap {padding:5%;}*/
 	.container {margin:46px 0 0 0;}
 	header {position:fixed;left:0;top:0;width:100%;border:0;z-index:2;}
-	/*header.ov-menu:after {content:"";background-color:rgba(255,255,255,0.5);top:0;bottom:0;left:0;right:0;width:100%;height:100%;position:absolute;} */
+	/*header.ov-menu:after {content:"";background-color:rgba(255,255,2554,0.5);top:0;bottom:0;left:0;right:0;width:100%;height:100%;position:absolute;} */
 	header .head-nav {padding:0;}
 	header .head-nav .ico-cate {display:block;position:absolute;z-index:501;top:15px;left:10px;cursor:pointer;}
-	header .menu li {padding-left:15px;}
-	header .menu li:first-child {display:block;}
+	.left-nav .menu li {padding-left:15px;}
+	.left-nav .menu li:first-child {display:block;}
 	header .wrap h1 {background:#fff;padding-left:50px;font-size:20px;}
-	header .menu {width:35%;}
-	header .menu li, header .menu li a {float:none;text-align:left;}
-	header .menu-sub {display:block;position:static;top:auto;left:auto;padding-left:20px;background-color:#fff;box-shadow:none;}
-	header .menu-sub a {display:block;float:none;font-size:13px;line-height:25px;padding:5px 20px;text-align:left;color:#333;}
+	.left-nav .menu {width:35%;}
+	.left-nav .menu li, .left-nav .menu li a {float:none;text-align:left;}
+	.left-nav .menu-sub {display:block;position:static;top:auto;left:auto;padding-left:20px;background-color:#fff;box-shadow:none;}
+	.left-nav .menu-sub a {display:block;float:none;font-size:13px;line-height:25px;padding:5px 20px;text-align:left;color:#333;}
 
 	.menu {display:block;position:fixed;z-index:502;background-color:#fff;left:0;top:0;box-shadow:0px 0px 4px rgba(0,0,0,0.14), 0px 4px 8px rgba(0,0,0,0.28);}
 	.menu {width:50%;height:100%;overflow-y:auto;overflow-x:hidden;}
@@ -41,7 +41,7 @@
 
 @media (min-width: 768px) and (max-width: 980px) {
 
-	header .menu {width:auto;margin:0 auto;}
+	.left-nav .menu {width:auto;margin:0 auto;}
 	.snippet-container {border:0;overflow:hidden;position:static;border-right: 10px solid #272822;}
 	.snippet-wrap {overflow-x:scroll;overflow-y:auto;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0);width:100%;background-color:#272822;-moz-overflow-scrolling: touch;-ms-scroll-chaining:chained; overflow-x: visible;}
 	pre {white-space:nowrap;}
@@ -55,7 +55,7 @@
 	header .wrap h1 {padding:10px 10px 10px 50px;}
 	header small {display:block;}
 	header .head-nav .ico-cate {top:12px;}
-	header .menu {width:60%;}
+	.left-nav .menu {width:60%;}
 	.contents {padding:50px 10px 0;}
 	.contents h1 {top:59px;}
 	.foot-link a {margin-right:10px;}
