@@ -119,7 +119,7 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 
 /* horizontal nav menu */
 header .head-nav {padding:10px 20px;top:15px;}
-.left-nav {position:fixed;left:0;top:102px;background-color:#FFF;z-index:2;width:190px;}
+.left-nav {position:fixed;left:0;top:112px;background-color:#FFF;z-index:2;width:190px;}
 .left-nav .menu a {font-weight:800;font-size:13px;display:block;padding:5px 0 5px 20px;line-height:25px;}
 .left-nav .menu {width:auto;margin:0 auto;}
 .left-nav .menu:after {content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
