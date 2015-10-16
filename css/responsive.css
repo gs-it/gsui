@@ -2,6 +2,7 @@
 	/*header .wrap, footer .wrap, .wrap {padding:5%;}*/
 	.container {margin:46px 0 0 0;}
 	header {position:fixed;left:0;top:0;width:100%;border:0;z-index:2;}
+	header.ov-menu {top:-100px;} 
 	header .head-nav {padding:0;}
 	header .head-nav .ico-cate {display:block;position:absolute;z-index:501;top:15px;left:10px;cursor:pointer;}
 	header .menu li {padding-left:15px;}
@@ -39,6 +40,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
+	header.ov-menu {top:-100px;} 
 	header .menu {width:auto;margin:0 auto;}
 	.snippet-container {border:0;overflow:hidden;position:static;}
 	.snippet-wrap {overflow-x:scroll;overflow-y:auto;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0);width:100%;background-color:#272822;-moz-overflow-scrolling: touch;-ms-scroll-chaining:chained; overflow-x: visible;}
@@ -48,6 +50,7 @@
 }
 
 @media (max-width: 414px) {
+	header.ov-menu {top:-100px;} 
 	body, header {min-width:320px;overflow-hidden:x;}
 	header .wrap h1 {padding:10px 10px 10px 50px;}
 	header small {display:block;}
