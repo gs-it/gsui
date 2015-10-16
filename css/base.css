@@ -108,10 +108,11 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 
 /* description */
 .exbox {padding:10px;background:#fff;border:1px solid #ccc;font-family:Consolas,Inconsolata-g,'Dejavu Sans Mono','Malgun Gothic';font-size:1.2em;}
-.desc-list dt {font-weight:bold;padding:5px 0 5px 5px;font-size:14px;}
-.desc-list dd {padding:10px 5px 10px 5px;}
-.desc-list dd>.cpn-ex {margin-top:-10px;}
-.desc-list dd pre, .desc-list dd div {margin:5px 0;}
+.desc-list {padding-bottom:25px;}
+.desc-list dt {font-weight:bold;padding:0;font-size:14px;}
+.desc-list dd {padding-top:5px;}
+.desc-list dd>.cpn-ex {padding:10px;font-weight:600;}
+.desc-list dd .snippet-container, .desc-list dd .snippet-container pre {margin:0;}
 
 /* align,margin,padding */
 .al {text-align:left;}
