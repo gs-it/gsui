@@ -163,10 +163,82 @@ define(function(){
 		xmlhttp.send();
 	}
 
+
+	//pre 태그 내에 있는 요소들의 (<>) 추출하여 &lt; &gt; 면환
+	var HtmlConversion = function(data){
+		var contents = data;
+	    var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
+	    var prePattern = /<pre/;
+	    var removePattern = /^(html|js|style)$/;
+	    var arrCode = contents.split(pattern);
+	    var replaceIS = false;
+	    var dataTxt = '';
+
+	    for(var i=0; i<arrCode.length; i++){
+	        if(removePattern.test(arrCode[i]) || arrCode[i] == undefined || arrCode[i] == null) arrCode[i] = '';
+	        if(arrCode[i] == '<pre class="html">'|| arrCode[i] == '<pre class="js">' || arrCode[i] == '<pre class="style">') replaceIS = true;
+	        if(arrCode[i] == '</pre>') replaceIS = false;
+
+	        if(replaceIS){
+	            if(!prePattern.test(arrCode[i])){
+	                arrCode[i] = arrCode[i].replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	            }
+	        }
+
+	        dataTxt += arrCode[i];
+	    }
+
+	    return dataTxt;
+	}
+
+
+
+	var CodeCleaning = function(data){
+		var val = data;
+	    var element = /(<|<\/){1}(meta|title|link|script|noscript|style|embed|button|iframe|html|head|body|div|h1|h2|h3|h4|h5|ul|ol|li|dl|dt|dd|b|big|i|img|input|span|a|i|small|strong|em|section|nav|header|footer|p|form|fieldset|label|legend|table|tr|thead|tbody|td|tfoot|area|map)/g;
+	    var depthPatt = /<\//;
+	    var singleEle = /(<|<\/){1}(meta|link|img|input|br|hr|area|embed)/;	    
+	    var trans = val.replace(/[\t\n]/g, '').replace(/</g, '\n<').replace(/>/g, '>\n').split('\n');
+	    var result = '';
+	    var depth = 0;
+	    var currentTag = '';
+	    var tagIS = true;
+
+	    for(var i in trans){                
+	        currentTag = element.test(trans[i]);
+	        if(currentTag){
+	            if(depthPatt.test(trans[i])){
+	                depth--;
+	                result += '\n' + space(depth) + trans[i];
+	            }else{
+	                result += '\n' + space(depth) + trans[i];
+	                if(!singleEle.test(trans[i])){
+	                    depth++;
+	                }
+	            }
+	        }else{
+	            if(trans[i]) result += '\n' + space(depth) + trans[i];
+	        }
+	    }
+
+	    function space(len){
+		    var depth = '';
+		    for(var i=0; i<len; i++){
+		        depth += '\t';
+		    }
+		    return depth;
+		}
+
+		return result;
+	}
+	
+
 	return {
 		agentChk:UserAgentChk,
 		support:Support,
 		loader:XhrLoader,
-		getUriSplit:GetUriSplit
+		getUriSplit:GetUriSplit,
+		codeConversion:HtmlConversion,
+		codeCleaning:CodeCleaning
 	};
 });

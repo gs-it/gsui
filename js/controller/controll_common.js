@@ -22,7 +22,7 @@ define(['base', 'modules/module_gnb'], function(Base, Gnb){
         resize:function(){
             if(Base.agentChk.getDeviceWidth() < 767) gnb.destroy();
         }
-    }
+    }    
 
     Common.prototype.constructor = Common;
 
