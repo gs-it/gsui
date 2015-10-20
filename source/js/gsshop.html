@@ -1,3 +1,13 @@
+<style>
+.swiper-container{position:relative;top:0;left:0;}
+.swiper-wrapper a {display:block;}
+.swiper-wrapper .swiper-slide {position:absolute;top:0;left:0;}
+.ctrl-st2 {display:block; position:absolute;top:50%;margin-top:-20px;}
+.prev {left:0;}
+.right {right:0;}
+
+</style>
+
 <h1>JavaScript<strong>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;GS SHOP PlugIn</strong></h1>
 <section>
 	<ul class="square-list">
@@ -5,25 +15,52 @@
 	</ul>
 	<h2>$.fn.wooksAct (jquery plugIn)</h2>
 	<h3 class="design-view"><span>Design View</span></h3>
-	<div class="cpn-ex">12345</div>
+	<div class="cpn-ex">
+
+		<div id="ban-swipe1" class="Viewer swiper-container">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide">
+					<a href="javascript:;">
+						<img src="http://dummyimage.com/300x100/ff0000/999.jpg" alt="브랜드관">
+					</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:;">
+						<img src="http://dummyimage.com/300x100/ff0000/eee.jpg" alt="브랜드관">
+					</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="javascript:;">
+						<img src="http://dummyimage.com/300x100/ff0000/555.jpg" alt="브랜드관">
+					</a>
+				</li>
+			</ul>
+			<a class="ctrl-st2 prev" href="javascript:;">
+				<i class="pagination"><strong>1</strong>/3</i>
+				<span>이전</span>
+			</a>
+			<a class="ctrl-st2 next" href="javascript:;">
+				<i class="pagination"><strong>1</strong>/3</i>
+				<span>다음</span>
+			</a>
+		</div>
+
+	</div>
 </section>
 <section>
 	<pre class="html">
-<div class="ban-swipe">
-	<h3 class="hide">기획전</h3>
-	<div id="ban-swipe1" class="Viewer">
-		<ul class="swiper-wrapper">
-			<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
-			<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
-			<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
-		</ul>
-		<a class="ctrl-st2 prev" href="javascript:;">
-			<i class="pagination"><strong>1</strong>/4</i><span>이전</span>
-		</a>
-		<a class="ctrl-st2 next" href="javascript:;">
-			<i class="pagination"><strong>1</strong>/4</i><span>다음</span>
-		</a>
-	</div>
+<div id="ban-swipe1" class="Viewer">
+	<ul class="swiper-wrapper">
+		<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
+		<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
+		<li class="swiper-slide"><a href="#"><img src="이미지 URL" alt=""></a></li>
+	</ul>
+	<a class="ctrl-st2 prev" href="javascript:;">
+		<i class="pagination"><strong>1</strong>/4</i><span>이전</span>
+	</a>
+	<a class="ctrl-st2 next" href="javascript:;">
+		<i class="pagination"><strong>1</strong>/4</i><span>다음</span>
+	</a>
 </div>
 	</pre>
 	<pre class="js">
@@ -163,7 +200,7 @@ $.fn.gsSelect.option = {
 	</pre>
 </section>
 <section>
-	<h2>GsBase nameSpace</h2>
+	<h2>UserAgent Check</h2>
 	<pre class="js">
 /* Syntax */
 GsBase.agentChk.getBrowser(); // browser 종류 버전

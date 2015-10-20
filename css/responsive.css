@@ -148,5 +148,5 @@
 	.mobile-nowrap .tmp-select.spread li:nth-child(n+4),
 	.mobile-nowrap .tmp-tab li:nth-child(n+3),
 	.mobile-nowrap .chk-lst li:nth-child(n+4) {display:none;}
-	.dim {z-index:6;}
+	.dim {z-index:4;}
 }
