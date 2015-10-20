@@ -105,6 +105,12 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 .flex-table.col-group5 .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell {width:20%;border-right-width:0;}
 .flex-table.col-group5 .tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell+.tbl-cell {width:auto;text-align:left;border-right-width:1px;}
 
+.flex-table.wag  {width:100%;}
+.flex-table.wag .tbl-cell+.tbl-cell {width:35%;text-align:left;}
+.flex-table.wag .tbl-cell+.tbl-cell+.tbl-cell {width:auto;border-left-width:0;text-align:left;}
+.flex-table.wag .tbl-cell:first-child {width:30%;}
+.flex-table.wag .tbl-header .tbl-cell,
+.flex-table.wag .tbl-header .tbl-cell+.tbl-cell+.tbl-cell{text-align:center;}
 
 /* description */
 .exbox {padding:10px;background:#fff;border:1px solid #ccc;font-family:Consolas,Inconsolata-g,'Dejavu Sans Mono','Malgun Gothic';font-size:1.2em;}

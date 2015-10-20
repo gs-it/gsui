@@ -53,6 +53,17 @@
 	.mobile-nowrap .tmp-tab li:nth-child(n+4),
 	.mobile-nowrap .chk-lst li:nth-child(n+4) {display:none;}
 	.dim {z-index:6;}
+
+	.flex-table.wag .tbl-header .tbl-cell:first-child,
+	.flex-table.wag .tbl-header .tbl-cell+.tbl-cell,
+	.flex-table.wag .tbl-header .tbl-cell+.tbl-cell+.tbl-cell{display:none;}
+
+	.flex-table.wag .tbl-cell:first-child,
+	.flex-table.wag .tbl-cell+.tbl-cell,
+	.flex-table.wag .tbl-cell+.tbl-cell+.tbl-cell {display:block;width:auto;border-width:0 1px 1px 1px}
+	.flex-table.wag .tbl-cell:first-child {background-color:#f5f7fa;}
+	.flex-table.wag .tbl-cell+.tbl-cell:before {content:"지침";font-weight:bold;}
+	.flex-table.wag .tbl-cell+.tbl-cell+.tbl-cell:before {content:"검사항목";font-weight:bold;}
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
@@ -148,5 +159,5 @@
 	.mobile-nowrap .tmp-select.spread li:nth-child(n+4),
 	.mobile-nowrap .tmp-tab li:nth-child(n+3),
 	.mobile-nowrap .chk-lst li:nth-child(n+4) {display:none;}
-	.dim {z-index:6;}
+	.dim {z-index:4;}
 }
