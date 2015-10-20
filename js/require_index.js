@@ -12,11 +12,11 @@ requirejs.config({
         'controll_common':{
             deps:['plugin', 'highlighter'],
             exports:'controll_common'
-        },
+        }/*,
         'disqus':{
             deps:['//gsuicov.disqus.com/embed.js', '//gsuicov.disqus.com/count.js'],
             exports:'disqus'
-        }
+        }*/
     }
 });
 

@@ -139,7 +139,7 @@ header .head-nav {padding:10px 20px;top:15px;}
 .left-nav .menu li:first-child {display:none;}
 .left-nav .menu li.on {background:#bed730;}
 .left-nav .menu li.on a {color:#333;}
-.left-nav .menu li.dotted {margin:10px 0;border:dotted #ccc;border-width:1px 0;}
+.left-nav .menu li.dotted {margin:5px 0;border:dotted #ccc;border-width:1px 0;}
 .left-nav .wrap.mini .head-nav a {font-size:13px;}
 .left-nav .menu-sub {display:block;}
 .left-nav .menu-sub .wrap {margin:0 auto;width:auto;}
@@ -150,11 +150,12 @@ header .head-nav {padding:10px 20px;top:15px;}
 #disqus_thread {padding:50px 30px 0;}
 
 /* footer link */
-.foot-link a {display:block;height:25px;margin-bottom:8px;position:relative;}
+.foot-link a {display:block;height:25px;margin-bottom:10px;position:relative;}
 .foot-link img {vertical-align:middle;}
-.foot-link .gsshop {overflow:hidden;}
-.foot-link .gsshop img {height:45px;position:absolute;top:-18px;}
-.foot-link .disqus img {height:16px;}
+.foot-link .gsshop {overflow:hidden;margin-bottom:0;}
+.foot-link .gsshop img {height:35px;position:absolute;top:-14px;}
+.foot-link .disqus img {height:15px;}
+.foot-link .github {height:20px;}
 .foot-link .github img {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
 
 /*dim*/
