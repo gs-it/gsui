@@ -124,7 +124,7 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 
 /* horizontal nav menu */
 header .head-nav {padding:10px 20px;top:15px;}
-.left-nav {position:fixed;left:0;top:112px;background-color:#FFF;z-index:2;width:190px;}
+.left-nav {position:fixed;left:0;top:112px;background-color:#FFF;z-index:2;width:230px;}
 .left-nav .menu a {font-weight:800;font-size:13px;display:block;padding:5px 0 5px 20px;line-height:25px;}
 .left-nav .menu {width:auto;margin:0 auto;}
 .left-nav .menu:after {content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
@@ -133,6 +133,7 @@ header .head-nav {padding:10px 20px;top:15px;}
 .left-nav .menu li:first-child {display:none;}
 .left-nav .menu li.on {background:#bed730;}
 .left-nav .menu li.on a {color:#333;}
+.left-nav .menu li.dotted {margin:10px 0;border:dotted #ccc;border-width:1px 0;}
 .left-nav .wrap.mini .head-nav a {font-size:13px;}
 .left-nav .menu-sub {display:block;}
 .left-nav .menu-sub .wrap {margin:0 auto;width:auto;}
@@ -159,3 +160,7 @@ header .head-nav {padding:10px 20px;top:15px;}
 .design-view span {font-weight:600;color:#555;display:inline-block;background-color:#fff;padding:5px 10px;border:1px solid #ededed;border-bottom-color:#fff;}
 .add-option {color:#444;font-weight:normal;padding:0 0 5px;margin-bottom:5px;}
 .mobile-nowrap {display:inline-block;}
+
+/* formatter */
+.importSect, .resultSect {padding:10px;border:1px solid #bbb;background:#fff;}
+.importSect  textarea, .resultSect textarea {width:100%;height:300px;border:0;}
