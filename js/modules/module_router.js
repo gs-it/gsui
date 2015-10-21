@@ -15,7 +15,6 @@ define(['base'], function(Base){
     	init:function(){
             var _that = this;
     		Base.support.addEvent(window, 'hashchange', function(e){
-                //var hash = e.newURL.split(root)[1];
                 _that.destroy();
                 _that.loadController();
                 $(document).scrollTop(0);
@@ -58,6 +57,9 @@ define(['base'], function(Base){
                 _that.currentController = new Module();
                 _that.currentController.loadTemplete(hash);
             });
+
+            //google analytics page hash
+            ga('send', hash);
 
             return _that;
         },
