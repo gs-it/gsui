@@ -4,13 +4,16 @@ define(['base'], function(Base){
 
     var Controller = function(){}
     Controller.prototype = {
+        init:function(){
+            setInterval(function(){console.log('code Fomatting');}, 1000);
+        },
         destroy:function(){
             console.log('markdown destroy');
         },
-        xhrCallBack:function(data){
+        appendTemplete:function(data){
             $('.contents').html(data);
             $('.importSect > textarea').on('change', function(e){
-                $('.resultSect > textarea').val(Base.codeCleaning(e.target.value));
+                $('.resultSect > textarea').val(Base.codeFormatting(e.target.value));
             });
         }
     }

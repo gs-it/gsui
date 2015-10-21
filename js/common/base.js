@@ -165,7 +165,7 @@ define(function(){
 
 
 	//pre 태그 내에 있는 요소들의 (<>) 추출하여 &lt; &gt; 면환
-	var HtmlConversion = function(data){
+	var CodeMarkdown = function(data){
 		var contents = data;
 	    var pattern = /(<pre class="(html|style|js)">)|(<\/pre>)/g;
 	    var prePattern = /<pre/;
@@ -193,7 +193,7 @@ define(function(){
 
 
 
-	var CodeCleaning = function(data){
+	var CodeFormatting = function(data){
 		var val = data;
 	    var element = /(<|<\/){1}(meta|title|link|script|noscript|style|embed|button|iframe|html|head|body|div|h1|h2|h3|h4|h5|ul|ol|li|dl|dt|dd|b|big|i|img|input|span|a|i|small|strong|em|section|nav|header|footer|p|form|fieldset|label|legend|table|tr|thead|tbody|td|tfoot|area|map)/g;
 	    var depthPatt = /<\//;
@@ -238,7 +238,7 @@ define(function(){
 		support:Support,
 		loader:XhrLoader,
 		getUriSplit:GetUriSplit,
-		codeConversion:HtmlConversion,
-		codeCleaning:CodeCleaning
+		codeMarkDown:CodeMarkdown,
+		codeFormatting:CodeFormatting
 	};
 });
