@@ -30,7 +30,7 @@ require(['router', 'controll_common', 'disqus'], function(Route, Common, Sns){
 
     Route.registerRoutes({
         normal:{path:'/', controller:'controller/controll_normal'},
-        component:{path:'/component', controller:'controller/controll_component'},
+        component:{path:'/component', controller:'controller/controll_normal', script:'source/component/component.js'},
         markdown:{path:'/markdown', controller:'controller/controll_markdown'}
     }).init().loadController();
 

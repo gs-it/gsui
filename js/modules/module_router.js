@@ -4,8 +4,10 @@ define(['base'], function(Base){
     var Router = function(){
         var _that = this;
         _that.routes = {};
-        _that.currentController;
         _that.controllerID;
+        _that.currentController;
+        _that.script;
+        _that.css;
         return _that;
     }
 
@@ -13,7 +15,6 @@ define(['base'], function(Base){
     	init:function(){
             var _that = this;
     		Base.support.addEvent(window, 'hashchange', function(e){
-                //var hash = e.newURL.split(root)[1];
                 _that.destroy();
                 _that.loadController();
                 $(document).scrollTop(0);
@@ -35,22 +36,30 @@ define(['base'], function(Base){
             var _that = this;
             var hash = (window.location.hash == '') ? '#/html/convention' : window.location.hash;
             var path = window.location.hash.split('/')[1];
-            _that.controllerID = (_that.routes[path]) ? _that.routes[path].controller : _that.routes['normal'].controller;
+            var ID = (_that.routes[path]) ? path : 'normal';
+
+            _that.controllerID = _that.routes[ID].controller;
+            _that.script = _that.routes[ID].script;
+            _that.css = _that.routes[ID].css;
 
             require([_that.controllerID], function(Module){
 
                 //templete loadTemplete 함수 확장
                 Module.prototype.loadTemplete = function(hashLink){
-                    var _that = this;
                     var objHashLink = Base.getUriSplit(hashLink);
                     var params = objHashLink.params;
-                    Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', _that.xhrCallBack);
-                    return _that;
+                    if(_that.controllerID) Base.loader('source/'+objHashLink.hashLink[0]+'/'+objHashLink.hashLink[1]+'.html', this.appendTemplete);
+                    if(_that.script) Base.loader(_that.script, this.appendScript);
+                    if(_that.css) Base.loader(_that.css, this.appendStyle);
+                    return this;
                 }
 
                 _that.currentController = new Module();
                 _that.currentController.loadTemplete(hash);
             });
+
+            //google analytics page hash
+            ga('send', hash);
 
             return _that;
         },

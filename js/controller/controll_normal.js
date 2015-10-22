@@ -7,11 +7,8 @@ define(['base'], function(Base){
         init:function(){
             console.log('controll_narmal');
         },
-        destroy:function(){
-            console.log('normal destroy');
-        },
-        xhrCallBack:function(data){
-            $('.contents').html(Base.codeConversion(data));
+        appendTemplete:function(data){
+            $('.contents').html(Base.codeMarkDown(data));
             $('pre.html').snippet('html', {style:'ide-codewarrior'});
             $('pre.style').snippet('css', {style:'ide-codewarrior'});
             $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
@@ -27,9 +24,28 @@ define(['base'], function(Base){
                     window.prompt("Copy to clipboard: Ctrl+C, Enter", targetTxt);
                 }
             });
+        },
+        appendScript:function(data){
+            var script = document.createElement('script');
+            script.id = 'page-script';
+            script.type = 'text/javascript';
+            script.innerHTML = data;
+            document.body.appendChild(script);
+        },
+        appendStyle:function(data){
+            var styleSheet = document.createElement('style');
+            styleSheet.id = 'page-style';
+            styleSheet.type = 'text/css';
+            styleSheet.rel = 'stylesheet';
+            styleSheet.innerHTML = data;
+            document.body.appendChild(styleSheet);
+        },
+        destroy:function(){
+            $('#page-script').remove();
+            $('#page-style').remove();
         }
     }
     Controller.prototype.constructor = Controller;
 
     return Controller;
-});    
+});
