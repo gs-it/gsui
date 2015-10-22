@@ -8,22 +8,12 @@ define(['base'], function(Base){
             console.log('controll_narmal');
         },
         appendTemplete:function(data){
+            var clipBoard = '';
+            if(Base.agentChk.getDevice() == 'PC') clipBoard = 'js/lib/zeroclipboard/ZeroClipboard.swf'
             $('.contents').html(Base.codeMarkDown(data));
-            $('pre.html').snippet('html', {style:'ide-codewarrior'});
-            $('pre.style').snippet('css', {style:'ide-codewarrior'});
-            $('pre.js').snippet('javascript', {style:'ide-codewarrior'});
-
-            $('.snippet-copy').removeAttr('style');
-            $('.snippet-copy').click(function(e){
-                e.preventDefault();
-                
-                var targetTxt = $(this).parent().parent().siblings('.snippet-textonly').text();
-                if(window.clipboardData){  
-                    window.clipboardData.setData('text', targetTxt);
-                }else{                     
-                    window.prompt("Copy to clipboard: Ctrl+C, Enter", targetTxt);
-                }
-            });
+            $('pre.html').snippet('html', {style:'ide-codewarrior', clipboard:clipBoard});
+            $('pre.style').snippet('css', {style:'ide-codewarrior', clipboard:clipBoard});
+            $('pre.js').snippet('javascript', {style:'ide-codewarrior', clipboard:clipBoard});
         },
         appendScript:function(data){
             var script = document.createElement('script');

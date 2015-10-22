@@ -6,11 +6,12 @@ requirejs.config({
         'plugin':'common/plugin',
         'router':'modules/module_router',
         'controll_common':'controller/controll_common',
-        'disqus':'modules/module_disqus'
+        'disqus':'modules/module_disqus',
+        'zeroclipboard':'lib/zeroclipboard/zeroclipboard.min'
     },
     shim:{
         'controll_common':{
-            deps:['plugin', 'highlighter'],
+            deps:['plugin', 'highlighter', 'zeroclipboard'],
             exports:'controll_common'
         }/*,
         'disqus':{
@@ -33,7 +34,6 @@ require(['router', 'controll_common', 'disqus'], function(Route, Common, Sns){
         component:{path:'/component', controller:'controller/controll_normal', script:'source/component/component.js'},
         markdown:{path:'/markdown', controller:'controller/controll_markdown'}
     }).init().loadController();
-
 
     //addCommonEvent
     $(window).scroll(function(e){
