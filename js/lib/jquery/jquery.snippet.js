@@ -110,7 +110,7 @@
                     }
                     );
                     var w = "<pre class='snippet-textonly sh_sourceCode' style='display:none;'>" + u.data("orgHtml") + "</pre>";
-                    var r = "<div class='snippet-menu sh_sourceCode' style='display:none;'><pre><a class='snippet-copy' href='#'>copy</a><a class='snippet-text' href='#'>text</a><a class='snippet-window' href='#'>pop-up</a></pre></div>";
+                    var r = "<div class='snippet-menu sh_sourceCode' style='display:none;'><pre><a class='snippet-copy' href='#'><i class='fa fa-clipboard'></i></a><a class='snippet-text' href='#'><i class='fa fa-text-width'></i></a><a class='snippet-window' style='display:none;' href='#'>pop-up</a></pre></div>";
                     u.parent().append(w);
                     u.parent().prepend(r);
                     u.parent().hover(function() {
@@ -134,8 +134,7 @@
                                 o = o.substr(0, 500) + "...\n\n(" + (o.length - 500) + " characters not shown)"
                             }
                             alert("Copied text to clipboard:\n\n " + o)
-                        }
-                        );
+                        });
                         j.parents(".snippet-menu").hide()
                     } else {
                         u.parent().find("a.snippet-copy").hide()
@@ -145,11 +144,11 @@
                         var i = a(this).parents(".snippet-wrap").find(".snippet-textonly");
                         o.toggle();
                         i.toggle();
-                        if (i.is(":visible")) {
+                        /*if (i.is(":visible")) {
                             a(this).html("html")
                         } else {
                             a(this).html("text")
-                        }
+                        }*/
                         a(this).blur();
                         return false
                     }

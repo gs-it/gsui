@@ -1,7 +1,7 @@
 requirejs.config({
     baseUrl:'js',
     paths: {
-        'highlighter':'lib/jquery/jquery.snippet.min',
+        'highlighter':'lib/jquery/jquery.snippet',
         'base':'common/base',
         'plugin':'common/plugin',
         'router':'modules/module_router',
@@ -13,11 +13,11 @@ requirejs.config({
         'controll_common':{
             deps:['plugin', 'highlighter', 'zeroclipboard'],
             exports:'controll_common'
-        }/*,
+        },
         'disqus':{
             deps:['//gsuicov.disqus.com/embed.js', '//gsuicov.disqus.com/count.js'],
             exports:'disqus'
-        }*/
+        }
     }
 });
 
