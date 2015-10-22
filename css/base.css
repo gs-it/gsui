@@ -9,7 +9,7 @@ fieldset,iframe,frame{border:0 none}
 input,select,textarea{vertical-align:middle} 
 ul,ol{list-style:none}
 i,em,dfn,address{font-style:normal}
-a{text-decoration:underline;cursor:pointer;color:#555}
+a{text-decoration:none;cursor:pointer;color:#555}
 a:hover,a:focus{text-decoration:underline}
 a:link,a:visited,a:active{}
 input[type='text'],input[type='password'],input[type='image'],input[type='search']{-webkit-appearance:none;-webkit-border-radius:0}
@@ -171,3 +171,8 @@ header .head-nav {padding:10px 20px;top:15px;}
 /* formatter */
 .importSect, .resultSect {padding:10px;border:1px solid #bbb;background:#fff;}
 .importSect  textarea, .resultSect textarea {width:100%;height:300px;border:0;}
+
+/* font icon */
+.fa.fa-external-link {color:#00aebd;margin-left:3px;}
+.after .fa.fa-angle-right {color:#00aebd;margin-right:3px;}
+.before .fa.fa-angle-right {color:#919191;margin-right:3px;}
