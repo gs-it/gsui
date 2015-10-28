@@ -10,8 +10,8 @@ input,select,textarea{vertical-align:middle}
 ul,ol{list-style:none}
 i,em,dfn,address{font-style:normal}
 a{text-decoration:none;cursor:pointer;color:#555}
-a:hover,a:focus{text-decoration:underline}
-a:link,a:visited,a:active{}
+a:hover {text-decoration:underline}
+a:link,a:visited,a:active, a:focus{}
 input[type='text'],input[type='password'],input[type='image'],input[type='search']{-webkit-appearance:none;-webkit-border-radius:0}
 button{border:0;cursor:pointer}
 hr{display:none}

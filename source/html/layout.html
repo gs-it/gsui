@@ -1,9 +1,20 @@
 <h1>Templates<strong>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;Layout Templates</strong></h1>
 
+<section>
+	<h2>컨텐츠 영역 정의</h2>
+	<ul class="square-list">
+	 	<li>2015년 10월 기준 GS SHOP의 실제 컨텐츠 영역은 940픽셀이다.</li>
+	 	<li>컨텐츠 영역 우측 스카이스크래퍼는 46픽셀이며 좌우여백을 합해 66픽셀이다.</li>
+	 	<li>컨텐츠 영역 좌측 여백 10픽셀과 컨텐츠 영역 940픽셀에 스카이스크래퍼 영역 66픽셀을 합한 1016픽셀을 가운데 정렬한다.</li>
+	 </ul>
+	 <h3 class="design-view"><span>Design View</span></h3>
+	<div class="cpn-ex"><img src="http://gs-it.github.io/gsui/img/gsshop-layout.png" alt="GS SHOP 가로폭 이미지" style="width:100%;" /><div>
+ </section>
+
  <section>
  	<h2>기본 레이아웃 - HTML4</h2>
  	<ul class="square-list">
- 		<li>현재 운용중인 HTML4 기반 기본 레이아웃</li>
+ 		<li>현재 운용중인 <a href="www.w3.org/TR/html4/" target="_new">HTML4<i class="fa fa-external-link"></i></a>  기반 기본 레이아웃</li>
  	</ul>
  	<pre class="html">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -34,7 +45,7 @@
 <section>
 	<h2>기본 레이아웃 - HTML5</h2>
 	<ul class="square-list">
-		<li>HTML5 기반으로 PC와 MC 같은 마크업 코드 사용을 우선으로 한다.</li>
+		<li><a href="https://ko.wikipedia.org/wiki/HTML5" target="_new">HTML5<i class="fa fa-external-link"></i></a> 기반으로 PC와 MC 같은 마크업 코드 사용을 목적으로 한다.</li>
 		<li>향후 기술 도입 혹은 변화에 유연하게 대처하기 위한 구조적 설계를 지향한다.</li>
 	</ul>
 	<pre class="html">
@@ -48,7 +59,6 @@
 <link rel="stylesheet" type="text/css" href="../css/tmp.css" />
 <link rel="stylesheet" type="text/css" href="페이지별 css" />
 <script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/g-ui.js"></script>
 </head>
 <body>
 <div id="gs-skip">
@@ -74,3 +84,76 @@
 </html>
 	</pre>
  </section>
+
+  <section>
+ 	<h2>기본 레이아웃 - 팝업</h2>
+
+	<h3 class="design-view"><span>Design View</span></h3>
+	<div class="cpn-ex">
+		<!-- popup -->
+		<link href="css/import/popup.css" rel="stylesheet" type="text/css" />
+
+		<div id="pop_wrap"><!-- 팝업사이즈 지정 -->
+			<div id="pop_header">
+				<h1 class="">팝업타이틀</h1>
+				<h1 class="txt_folder">찜폴더 추가/수정</h1>
+				<h1 class="txt_login">로그인</h1>
+				<h1 class="txt_calculator">미리계산</h1>
+				<h1 class="txt_broadcast">방송알림</h1>
+				<h1 class="txt_card">GS SHOP 상품권 사용안내</h1>
+				<span><a href="javascript:window.close();"><img src="img/btn_pop_close.png" alt="새창 닫기" /></a></span>
+			</div>
+			<div id="pop_container">
+				<!-- 내용 -->
+				내용
+			</div>
+			<div id="pop_footer_bg">
+				<div class="fl_right">
+					<a href="javascript:window.close();" class="link_close"><span class="hide">새창</span>창닫기</a>
+				</div>
+			</div>
+		</div>
+		<!-- //popup -->
+	</div>
+
+ 	<pre class="html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko"  lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>팝업 템플릿 - GS SHOP</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="stylesheet" type="text/css" href="../css/temp_guide.css" />
+<link rel="stylesheet" type="text/css" href="../css/common_v2.css" />
+<link href="../css/popup.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="pop_wrap" style="width:455px"><!-- 팝업사이즈 지정 -->
+	<div id="pop_header">
+		<h1 class="">팝업타이틀</h1><!-- 기본 모든 일반 팝업에 사용 -->
+		<h1 class="txt_folder">찜폴더 추가/수정</h1><!-- 찜폴더 추가/수정 -->
+		<h1 class="txt_login">로그인</h1><!-- 로그인 -->
+		<h1 class="txt_calculator">미리계산</h1><!-- 미리계산 -->
+		<h1 class="txt_broadcast">방송알림</h1><!-- 방송알림 -->
+		<h1 class="txt_card">GS SHOP 상품권 사용안내</h1><!-- GS SHOP 상품권 사용안내 -->
+		<span><a href="javascript:window.close();"><img src="img/btn_pop_close.png" alt="새창 닫기" /></a></span>
+	</div>
+	<div id="pop_container">
+		<!-- 내용 -->
+		내용
+	</div>
+	<div id="pop_footer_bg">
+		<div class="fl_right">
+			<a href="javascript:window.close();" class="link_close"><span class="hide">새창</span>창닫기</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+	</pre>
+</section>

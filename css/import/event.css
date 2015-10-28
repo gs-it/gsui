@@ -942,3 +942,12 @@ color:#666666;
 #app-wide {background:url('http://image.gsshop.com/mi13/img/event/k_appwide.gif') repeat-x;}
 #app-wide input {position:absolute;left:350px;top:144px;width:330px;padding:8px 3px;border:0;background:#fff;font-size:20px;}
 #app-wide button {position:absolute;left:688px;top:136px;width:128px;height:62px;background:none;}
+
+#wrap {width:940px;padding:0 66px 0 10px;margin:0 auto;}
+#app-down {background:url('http://image.gsshop.com/mi13/img/event/k_appwide.gif') repeat-x;height:299px;}
+#app-down form {display:block;background:url('http://image.gsshop.com/mi13/img/event/k_app.gif') no-repeat 0% 0%;width:940px;height:299px;}
+#app-down input {position:absolute;left:336px;top:142px;width:320px;padding:8px 3px;border:0;background:#fff;font-size:20px;text-align:center;}
+#app-down button {position:absolute;left:665px;top:134px;width:128px;height:62px;background:none;}
+#wrap #app-down input {position:absolute;left:325px;top:142px;width:320px;padding:8px 3px;border:0;background:#fff;font-size:20px;}
+#wrap #app-down button {position:absolute;left:652px;top:134px;width:128px;height:62px;background:none;}
+#wrap .event-common-wrap {padding:0 0 0 0;}
