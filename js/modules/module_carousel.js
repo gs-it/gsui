@@ -1,4 +1,4 @@
-define(['jquery', 'Base'], function($, Base){
+define(['Base'], function(Base){
 	"use strict";
 
 	//swipe module

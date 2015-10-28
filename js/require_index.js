@@ -6,18 +6,18 @@ requirejs.config({
         'plugin':'common/plugin',
         'router':'modules/module_router',
         'controll_common':'controller/controll_common',
-        'disqus':'modules/module_disqus',
-        'zeroclipboard':'lib/zeroclipboard/zeroclipboard.min'
+        'disqus':'modules/module_disqus'
+        //'zeroclipboard':'lib/zeroclipboard/zeroclipboard.min'
     },
     shim:{
         'controll_common':{
-            deps:['plugin', 'highlighter', 'zeroclipboard'],
+            deps:['plugin', 'highlighter'],
             exports:'controll_common'
-        },
+        }/*,
         'disqus':{
             deps:['//gsuicov.disqus.com/embed.js', '//gsuicov.disqus.com/count.js'],
             exports:'disqus'
-        }
+        }*/
     }
 });
 

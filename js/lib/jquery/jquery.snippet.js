@@ -114,14 +114,17 @@
                     u.parent().append(w);
                     u.parent().prepend(r);
                     u.parent().hover(function() {
-                        a(this).find(".snippet-menu").fadeIn("fast")
+                        a(this).find(".snippet-menu").fadeIn("fast");
                     }
                     , function() {
-                        a(this).find(".snippet-menu").fadeOut("fast")
-                    }
-                    );
-                    if (d.clipboard != "" && d.clipboard != false) {
-                        var j = u.parent().find("a.snippet-copy");
+                        a(this).find(".snippet-menu").fadeOut("fast");
+                    });
+
+                    if (d.clipboard != "" && d.clipboard != false && d.clipboard == true) {
+
+
+                        //zeroClipboard.js 사용에 따른 수정 20151028
+                        /*var j = u.parent().find("a.snippet-copy");
                         j.show();
                         j.parents(".snippet-menu").show();
                         var s = u.parents(".snippet-wrap").find(".snippet-textonly").text();
@@ -131,14 +134,35 @@
                         G.glue(j[0], j.parents(".snippet-menu")[0]);
                         G.addEventListener("complete", function(i, o) {
                             if (o.length > 500) {
-                                o = o.substr(0, 500) + "...\n\n(" + (o.length - 500) + " characters not shown)"
+                                o = o.substr(0, 500) + "...\n\n(" + (o.length - 500) + " characters not shown)";
                             }
-                            alert("Copied text to clipboard:\n\n " + o)
+                            alert("Copied text to clipboard:\n\n " + o);
                         });
-                        j.parents(".snippet-menu").hide()
+                        j.parents(".snippet-menu").hide();*/
+
+                        var j = u.parent().find("a.snippet-copy");
+                        var s = u.parents(".snippet-wrap").find(".snippet-textonly").text();
+                        j.on('click', function(e){
+                            e.preventDefault();
+                            if( is_ie() ) {
+                                window.clipboardData.setData("Text", s);
+                                alert("복사되었습니다.");
+                                return;
+                            }
+                            prompt("Ctrl+C를 눌러 복사하세요.", s);
+                        });
+
                     } else {
-                        u.parent().find("a.snippet-copy").hide()
+                        u.parent().find("a.snippet-copy").hide();
                     }
+
+                    function is_ie() {
+                        if(navigator.userAgent.toLowerCase().indexOf("chrome") != -1) return false;
+                        if(navigator.userAgent.toLowerCase().indexOf("msie") != -1) return true;
+                        if(navigator.userAgent.toLowerCase().indexOf("windows nt") != -1) return true;
+                        return false;
+                    }   
+
                     u.parent().find("a.snippet-text").click(function() {
                         var o = a(this).parents(".snippet-wrap").find(".snippet-formatted");
                         var i = a(this).parents(".snippet-wrap").find(".snippet-textonly");

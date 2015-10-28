@@ -8,8 +8,10 @@ define(['base'], function(Base){
             console.log('controll_narmal');
         },
         appendTemplete:function(data){
-            var clipBoard = '';
-            if(Base.agentChk.getDevice() == 'PC') clipBoard = 'js/lib/zeroclipboard/ZeroClipboard.swf'
+            var clipBoard = true;
+            //chrome에서 copy 버튼을 display:(none|block)으로 제어 할때 swf파일을 다시 로드하는 버그 발생
+            //if(Base.agentChk.getDevice() == 'PC') clipBoard = 'js/lib/zeroclipboard/zeroClipboard.swf';
+
             $('.contents').html(Base.codeMarkDown(data));
             $('pre.html').snippet('html', {style:'ide-codewarrior', clipboard:clipBoard});
             $('pre.style').snippet('css', {style:'ide-codewarrior', clipboard:clipBoard});
@@ -30,7 +32,7 @@ define(['base'], function(Base){
             styleSheet.innerHTML = data;
             document.body.appendChild(styleSheet);
         },
-        destroy:function(){
+        destroy:function(){    
             $('#page-script').remove();
             $('#page-style').remove();
         }
