@@ -6,8 +6,8 @@ requirejs.config({
         'plugin':'common/plugin',
         'router':'modules/module_router',
         'controll_common':'controller/controll_common',
-        'disqus':'modules/module_disqus'
-        //'zeroclipboard':'lib/zeroclipboard/zeroclipboard.min'
+        'disqus':'modules/module_disqus',
+        'clipboard':'lib/zenorocha/zenorocha.clipboard.min'
     },
     shim:{
         'controll_common':{
@@ -21,13 +21,12 @@ requirejs.config({
     }
 });
 
-require(['router', 'controll_common', 'disqus'], function(Route, Common, Sns){
+require(['router', 'controll_common', 'disqus', 'clipboard'], function(Route, Common, Sns, ClipBoard){
 
     "use strict";
 
     var common = new Common();
     var sns = new Sns();
-    
 
     Route.registerRoutes({
         normal:{path:'/', controller:'controller/controll_normal'},
