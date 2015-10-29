@@ -47,9 +47,11 @@
 <section>
 	<h2>이벤트 하단 앱다운</h2>
 	<ul class="square-list">
-		<li>가로 100%의 경우 <strong class="tag">#wrap</strong>의 형제요소로 <strong class="tag">#wrap</strong> 다음에 위치한다.</li>
-		<li>가로 100%가 아닌 경우 가로 940이벤트와 마찬가지로 <strong class="tag">#wrap</strong> 자식요소로 생성한다.</li>
 		<li>CSS는 <a href="http://image.gsshop.com/mi13/css/event.css"><strong>http://image.gsshop.com/mi13/css/event.css</strong></a>를 참조한다.</li>
+		<li>가로 100%의 경우 <strong class="tag">#wrap</strong>의 형제요소로 <strong class="tag">#wrap</strong> 다음에 위치한다.</li>
+		<li>또한 가로 100%일때 #wrap 하단의 30픽셀 여백을 줄이려면 pull-wrap 클래스를 적용해 여백을 조정한다.</li>
+		<li>가로 100%가 아닌 경우 가로 940이벤트와 마찬가지로 <strong class="tag">#wrap</strong> 자식요소로 생성한다.</li>
+		<li>앱다운 받기 하단 NOTICE는 img 태그로 삽입하고 longdesc에 해당 내용을 기술한다.</li>
 		<!-- <li><a href="http://www.gsshop.com/event/apply_mEvent.jsp?nm=welcome" target="_new">앱다운<i class="fa fa-external-link"></i></a> 이미지 배경은 이벤트마다 변경되므로 배경은 인라인으로 적용해 사용한다.</li> -->
 		<!-- <li>2015년 10월 현재 앱다운 영역의 높이는 418px로, 변경된다면 CSS 수정이 필요하다.</li> -->
 	</ul>
@@ -71,6 +73,15 @@
 					</form>
 				</div>
 			</div>
+			<!-- 하단 NOTICE -->
+			<div id="app-down-notice">
+				<div class="event-common-wrap"><img src="http://image.gsshop.com/mi13/img/event/2015_10/nf/img4.gif" alt="NOTICE" longdesc="#event-notice" /></div>
+				<div id="event-notice" class="blind">
+					기간: 2015년 11월 2일(월) ~ 11월 8일(일) 단 7일간 
+					대상: GS SHOP 모바일에서 처음 구매하시는 고객님
+					내용: 자세한 사항은 모바일 노스페이스 맥머도 이벤트에서 확인하세요.
+				</div>
+			</div>
 			<!-- //앱다운 -->
 		</div>
 	</div>
@@ -88,7 +99,7 @@
 			</div>
 		</div>
 		<!-- 앱다운 -->
-		<div id="app-down">
+		<div id="app-down" class="pull-wrap"><!-- #wrap 하단의 패딩 30픽셀 당기기 -->
 			<div class="event-common-wrap">
 				<form id="frm_sender" name="frm" method="post">
 					<fieldset>
@@ -97,6 +108,15 @@
 						<button onclick="javascript:applyApp();" title="앱 다운받기"><span class="blind">앱 다운받기</span></button>
 					</fieldset>
 				</form>
+			</div>
+		</div>
+		<!-- 하단 NOTICE -->
+		<div id="app-down-notice">
+			<div class="event-common-wrap"><img src="http://image.gsshop.com/mi13/img/event/2015_10/nf/img4.gif" alt="NOTICE" longdesc="#event-notice" /></div>
+			<div id="event-notice" class="blind">
+				기간: 2015년 11월 2일(월) ~ 11월 8일(일) 단 7일간 
+				대상: GS SHOP 모바일에서 처음 구매하시는 고객님
+				내용: 자세한 사항은 모바일 노스페이스 맥머도 이벤트에서 확인하세요.
 			</div>
 		</div>
 		<!-- //앱다운 -->
@@ -113,22 +133,27 @@
 	<div id="header"></div>
 	<div id="gs-content">
 		<div id="wrap">
-			<div><!-- 이벤트 div 생성 -->
-				이벤트
-				<!-- 앱다운 -->
-				<div id="app-down">
-					<div class="event-common-wrap">
-						<form id="frm_sender" name="frm" method="post">
-							<fieldset>
-								<legend>앱다운받기 핸드폰 번호 입력</legend>
-								<input type="text" name="telNo" id="telNo" value="휴대폰 번호를 입력해주세요." onclick="javascript:valclear();" maxlength="11">
-								<button onclick="javascript:applyApp();" title="앱 다운받기"><span class="blind">앱 다운받기</span></button>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-
+			<div><!-- 이벤트 div 생성 --></div>
+			<!-- 앱다운 -->
+			<div id="app-down">
+				<form id="frm_sender" name="frm" method="post">
+					<fieldset>
+						<legend>앱다운받기 핸드폰 번호 입력</legend>
+						<input type="text" name="telNo" id="telNo" value="휴대폰 번호를 입력해주세요." onclick="javascript:valclear();" maxlength="11">
+						<button onclick="javascript:applyApp();" title="앱 다운받기"><span class="blind">앱 다운받기</span></button>
+					</fieldset>
+				</form>
 			</div>
+			<!-- 하단 NOTICE -->
+			<div id="app-down-notice">
+				<p><img src="http://image.gsshop.com/mi13/img/event/2015_10/nf/img4.gif" alt="NOTICE" longdesc="#event-notice" /></p>
+				<div id="event-notice" class="blind">
+					기간: 2015년 11월 2일(월) ~ 11월 8일(일) 단 7일간 
+					대상: GS SHOP 모바일에서 처음 구매하시는 고객님
+					내용: 자세한 사항은 모바일 노스페이스 맥머도 이벤트에서 확인하세요.
+				</div>
+			</div>
+			<!-- //앱다운 -->
 		</div>
 	</div>
 	<div id="footer"></div>
@@ -139,6 +164,7 @@
 <section>
 	<h2>이벤트 상단 탭</h2>
 	<ul class="square-list">
+		<li>CSS는 <a href="http://image.gsshop.com/mi13/css/temp_guide.css"><strong>http://image.gsshop.com/mi13/css/temp_guide.css</strong></a>를 참조한다.</li>
 		<li><strong class="tag">#wrap</strong>자식요소에 <strong class="class">.wide_tabpcEvent</strong> 클래스 템플릿을 추가한다.</li>
 		<li><strong class="class">.wide_tabpcEvent</strong> 클래스 하단 마진(11px) 만큼 생성한 이벤트 영역에 음수 마진을 적용한다.</li>
 		<li>와이드 이벤트의 이벤트 영역은 #wrap부모 요소(#gs-content의 자식요소)에 생성한다.</li>
@@ -162,6 +188,9 @@
 		</div>
 	</div>
 	<pre class="html">
+<!-- 참조 CSS -->
+<link rel="stylesheet" type="text/css" href="http://image.gsshop.com/mi13/css/temp_guide.css" />
+
 <body>
 	<div id="header"></div>
 	<div id="gs-content">
