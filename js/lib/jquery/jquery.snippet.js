@@ -8,7 +8,6 @@
  *
  * Date: Wed Jan 19, 2011
  */
-
 (function(a) {
     window.log = function() {
         log.history = log.history || [];
@@ -110,7 +109,7 @@
                     }
                     );
                     var w = "<pre class='snippet-textonly sh_sourceCode' style='display:none;'>" + u.data("orgHtml") + "</pre>";
-                    var r = "<div class='snippet-menu sh_sourceCode' style='display:none;'><pre><a class='snippet-copy' href='#'><i class='fa fa-clipboard'></i></a><a class='snippet-text' href='#'><i class='fa fa-text-width'></i></a><a class='snippet-window' style='display:none;' href='#'>pop-up</a></pre></div>";
+                    var r = "<div class='snippet-menu sh_sourceCode' style='display:none;'><pre><a class='snippet-copy' data-clipboard-btn href='#'><i class='fa fa-clipboard'></i></a><a class='snippet-text' href='#'><i class='fa fa-text-width'></i></a><a class='snippet-window' style='display:none;' href='#'>pop-up</a></pre></div>";
                     u.parent().append(w);
                     u.parent().prepend(r);
                     u.parent().hover(function() {
@@ -120,7 +119,7 @@
                         a(this).find(".snippet-menu").fadeOut("fast");
                     });
 
-                    if (d.clipboard != "" && d.clipboard != false && d.clipboard == true) {
+                    if (d.clipboard != "" && d.clipboard != false) {
 
 
                         //zeroClipboard.js 사용에 따른 수정 20151028
@@ -142,14 +141,13 @@
 
                         var j = u.parent().find("a.snippet-copy");
                         var s = u.parents(".snippet-wrap").find(".snippet-textonly").text();
+                        j.attr({
+                            'data-clipboard-action':'copy',
+                            'data-clipboard-text':s
+                        });
+
                         j.on('click', function(e){
                             e.preventDefault();
-                            if( is_ie() ) {
-                                window.clipboardData.setData("Text", s);
-                                alert("복사되었습니다.");
-                                return;
-                            }
-                            prompt("Ctrl+C를 눌러 복사하세요.", s);
                         });
 
                     } else {
@@ -622,6 +620,7 @@ ZeroClipboard.Client.prototype = {
         }
     }
 };
+
 if (!this.sh_languages) {
     this.sh_languages = {}
 }
