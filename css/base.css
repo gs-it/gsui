@@ -1,7 +1,7 @@
 /* default setting */
 /* author : GSSHOP UI GROUP 2015 */
 * {margin:0;padding:0}
-body,input,textarea,select,button,table{font-family:"Open Sans", "Myriad Pro","Helvetica Neue","Helvetica","Arial","Malgun Gothic",sans-serif;font-size:13px;line-height:1.5em;color:#555;text-rendering:optimizelegibility;}
+body,input,textarea,select,button,table{font-family:"Malgun Gothic", "Open Sans", "Myriad Pro","Helvetica Neue","Helvetica","Arial","Malgun Gothic",sans-serif;font-size:13px;line-height:1.5em;color:#555;text-rendering:optimizelegibility;}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
 h1,h2,h3,h4,h5,h6{font-size:1em}
 img{vertical-align:top;border:0 none}
@@ -30,34 +30,35 @@ header a:hover {text-decoration:none;}
 
 /* logo */
 header .wrap {width:auto;height:102px;overflow:hidden;}
-header .wrap h1 {padding:20px 20px 0 20px;height:81px;font-weight:600;font-size:22px;letter-spacing:0.1em;border-bottom:1px solid #e0e0e0;}
-header small {opacity:0.5;font-size:12px;} /* for gsshop it group */
+header .wrap h1 {overflow:hidden;padding:0 25px;height:100px;font-size:25px;font-weight:normal;letter-spacing:0.0.1em;line-height:1.2em;}
+header .wrap h1 a {display:block;margin-top:25px;color:#b0c200;}
+header small {display:none;opacity:0.5;font-size:12px;} /* for gsshop it group */
 header .for {}
 header em {/*color:#bed730;*/}
 
 /* footer */
-footer {position:fixed;left:0;bottom:0;width:230px;border-top:1px solid #e0e0e0;z-index:1;}
-footer .wrap {padding:15px 20px;line-height:1.2;font-size:10px;}
+footer {position:fixed;left:0;bottom:0;width:240px;border-top:1px solid #e0e0e0;z-index:1;}
+footer .wrap {padding:30px 25px;line-height:1.6em;font-size:11px;color:#443e2d;}
 
 /* layout setting */
-.container {margin-left:230px;background:#fafafa;border-left:1px solid #e0e0e0;}
+.container {margin-left:240px;background:#fafafa;border-left:1px solid #ddd;}
 /*.nav {margin-top:40px;background-color:#f7f7f7;}*/
-section {margin-top:30px;}
-.contents {padding:102px 30px 0;}
+section {margin-top:50px;font-size:13px;color:#666;}
+.contents {padding:100px 50px 0;}
 
 .ico-cate {display:none; position:fixed;width:25px; height:25px; border:3px solid #cbd92a; border-radius:1px;-webkit-border-radius:1px;-moz-border-radius:1px;}
 .ico-cate:before{content:''; height:3px; width:20px; background:#cbd92a; display:block; position:absolute; top:5px; left:3px; box-shadow:0 6px 0 #cbd92a, 0 12px 0 #cbd92a;-webkit-box-shadow:0 6px 0 #cbd92a, 0 12px 0 #cbd92a;-moz-box-shadow:0 6px 0 #cbd92a, 0 12px 0 #cbd92a;}
 
 /* title */
 /* title */
-.contents h1 {overflow:hidden;position:fixed;left:230px;top:0;width:100%;height:102px;padding-left:20px;background:#00aebd;color:#fff;font-size:34px;font-weight:400;line-height:102px;z-index:10;}
-.contents h1.small {height:60px;font-size:20px;line-height:60px;}
+.contents h1 {overflow:hidden;position:fixed;left:240px;top:0;width:100%;height:100px;padding-left:30px;background:#cbdb2a;color:#fff;font-size:38px;line-height:100px;font-weight:normal;z-index:10;}
+.contents h1.small {height:60px;font-size:24px;line-height:60px;}
 .contents h1 strong {font-weight:normal;}
 .contents h1.small strong {display:inline;}
 
 
-section h2 {margin-bottom:10px;padding-bottom:10px;font-size:20px;letter-spacing:-0.01em;color:#000;font-weight:normal;}
-h3 {padding:20px 0 10px;}
+section h2 {margin-bottom:10px;padding-bottom:10px;font-size:36px;letter-spacing:-0.01em;color:#443e2d;font-weight:normal;}
+h3 {padding:20px 0 10px;color:#443e2d;font-size:24px;font-weight:normal;}
 h2+h3 {padding-top:0;}
 
 /* code setting */
@@ -130,8 +131,9 @@ table td {padding:1% 2%;border:1px solid #e1e3e6;background:#fff;}
 
 /* horizontal nav menu */
 header .head-nav {padding:10px 20px;top:15px;}
-.left-nav {position:fixed;left:0;top:112px;background-color:#FFF;z-index:2;width:230px;}
-.left-nav .menu a {font-weight:800;font-size:13px;display:block;padding:5px 0 5px 20px;line-height:25px;}
+.left-nav {position:fixed;left:0;top:135px;background-color:#FFF;z-index:2;width:240px;}
+.left-nav .menu a {display:block;padding:0 25px;line-height:40px;font-size:13px;font-weight:bold;color:#443e2d;}
+.left-nav .menu a:hover {background:#f4f4f4;}
 .left-nav .menu {width:auto;margin:0 auto;}
 .left-nav .menu:after {content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
 .left-nav .menu li {position:relative;list-style-type:none;padding:0;margin-left:0;}
@@ -139,23 +141,24 @@ header .head-nav {padding:10px 20px;top:15px;}
 .left-nav .menu li:first-child {display:none;}
 .left-nav .menu li.on {background:#bed730;}
 .left-nav .menu li.on a {color:#333;}
-.left-nav .menu li.dotted {margin:5px 0;border:dotted #ccc;border-width:1px 0;}
+.left-nav .menu li.dotted {margin:5px 0;}
 .left-nav .wrap.mini .head-nav a {font-size:13px;}
 .left-nav .menu-sub {display:block;}
-.left-nav .menu-sub .wrap {margin:0 auto;width:auto;}
-.left-nav .menu-sub a {display:block;font-weight:600;line-height:25px;padding:5px 0 0 40px;}
-.left-nav .menu-sub a:hover {opacity:0.8;color:#666;} 
+.left-nav .menu-sub .wrap {width:auto;margin-left:-25px;}
+.left-nav .menu-sub a {display:block;font-weight:normal;line-height:30px;padding-left:70px;}
+.left-nav .menu-sub a:hover {color:#443e2d;} 
 
 /* reply form */
-#disqus_thread {padding:50px 30px 0;}
+#disqus_thread {padding:50px 0px 0;}
 
 /* footer link */
-.foot-link a {display:block;height:25px;margin-bottom:10px;position:relative;}
+.foot-link a {display:block;height:20px;position:relative;}
 .foot-link img {vertical-align:middle;}
-.foot-link .gsshop {overflow:hidden;margin-bottom:0;}
+.foot-link .gsshop {overflow:hidden;margin-bottom:20px;}
 .foot-link .gsshop img {height:35px;position:absolute;top:-14px;}
+.foot-link .disqus {display:none;}
 .foot-link .disqus img {height:15px;}
-.foot-link .github {height:20px;}
+.foot-link .github {display:none;height:20px;}
 .foot-link .github img {position: absolute;clip: rect(0px,68px,25px,0px);margin-top:-2px;}
 
 /*dim*/
